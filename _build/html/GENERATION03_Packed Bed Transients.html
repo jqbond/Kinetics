@@ -1,0 +1,1270 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Kinetics and Reaction Engineering</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'GENERATION03_Packed Bed Transients';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/JQB.png" class="logo__image only-light" alt="Kinetics and Reaction Engineering - Home"/>
+    <script>document.write(`<img src="_static/JQB.png" class="logo__image only-dark" alt="Kinetics and Reaction Engineering - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Kinetics workshop!
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter1.html">Batch Reactor Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS01_Batch.html">Batch Reactors 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS02_Batch.html">Batch Reactors 02</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter2.html">Lectures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS04_Flow.html">Flow Reactors 02</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jqbond/CEN587/main?urlpath=tree/GENERATION03_Packed Bed Transients.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jqbond/CEN587" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jqbond/CEN587/issues/new?title=Issue%20on%20page%20%2FGENERATION03_Packed Bed Transients.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/GENERATION03_Packed Bed Transients.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">DifferentialEquations</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Printf</span>
+<span class="k">using</span><span class="w"> </span><span class="n">CairoMakie</span>
+<span class="k">using</span><span class="w"> </span><span class="n">LaTeXStrings</span>
+<span class="k">using</span><span class="w"> </span><span class="n">NumericalIntegration</span>
+<span class="k">using</span><span class="w"> </span><span class="n">DelimitedFiles</span>
+<span class="k">using</span><span class="w"> </span><span class="n">JLD2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#Constant information, can be global, but storing in a dictionary to keep tidy</span>
+
+<span class="n">constants</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span>
+<span class="s">&quot;T&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">298</span><span class="p">,</span><span class="w">            </span><span class="c">#K         </span>
+<span class="s">&quot;P&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w">            </span><span class="c">#bar</span>
+<span class="s">&quot;P0&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w">            </span><span class="c">#bar</span>
+<span class="s">&quot;MC&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w">           </span><span class="c">#grams of catalyst in reactor</span>
+<span class="s">&quot;FAf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">              </span><span class="c">#mol/s</span>
+<span class="s">&quot;FBf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">              </span><span class="c">#mol/s</span>
+<span class="s">&quot;FCf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">              </span><span class="c">#mol/s</span>
+<span class="s">&quot;FIf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">           </span><span class="c">#mol/s</span>
+<span class="s">&quot;FPf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">              </span><span class="c">#mol/s</span>
+<span class="s">&quot;R&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">8.314</span><span class="p">,</span><span class="w">          </span><span class="c">#J/mol/K</span>
+<span class="s">&quot;kb&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">1.380649e-23</span><span class="p">,</span><span class="w">   </span><span class="c">#J/K</span>
+<span class="s">&quot;h&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">6.62607015e-34</span><span class="p">,</span><span class="w"> </span><span class="c">#J*s</span>
+<span class="s">&quot;φ&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">            </span><span class="c">#V_void/V_total</span>
+<span class="s">&quot;VR&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">50000.0</span><span class="p">,</span><span class="w">        </span><span class="c">#L</span>
+<span class="s">&quot;VF&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">50000.0</span><span class="o">*</span><span class="mf">0.5</span><span class="p">,</span><span class="w">     </span><span class="c">#L</span>
+<span class="s">&quot;VC&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="mf">50000.0</span><span class="o">*</span><span class="mf">0.5</span><span class="p">,</span><span class="w">    </span><span class="c">#L</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{String, Real} with 16 entries:
+  &quot;VC&quot;  =&gt; 25000.0
+  &quot;FPf&quot; =&gt; 0
+  &quot;T&quot;   =&gt; 298
+  &quot;P&quot;   =&gt; 1.0
+  &quot;MC&quot;  =&gt; 10.0
+  &quot;FBf&quot; =&gt; 2
+  &quot;h&quot;   =&gt; 6.62607e-34
+  &quot;P0&quot;  =&gt; 1.0
+  &quot;FAf&quot; =&gt; 1
+  &quot;kb&quot;  =&gt; 1.38065e-23
+  &quot;φ&quot;   =&gt; 0.5
+  &quot;FCf&quot; =&gt; 0
+  &quot;VF&quot;  =&gt; 25000.0
+  &quot;FIf&quot; =&gt; 1000
+  &quot;VR&quot;  =&gt; 50000.0
+  &quot;R&quot;   =&gt; 8.314
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">tCSTR1!</span><span class="p">(</span><span class="n">du</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+<span class="w">   </span>
+<span class="w">    </span><span class="c">#unpack parameters</span>
+<span class="w">    </span><span class="n">FAf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FBf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FCf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FPf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FIf_S</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">P0</span><span class="p">,</span><span class="w"> </span><span class="n">kf</span><span class="p">,</span><span class="w"> </span><span class="n">kr</span><span class="p">,</span><span class="w"> </span><span class="n">τF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Labelling unknowns for readable equations; Fj [=] mol/s/mol site</span>
+<span class="w">    </span><span class="n">FA_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FB_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FC_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FP_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θA</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θB</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θC</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θP</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculate vacancies from site balance</span>
+<span class="w">    </span><span class="n">θV</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θA</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θP</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Total molar flowrate of gas phase species</span>
+<span class="w">    </span><span class="n">FT_S</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">FA_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FB_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FC_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FP_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FIf_S</span><span class="w"> </span><span class="c">#mol/s/mol site</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Mole fractions</span>
+<span class="w">    </span><span class="n">yA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FA_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span><span class="n">yB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FB_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span><span class="n">yC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FC_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span><span class="n">yP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FP_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Thermodynamic activities</span>
+<span class="w">    </span><span class="n">aA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yA</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yB</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yC</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yP</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculate rate constants at system temperature</span>
+<span class="w">    </span><span class="n">k1f</span><span class="p">,</span><span class="w"> </span><span class="n">k2f</span><span class="p">,</span><span class="w"> </span><span class="n">k3f</span><span class="p">,</span><span class="w"> </span><span class="n">k4f</span><span class="p">,</span><span class="w"> </span><span class="n">k5f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kf</span>
+<span class="w">    </span><span class="n">k1r</span><span class="p">,</span><span class="w"> </span><span class="n">k2r</span><span class="p">,</span><span class="w"> </span><span class="n">k3r</span><span class="p">,</span><span class="w"> </span><span class="n">k4r</span><span class="p">,</span><span class="w"> </span><span class="n">k5r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kr</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Elementary reaction rates in TOF units</span>
+<span class="w">    </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k1f</span><span class="o">*</span><span class="n">aA</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k1r</span><span class="o">*</span><span class="n">θA</span>
+<span class="w">    </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k2f</span><span class="o">*</span><span class="n">aB</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k2r</span><span class="o">*</span><span class="n">θB</span>
+<span class="w">    </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k3f</span><span class="o">*</span><span class="n">aC</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k3r</span><span class="o">*</span><span class="n">θC</span>
+<span class="w">    </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k4f</span><span class="o">*</span><span class="n">θA</span><span class="o">*</span><span class="n">θB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k4r</span><span class="o">*</span><span class="n">θC</span><span class="o">*</span><span class="n">θV</span>
+<span class="w">    </span><span class="n">r5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="w">    </span><span class="c">#Production rates, TOF units [=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">RA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r1</span>
+<span class="w">    </span><span class="n">RB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r2</span>
+<span class="w">    </span><span class="n">RC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r3</span>
+<span class="w">    </span><span class="n">RP</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">RAs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RBs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RCs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RPs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="mi">0</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Material balances, LHS = ODE </span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FAf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FA_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RA</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FBf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FB_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RB</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FCf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FC_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RC</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FPf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FP_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RP</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RAs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RBs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RCs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RPs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tCSTR1! (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">tCSTRmain1</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Pull constants out of dictionary of parameters</span>
+<span class="w">    </span><span class="n">T</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;T&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;P&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;P0&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FAf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FAf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FBf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FBf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FCf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FCf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FIf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FIf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FPf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FPf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">R</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;R&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">kb</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;kb&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">h</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;h&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">φ</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;φ&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VR</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VR&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VF</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VF&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VC</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VC&quot;</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Experiment/Simulation Specific Information</span>
+<span class="w">    </span><span class="n">NS0</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;NS0&quot;</span><span class="p">]</span><span class="w">    </span><span class="c">#moles of active sites in bed  </span>
+<span class="w">    </span><span class="n">DSACT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DSACT&quot;</span><span class="p">]</span><span class="w">  </span><span class="c">#Entropy of activation, J/mol/K</span>
+<span class="w">    </span><span class="n">DHACT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DHACT&quot;</span><span class="p">]</span><span class="w">  </span><span class="c">#Enthalpy of activation, J/mol</span>
+<span class="w">    </span><span class="n">DS</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DS&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#Entropy of reaction, J/mol/K</span>
+<span class="w">    </span><span class="n">DH</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DH&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#Enthalpy of reaction, J/mol</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculating quantities relevant to this simulation</span>
+<span class="w">    </span><span class="n">FAf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FAf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+<span class="w">    </span><span class="n">FBf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FBf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+<span class="w">    </span><span class="n">FCf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FCf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+<span class="w">    </span><span class="n">FPf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FPf</span><span class="o">/</span><span class="n">NS0</span>
+<span class="w">    </span><span class="n">FIf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FIf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+
+<span class="w">    </span><span class="c">#Temperature dependent quantities</span>
+<span class="w">    </span><span class="n">K</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">DS</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">.*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="o">-</span><span class="n">DH</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="w">    </span><span class="n">kf</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">kb</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">h</span><span class="o">*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">DSACT</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">.*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="o">-</span><span class="n">DHACT</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="w">    </span><span class="n">kr</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">kf</span><span class="o">./</span><span class="n">K</span>
+<span class="w">    </span><span class="n">Qf</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">FAf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FBf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FCf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FIf</span><span class="p">)</span><span class="o">*</span><span class="mf">0.083145</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">P</span><span class="w"> </span><span class="c">#L/s</span>
+<span class="w">    </span><span class="n">τF</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">VF</span><span class="o">/</span><span class="n">Qf</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Set up ODE solver, solve problem</span>
+<span class="w">    </span><span class="n">par</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FAf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FBf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FCf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FPf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FIf_S</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">P0</span><span class="p">,</span><span class="w"> </span><span class="n">kf</span><span class="p">,</span><span class="w"> </span><span class="n">kr</span><span class="p">,</span><span class="w"> </span><span class="n">τF</span>
+<span class="w">    </span><span class="n">domainfunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">any</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
+<span class="w">    </span><span class="n">u0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">tspan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1e13</span><span class="p">)</span><span class="w"> </span><span class="c">#adequate time to reach steady state? t --&gt; :∞ </span>
+<span class="w">    </span><span class="n">tvals</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">.^</span><span class="n">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span>
+<span class="w">    </span><span class="n">prob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ODEProblem</span><span class="p">(</span><span class="n">tCSTR1!</span><span class="p">,</span><span class="w"> </span><span class="n">u0</span><span class="p">,</span><span class="w"> </span><span class="n">tspan</span><span class="p">,</span><span class="w"> </span><span class="n">par</span><span class="p">)</span><span class="w">  </span>
+<span class="w">    </span><span class="n">tCSTRsol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span><span class="w"> </span><span class="n">Rodas4</span><span class="p">(),</span><span class="w"> </span><span class="n">isoutofdomain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domainfunc</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Benchmarking results</span>
+<span class="w">    </span><span class="c">#display(@benchmark solve($prob, Rosenbrock23(), isoutofdomain = $domainfunc, saveat = $tvals))</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#time set for plotting on log x axis</span>
+<span class="w">    </span><span class="n">tCSTRout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRsol</span><span class="p">(</span><span class="n">tvals</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Output information, function of time.</span>
+<span class="w">    </span><span class="n">FA_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FB_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FC_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FP_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θA</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θB</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θC</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θP</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θV</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θA</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θB</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θC</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θP</span>
+<span class="w">    </span><span class="n">XA</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">FAf_S</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">FA_S</span><span class="p">)</span><span class="o">/</span><span class="n">FAf_S</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Specify returns</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tvals</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S</span><span class="p">,</span><span class="w"> </span><span class="n">FB_S</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S</span><span class="p">,</span><span class="w"> </span><span class="n">FP_S</span><span class="p">,</span><span class="w"> </span><span class="n">XA</span><span class="p">,</span><span class="w"> </span><span class="n">θA</span><span class="p">,</span><span class="w"> </span><span class="n">θB</span><span class="p">,</span><span class="w"> </span><span class="n">θC</span><span class="p">,</span><span class="w"> </span><span class="n">θP</span><span class="p">,</span><span class="w"> </span><span class="n">θV</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tCSTRmain1 (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#Solve the problem, store the returns.</span>
+<span class="n">sim_pars1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;NS0&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">                           </span><span class="c">#moles of active sites in bed</span>
+<span class="w">    </span><span class="s">&quot;DSACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">      </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DHACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">130</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w">      </span><span class="c">#J/mol</span>
+<span class="w">    </span><span class="s">&quot;DS&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">      </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DH&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="c">#J/mol</span>
+<span class="p">)</span>
+
+<span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S1</span><span class="p">,</span><span class="w"> </span><span class="n">FB_S1</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S1</span><span class="p">,</span><span class="w"> </span><span class="n">FP_S1</span><span class="p">,</span><span class="w"> </span><span class="n">XA1</span><span class="p">,</span><span class="w"> </span><span class="n">θA1</span><span class="p">,</span><span class="w"> </span><span class="n">θB1</span><span class="p">,</span><span class="w"> </span><span class="n">θC1</span><span class="p">,</span><span class="w"> </span><span class="n">θP1</span><span class="p">,</span><span class="w"> </span><span class="n">θV1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRmain1</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars1</span><span class="p">);</span>
+<span class="n">tLABEL1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;t (s)&quot;</span><span class="w"> </span><span class="s">&quot;FA (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FB (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FC (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FP (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;XA&quot;</span><span class="w"> </span><span class="s">&quot;θA&quot;</span><span class="w"> </span><span class="s">&quot;θB&quot;</span><span class="w"> </span><span class="s">&quot;θC&quot;</span><span class="w"> </span><span class="s">&quot;θP&quot;</span><span class="w"> </span><span class="s">&quot;θV&quot;</span><span class="p">]</span>
+<span class="n">tDATA1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">t1</span><span class="o">/</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FA_S1</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FB_S1</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FC_S1</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FP_S1</span><span class="w"> </span><span class="n">XA1</span><span class="w"> </span><span class="n">θA1</span><span class="w"> </span><span class="n">θB1</span><span class="w"> </span><span class="n">θC1</span><span class="w"> </span><span class="n">θP1</span><span class="w"> </span><span class="n">θV1</span><span class="p">]</span>
+<span class="n">FLOW_TRANSIENT_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcat</span><span class="p">(</span><span class="n">tLABEL1</span><span class="p">,</span><span class="w"> </span><span class="n">tDATA1</span><span class="p">);</span>
+
+<span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">&quot;FLOW_TRANSIENT_1.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">writedlm</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">FLOW_TRANSIENT_1</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady state flowrates of A, B, and C are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> mol/s/mol active site </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S1</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FB_S1</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FC_S1</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Fractional Conversion of A is </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">XA1</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady State Coverages of A, B, C, P, and V are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">θA1</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θB1</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θC1</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θP1</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θV1</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;The turnover frequency for this reaction is approximately </span><span class="si">%3.2E</span><span class="s"> mol/s/mol site.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S1</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state flowrates of A, B, and C are 1.00E-01, 2.00E-01, 1.06E-07 mol/s/mol active site 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fractional Conversion of A is 1.06E-06 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady State Coverages of A, B, C, P, and V are 5.84E-03, 9.88E-01, 5.77E-03, 0.00E+00, 5.77E-12 
+The turnover frequency for this reaction is approximately 1.06E-07 mol/s/mol site.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">tCSTR2!</span><span class="p">(</span><span class="n">du</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+<span class="w">   </span>
+<span class="w">    </span><span class="c">#unpack parameters</span>
+<span class="w">    </span><span class="n">FAf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FBf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FCf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FPf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FIf_S</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">P0</span><span class="p">,</span><span class="w"> </span><span class="n">kf</span><span class="p">,</span><span class="w"> </span><span class="n">kr</span><span class="p">,</span><span class="w"> </span><span class="n">τF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Labelling unknowns for readable equations; Fj [=] mol/s/mol site</span>
+<span class="w">    </span><span class="n">FA_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FB_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FC_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FP_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θA</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θB</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θC</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θP</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculate vacancies from site balance</span>
+<span class="w">    </span><span class="n">θV</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θA</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θP</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Total molar flowrate of gas phase species</span>
+<span class="w">    </span><span class="n">FT_S</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">FA_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FB_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FC_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FP_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FIf_S</span><span class="w"> </span><span class="c">#mol/s/mol site</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Mole fractions</span>
+<span class="w">    </span><span class="n">yA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FA_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span><span class="n">yB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FB_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span><span class="n">yC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FC_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span><span class="n">yP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FP_S</span><span class="o">/</span><span class="n">FT_S</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Thermodynamic activities</span>
+<span class="w">    </span><span class="n">aA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yA</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yB</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yC</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yP</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculate rate constants at system temperature</span>
+<span class="w">    </span><span class="n">k1f</span><span class="p">,</span><span class="w"> </span><span class="n">k2f</span><span class="p">,</span><span class="w"> </span><span class="n">k3f</span><span class="p">,</span><span class="w"> </span><span class="n">k4f</span><span class="p">,</span><span class="w"> </span><span class="n">k5f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kf</span>
+<span class="w">    </span><span class="n">k1r</span><span class="p">,</span><span class="w"> </span><span class="n">k2r</span><span class="p">,</span><span class="w"> </span><span class="n">k3r</span><span class="p">,</span><span class="w"> </span><span class="n">k4r</span><span class="p">,</span><span class="w"> </span><span class="n">k5r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kr</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Elementary reaction rates in TOF units</span>
+<span class="w">    </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k1f</span><span class="o">*</span><span class="n">aA</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k1r</span><span class="o">*</span><span class="n">θA</span>
+<span class="w">    </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k2f</span><span class="o">*</span><span class="n">aB</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k2r</span><span class="o">*</span><span class="n">θB</span>
+<span class="w">    </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k3f</span><span class="o">*</span><span class="n">aC</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k3r</span><span class="o">*</span><span class="n">θC</span>
+<span class="w">    </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k4f</span><span class="o">*</span><span class="n">θA</span><span class="o">*</span><span class="n">θB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k4r</span><span class="o">*</span><span class="n">θC</span><span class="o">*</span><span class="n">θV</span>
+<span class="w">    </span><span class="n">r5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k5f</span><span class="o">*</span><span class="n">θA</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">k5r</span><span class="o">*</span><span class="n">θP</span>
+
+<span class="w">    </span><span class="c">#Production rates, TOF units [=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">RA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r1</span>
+<span class="w">    </span><span class="n">RB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r2</span>
+<span class="w">    </span><span class="n">RC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r3</span>
+<span class="w">    </span><span class="n">RP</span><span class="w">     </span><span class="o">=</span><span class="w">  </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">RAs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r5</span>
+<span class="w">    </span><span class="n">RBs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RCs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RPs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r5</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Material balances, LHS = ODE </span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FAf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FA_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RA</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FBf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FB_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RB</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FCf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FC_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RC</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FPf_S</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FP_S</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RP</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RAs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RBs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RCs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RPs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tCSTR2! (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">tCSTRmain2</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Pull constants out of dictionary of parameters</span>
+<span class="w">    </span><span class="n">T</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;T&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;P&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;P0&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FAf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FAf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FBf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FBf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FCf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FCf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FIf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FIf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FPf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FPf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">R</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;R&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">kb</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;kb&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">h</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;h&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">φ</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;φ&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VR</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VR&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VF</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VF&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VC</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VC&quot;</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Experiment/Simulation Specific Information</span>
+<span class="w">    </span><span class="n">NS0</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;NS0&quot;</span><span class="p">]</span><span class="w">    </span><span class="c">#moles of active sites in bed  </span>
+<span class="w">    </span><span class="n">DSACT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DSACT&quot;</span><span class="p">]</span><span class="w">  </span><span class="c">#Entropy of activation, J/mol/K</span>
+<span class="w">    </span><span class="n">DHACT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DHACT&quot;</span><span class="p">]</span><span class="w">  </span><span class="c">#Enthalpy of activation, J/mol</span>
+<span class="w">    </span><span class="n">DS</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DS&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#Entropy of reaction, J/mol/K</span>
+<span class="w">    </span><span class="n">DH</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DH&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#Enthalpy of reaction, J/mol</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculating quantities relevant to this simulation</span>
+<span class="w">    </span><span class="n">FAf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FAf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+<span class="w">    </span><span class="n">FBf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FBf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+<span class="w">    </span><span class="n">FCf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FCf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+<span class="w">    </span><span class="n">FPf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FPf</span><span class="o">/</span><span class="n">NS0</span>
+<span class="w">    </span><span class="n">FIf_S</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">FIf</span><span class="o">/</span><span class="n">NS0</span><span class="w">        </span><span class="c">#mol/s/mol active site</span>
+
+<span class="w">    </span><span class="c">#Temperature dependent quantities</span>
+<span class="w">    </span><span class="n">K</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">DS</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">.*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="o">-</span><span class="n">DH</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="w">    </span><span class="n">kf</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">kb</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">h</span><span class="o">*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">DSACT</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">.*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="o">-</span><span class="n">DHACT</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="w">    </span><span class="n">kr</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">kf</span><span class="o">./</span><span class="n">K</span>
+<span class="w">    </span><span class="n">Qf</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">FAf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FBf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FCf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FIf</span><span class="p">)</span><span class="o">*</span><span class="mf">0.083145</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">P</span><span class="w"> </span><span class="c">#L/s</span>
+<span class="w">    </span><span class="n">τF</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">VF</span><span class="o">/</span><span class="n">Qf</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Set up ODE solver, solve problem</span>
+<span class="w">    </span><span class="n">par</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FAf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FBf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FCf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FPf_S</span><span class="p">,</span><span class="w"> </span><span class="n">FIf_S</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">P0</span><span class="p">,</span><span class="w"> </span><span class="n">kf</span><span class="p">,</span><span class="w"> </span><span class="n">kr</span><span class="p">,</span><span class="w"> </span><span class="n">τF</span>
+<span class="w">    </span><span class="n">domainfunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">any</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
+<span class="w">    </span><span class="n">u0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">tspan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1e13</span><span class="p">)</span><span class="w"> </span><span class="c">#adequate time to reach steady state? t --&gt; :∞ </span>
+<span class="w">    </span><span class="n">tvals</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">.^</span><span class="n">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span>
+<span class="w">    </span><span class="n">prob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ODEProblem</span><span class="p">(</span><span class="n">tCSTR2!</span><span class="p">,</span><span class="w"> </span><span class="n">u0</span><span class="p">,</span><span class="w"> </span><span class="n">tspan</span><span class="p">,</span><span class="w"> </span><span class="n">par</span><span class="p">)</span><span class="w">  </span>
+<span class="w">    </span><span class="n">tCSTRsol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span><span class="w"> </span><span class="n">Rodas4</span><span class="p">(),</span><span class="w"> </span><span class="n">isoutofdomain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domainfunc</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Benchmarking results</span>
+<span class="w">    </span><span class="c">#display(@benchmark solve($prob, Rosenbrock23(), isoutofdomain = $domainfunc, saveat = $tvals))</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#time set for plotting on log x axis</span>
+<span class="w">    </span><span class="n">tCSTRout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRsol</span><span class="p">(</span><span class="n">tvals</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Output information, function of time.</span>
+<span class="w">    </span><span class="n">FA_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FB_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FC_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FP_S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θA</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θB</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θC</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θP</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θV</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θA</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θB</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θC</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θP</span>
+<span class="w">    </span><span class="n">XA</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">FAf_S</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">FA_S</span><span class="p">)</span><span class="o">/</span><span class="n">FAf_S</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Specify returns</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tvals</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S</span><span class="p">,</span><span class="w"> </span><span class="n">FB_S</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S</span><span class="p">,</span><span class="w"> </span><span class="n">FP_S</span><span class="p">,</span><span class="w"> </span><span class="n">XA</span><span class="p">,</span><span class="w"> </span><span class="n">θA</span><span class="p">,</span><span class="w"> </span><span class="n">θB</span><span class="p">,</span><span class="w"> </span><span class="n">θC</span><span class="p">,</span><span class="w"> </span><span class="n">θP</span><span class="p">,</span><span class="w"> </span><span class="n">θV</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tCSTRmain2 (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sim_pars2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;NS0&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">                           </span><span class="c">#moles of active sites in bed</span>
+<span class="w">    </span><span class="s">&quot;DSACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">      </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DHACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">105</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w">      </span><span class="c">#J/mol</span>
+<span class="w">    </span><span class="s">&quot;DS&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">      </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DH&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="c">#J/mol</span>
+<span class="p">)</span>
+
+<span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S2</span><span class="p">,</span><span class="w"> </span><span class="n">FB_S2</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S2</span><span class="p">,</span><span class="w"> </span><span class="n">FP_S2</span><span class="p">,</span><span class="w"> </span><span class="n">XA2</span><span class="p">,</span><span class="w"> </span><span class="n">θA2</span><span class="p">,</span><span class="w"> </span><span class="n">θB2</span><span class="p">,</span><span class="w"> </span><span class="n">θC2</span><span class="p">,</span><span class="w"> </span><span class="n">θP2</span><span class="p">,</span><span class="w"> </span><span class="n">θV2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRmain2</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars2</span><span class="p">);</span>
+<span class="n">tLABEL2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;t (s)&quot;</span><span class="w"> </span><span class="s">&quot;FA (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FB (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FC (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FP (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;XA&quot;</span><span class="w"> </span><span class="s">&quot;θA&quot;</span><span class="w"> </span><span class="s">&quot;θB&quot;</span><span class="w"> </span><span class="s">&quot;θC&quot;</span><span class="w"> </span><span class="s">&quot;θP&quot;</span><span class="w"> </span><span class="s">&quot;θV&quot;</span><span class="p">]</span>
+<span class="n">tDATA2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">t2</span><span class="o">/</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FA_S2</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FB_S2</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FC_S2</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FP_S2</span><span class="w"> </span><span class="n">XA2</span><span class="w"> </span><span class="n">θA2</span><span class="w"> </span><span class="n">θB2</span><span class="w"> </span><span class="n">θC2</span><span class="w"> </span><span class="n">θP2</span><span class="w"> </span><span class="n">θV2</span><span class="p">]</span>
+<span class="n">FLOW_TRANSIENT_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcat</span><span class="p">(</span><span class="n">tLABEL2</span><span class="p">,</span><span class="w"> </span><span class="n">tDATA2</span><span class="p">);</span>
+
+<span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">&quot;FLOW_TRANSIENT_2.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">writedlm</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">FLOW_TRANSIENT_2</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady state flowrates of A, B, and C are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> mol/s/mol active site </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S2</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FB_S2</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FC_S2</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Fractional Conversion of A is </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">XA2</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady State Coverages of A, B, C, P, and V are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">θA2</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θB2</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θC2</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θP2</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θV2</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;The turnover frequency for this reaction is approximately </span><span class="si">%3.2E</span><span class="s"> mol/s/mol site.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S2</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state flowrates of A, B, and C are 1.00E-01, 2.00E-01, 3.39E-07 mol/s/mol active site 
+Fractional Conversion of A is 3.39E-06 
+Steady State Coverages of A, B, C, P, and V are 9.15E-02, 2.01E-01, 1.84E-02, 6.89E-01, 5.46E-11 
+The turnover frequency for this reaction is approximately 3.39E-07 mol/s/mol site.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">t3</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S3</span><span class="p">,</span><span class="w"> </span><span class="n">FB_S3</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S3</span><span class="p">,</span><span class="w"> </span><span class="n">FP_S3</span><span class="p">,</span><span class="w"> </span><span class="n">XA3</span><span class="p">,</span><span class="w"> </span><span class="n">θA3</span><span class="p">,</span><span class="w"> </span><span class="n">θB3</span><span class="p">,</span><span class="w"> </span><span class="n">θC3</span><span class="p">,</span><span class="w"> </span><span class="n">θP3</span><span class="p">,</span><span class="w"> </span><span class="n">θV3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRmain1</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars2</span><span class="p">);</span>
+<span class="n">tLABEL3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;t (s)&quot;</span><span class="w"> </span><span class="s">&quot;FA (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FB (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FC (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;FP (mol/s/mol site)&quot;</span><span class="w"> </span><span class="s">&quot;XA&quot;</span><span class="w"> </span><span class="s">&quot;θA&quot;</span><span class="w"> </span><span class="s">&quot;θB&quot;</span><span class="w"> </span><span class="s">&quot;θC&quot;</span><span class="w"> </span><span class="s">&quot;θP&quot;</span><span class="w"> </span><span class="s">&quot;θV&quot;</span><span class="p">]</span>
+<span class="n">tDATA3</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">t3</span><span class="o">/</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FA_S3</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FB_S3</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FC_S3</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FP_S3</span><span class="w"> </span><span class="n">XA3</span><span class="w"> </span><span class="n">θA3</span><span class="w"> </span><span class="n">θB3</span><span class="w"> </span><span class="n">θC3</span><span class="w"> </span><span class="n">θP3</span><span class="w"> </span><span class="n">θV3</span><span class="p">]</span>
+<span class="n">FLOW_TRANSIENT_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcat</span><span class="p">(</span><span class="n">tLABEL3</span><span class="p">,</span><span class="w"> </span><span class="n">tDATA3</span><span class="p">);</span>
+
+<span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">&quot;FLOW_TRANSIENT_3.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">writedlm</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">FLOW_TRANSIENT_3</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady state flowrates of A, B, and C are </span><span class="si">%3.3E</span><span class="s">, </span><span class="si">%3.3E</span><span class="s">, </span><span class="si">%3.3E</span><span class="s"> mol/s/mol active site </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FA_S3</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FB_S3</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FC_S3</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Fractional Conversion of A is </span><span class="si">%3.3E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">XA3</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady State Coverages of A, B, C, P, and V are </span><span class="si">%3.3E</span><span class="s">, </span><span class="si">%3.3E</span><span class="s">, </span><span class="si">%3.3E</span><span class="s">, </span><span class="si">%3.3E</span><span class="s">, </span><span class="si">%3.3E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">θA3</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θB3</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θC3</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θP3</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θV3</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;The turnover frequency for this reaction is approximately </span><span class="si">%3.3E</span><span class="s"> mol/s/mol site.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FC_S3</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state flowrates of A, B, and C are 1.000E-01, 2.000E-01, 2.679E-06 mol/s/mol active site 
+Fractional Conversion of A is 2.679E-05 
+Steady State Coverages of A, B, C, P, and V are 2.361E-01, 6.180E-01, 1.459E-01, 0.000E+00, 1.896E-10 
+The turnover frequency for this reaction is approximately 2.679E-06 mol/s/mol site.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">tCSTR4!</span><span class="p">(</span><span class="n">du</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">#unpack parameters</span>
+<span class="w">    </span><span class="n">FAf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;FAf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FBf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;FBf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FCf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;FCf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FPf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;FPf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FIf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;FIf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">T</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;T&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;P&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;P0&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">kf</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;kf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">kr</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;kr&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">NS0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;NS0&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">τF</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="s">&quot;τF&quot;</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Labelling unknowns for readable equations; Fj [=] mol/s/mol site</span>
+<span class="w">    </span><span class="n">FA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span>
+<span class="w">    </span><span class="n">NS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NS0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">365</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">10000</span><span class="o">*</span><span class="n">t</span><span class="o">/</span><span class="mf">1e10</span><span class="p">))</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculate vacancies from site balance</span>
+<span class="w">    </span><span class="n">θV</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θA</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θC</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">θP</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Total molar flowrate of gas phase species</span>
+<span class="w">    </span><span class="n">FT</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">FA</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FC</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FP</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FIf</span><span class="w"> </span><span class="c">#mol/s/mol site</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Mole fractions</span>
+<span class="w">    </span><span class="n">yA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FA</span><span class="o">/</span><span class="n">FT</span>
+<span class="w">    </span><span class="n">yB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FB</span><span class="o">/</span><span class="n">FT</span>
+<span class="w">    </span><span class="n">yC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FC</span><span class="o">/</span><span class="n">FT</span>
+<span class="w">    </span><span class="n">yP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">FP</span><span class="o">/</span><span class="n">FT</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Thermodynamic activities</span>
+<span class="w">    </span><span class="n">aA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yA</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yB</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yC</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span><span class="n">aP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">yP</span><span class="o">*</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Calculate rate constants at system temperature</span>
+<span class="w">    </span><span class="n">k1f</span><span class="p">,</span><span class="w"> </span><span class="n">k2f</span><span class="p">,</span><span class="w"> </span><span class="n">k3f</span><span class="p">,</span><span class="w"> </span><span class="n">k4f</span><span class="p">,</span><span class="w"> </span><span class="n">k5f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kf</span>
+<span class="w">    </span><span class="n">k1r</span><span class="p">,</span><span class="w"> </span><span class="n">k2r</span><span class="p">,</span><span class="w"> </span><span class="n">k3r</span><span class="p">,</span><span class="w"> </span><span class="n">k4r</span><span class="p">,</span><span class="w"> </span><span class="n">k5r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kr</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Elementary reaction rates in TOF units</span>
+<span class="w">    </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k1f</span><span class="o">*</span><span class="n">aA</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k1r</span><span class="o">*</span><span class="n">θA</span>
+<span class="w">    </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k2f</span><span class="o">*</span><span class="n">aB</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k2r</span><span class="o">*</span><span class="n">θB</span>
+<span class="w">    </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k3f</span><span class="o">*</span><span class="n">aC</span><span class="o">*</span><span class="n">θV</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k3r</span><span class="o">*</span><span class="n">θC</span>
+<span class="w">    </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k4f</span><span class="o">*</span><span class="n">θA</span><span class="o">*</span><span class="n">θB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k4r</span><span class="o">*</span><span class="n">θC</span><span class="o">*</span><span class="n">θV</span>
+<span class="w">    </span><span class="n">r5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e15</span><span class="o">*</span><span class="n">aP</span><span class="o">*</span><span class="n">θV</span>
+
+<span class="w">    </span><span class="c">#Production rates, TOF units [=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">RA</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r1</span>
+<span class="w">    </span><span class="n">RB</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r2</span>
+<span class="w">    </span><span class="n">RC</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r3</span>
+<span class="w">    </span><span class="n">RP</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">r5</span>
+<span class="w">    </span><span class="n">RAs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RBs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RCs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r4</span>
+<span class="w">    </span><span class="n">RPs</span><span class="w">    </span><span class="o">=</span><span class="w">  </span><span class="n">r5</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Material balances, LHS = ODE </span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FAf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FA</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RA</span><span class="o">*</span><span class="n">NS</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FBf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RB</span><span class="o">*</span><span class="n">NS</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FCf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FC</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RC</span><span class="o">*</span><span class="n">NS</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">τF</span><span class="o">*</span><span class="p">(</span><span class="n">FPf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">FP</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">RP</span><span class="o">*</span><span class="n">NS</span><span class="p">)</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RAs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RBs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RCs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="w">    </span><span class="n">du</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">RPs</span><span class="w"> </span><span class="c">#[=] moles species/mole site/time</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tCSTR4! (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">tCSTRmain4</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Pull constants out of dictionary of parameters</span>
+<span class="w">    </span><span class="n">T</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;T&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;P&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">P0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;P0&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FAf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FAf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FBf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FBf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FCf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FCf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FIf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FIf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FPf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;FPf&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">R</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;R&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">kb</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;kb&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">h</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;h&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">φ</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;φ&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VR</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VR&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VF</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VF&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="n">VC</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">constants</span><span class="p">[</span><span class="s">&quot;VC&quot;</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Experiment/Simulation Specific Information</span>
+<span class="w">    </span><span class="n">NS0</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;NS0&quot;</span><span class="p">]</span><span class="w">    </span><span class="c">#moles of active sites in bed  </span>
+<span class="w">    </span><span class="n">DSACT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DSACT&quot;</span><span class="p">]</span><span class="w">  </span><span class="c">#Entropy of activation, J/mol/K</span>
+<span class="w">    </span><span class="n">DHACT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DHACT&quot;</span><span class="p">]</span><span class="w">  </span><span class="c">#Enthalpy of activation, J/mol</span>
+<span class="w">    </span><span class="n">DS</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DS&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#Entropy of reaction, J/mol/K</span>
+<span class="w">    </span><span class="n">DH</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;DH&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#Enthalpy of reaction, J/mol</span>
+<span class="w">    </span><span class="n">cb</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">sim_pars</span><span class="p">[</span><span class="s">&quot;CB&quot;</span><span class="p">]</span><span class="w">     </span><span class="c">#callback function</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="c">#Temperature dependent quantities</span>
+<span class="w">    </span><span class="n">K</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">DS</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">.*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="o">-</span><span class="n">DH</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="w">    </span><span class="n">kf</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">kb</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">h</span><span class="o">*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">DSACT</span><span class="o">/</span><span class="n">R</span><span class="p">)</span><span class="o">.*</span><span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="o">-</span><span class="n">DHACT</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">T</span><span class="p">)</span>
+<span class="w">    </span><span class="n">kr</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">kf</span><span class="o">./</span><span class="n">K</span>
+<span class="w">    </span><span class="n">Qf</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">FAf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FBf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FCf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">FIf</span><span class="p">)</span><span class="o">*</span><span class="mf">0.083145</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">P</span><span class="w"> </span><span class="c">#L/s</span>
+<span class="w">    </span><span class="n">τF</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">VF</span><span class="o">/</span><span class="n">Qf</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Set up ODE solver, solve problem</span>
+<span class="w">    </span><span class="n">par</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;FAf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">FAf</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;FBf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">FBf</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;FCf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">FCf</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;FPf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">FPf</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;FIf&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">FIf</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;T&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;P&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;P0&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">P0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;kf&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">kf</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;kr&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">kr</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="s">&quot;NS0&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">NS0</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;τF&quot;</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">τF</span><span class="p">,</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">domainfunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">any</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
+<span class="w">    </span><span class="n">u0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">tspan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1e13</span><span class="p">)</span><span class="w"> </span><span class="c">#adequate time to reach steady state? t --&gt; :∞ </span>
+<span class="w">    </span><span class="n">tvals</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">.^</span><span class="n">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span>
+<span class="w">    </span><span class="n">f</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">ODEFunction</span><span class="p">(</span><span class="n">tCSTR4!</span><span class="p">)</span>
+<span class="w">    </span><span class="n">prob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ODEProblem</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">u0</span><span class="p">,</span><span class="w"> </span><span class="n">tspan</span><span class="p">,</span><span class="w"> </span><span class="n">par</span><span class="p">)</span><span class="w">  </span>
+<span class="w">    </span><span class="n">tCSTRsol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">prob</span><span class="p">,</span><span class="w"> </span><span class="n">Rodas4</span><span class="p">(),</span><span class="w"> </span><span class="n">callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cb</span><span class="p">,</span><span class="w"> </span><span class="n">tstops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1.0e8</span><span class="p">],</span><span class="w"> </span><span class="n">abstol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-11</span><span class="p">,</span><span class="w"> </span><span class="n">reltol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-11</span><span class="p">,</span><span class="w"> </span><span class="n">isoutofdomain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domainfunc</span><span class="p">,</span><span class="w"> </span><span class="n">dtmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-18</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">#time set for plotting on log x axis</span>
+<span class="w">    </span><span class="n">tCSTRout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRsol</span><span class="p">(</span><span class="n">tvals</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Output information, function of time.</span>
+<span class="w">    </span><span class="n">FA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">FP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRout</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">]</span>
+<span class="w">    </span><span class="n">θV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θA</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θB</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θC</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">θP</span>
+<span class="w">    </span><span class="n">XA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">FAf</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">FA</span><span class="p">)</span><span class="o">/</span><span class="n">FAf</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Specify returns</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tvals</span><span class="p">,</span><span class="w"> </span><span class="n">FA</span><span class="p">,</span><span class="w"> </span><span class="n">FB</span><span class="p">,</span><span class="w"> </span><span class="n">FC</span><span class="p">,</span><span class="w"> </span><span class="n">FP</span><span class="p">,</span><span class="w"> </span><span class="n">XA</span><span class="p">,</span><span class="w"> </span><span class="n">θA</span><span class="p">,</span><span class="w"> </span><span class="n">θB</span><span class="p">,</span><span class="w"> </span><span class="n">θC</span><span class="p">,</span><span class="w"> </span><span class="n">θP</span><span class="p">,</span><span class="w"> </span><span class="n">θV</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tCSTRmain4 (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sim_pars4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;NS0&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">                           </span><span class="c">#moles of active sites in bed</span>
+<span class="w">    </span><span class="s">&quot;DSACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">      </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DHACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span><span class="w"> </span><span class="mi">130</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w">      </span><span class="c">#J/mol</span>
+<span class="w">    </span><span class="s">&quot;DS&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">      </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DH&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="c">#J/mol</span>
+<span class="w">    </span><span class="s">&quot;CB&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">nothing</span>
+<span class="p">)</span>
+
+<span class="n">t4</span><span class="p">,</span><span class="w"> </span><span class="n">FA4</span><span class="p">,</span><span class="w"> </span><span class="n">FB4</span><span class="p">,</span><span class="w"> </span><span class="n">FC4</span><span class="p">,</span><span class="w"> </span><span class="n">FP4</span><span class="p">,</span><span class="w"> </span><span class="n">XA4</span><span class="p">,</span><span class="w"> </span><span class="n">θA4</span><span class="p">,</span><span class="w"> </span><span class="n">θB4</span><span class="p">,</span><span class="w"> </span><span class="n">θC4</span><span class="p">,</span><span class="w"> </span><span class="n">θP4</span><span class="p">,</span><span class="w"> </span><span class="n">θV4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRmain4</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars4</span><span class="p">);</span>
+<span class="n">tLABEL4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;t (s)&quot;</span><span class="w"> </span><span class="s">&quot;FA (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;FB (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;FC (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;FP (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;XA&quot;</span><span class="w"> </span><span class="s">&quot;θA&quot;</span><span class="w"> </span><span class="s">&quot;θB&quot;</span><span class="w"> </span><span class="s">&quot;θC&quot;</span><span class="w"> </span><span class="s">&quot;θP&quot;</span><span class="w"> </span><span class="s">&quot;θV&quot;</span><span class="p">]</span>
+<span class="n">tDATA4</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">t4</span><span class="o">/</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FA4</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FB4</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FC4</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FP4</span><span class="w"> </span><span class="n">XA4</span><span class="w"> </span><span class="n">θA4</span><span class="w"> </span><span class="n">θB4</span><span class="w"> </span><span class="n">θC4</span><span class="w"> </span><span class="n">θP4</span><span class="w"> </span><span class="n">θV4</span><span class="p">]</span>
+<span class="n">FLOW_TRANSIENT_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcat</span><span class="p">(</span><span class="n">tLABEL4</span><span class="p">,</span><span class="w"> </span><span class="n">tDATA4</span><span class="p">);</span>
+
+<span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">&quot;FLOW_TRANSIENT_4.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">writedlm</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">FLOW_TRANSIENT_4</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady state flowrates of A, B, and C are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> mol/s/mol active site </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FA4</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FB4</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FC4</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Fractional Conversion of A is </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">XA4</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady State Coverages of A, B, C, P, and V are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">θA4</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θB4</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θC4</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θP4</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θV4</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;The turnover frequency for this reaction is approximately </span><span class="si">%3.2E</span><span class="s"> mol/s/mol site.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FC4</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Yellow">┌ Warning: </span>Using arrays or dicts to store parameters of different types can hurt performance.
+<span class=" -Color -Color-Bold -Color-Bold-Yellow">│ </span>Consider using tuples instead.
+<span class=" -Color -Color-Bold -Color-Bold-Yellow">└ </span>@ SciMLBase C:\Users\jqbon\.julia\packages\SciMLBase\elLNZ\src\performance_warnings.jl:33
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state flowrates of A, B, and C are 1.00E+00, 2.00E+00, 7.14E-05 mol/s/mol active site 
+Fractional Conversion of A is 7.14E-05 
+Steady State Coverages of A, B, C, P, and V are 3.26E-01, 6.63E-01, 1.04E-02, 0.00E+00, 1.67E-10 
+The turnover frequency for this reaction is approximately 7.14E-05 mol/s/mol site.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">condition5</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">integrator</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">1.0e8</span>
+<span class="k">end</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">affect5!</span><span class="p">(</span><span class="n">integrator</span><span class="p">)</span>
+<span class="w">    </span><span class="n">integrator</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s">&quot;FPf&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0e-6</span>
+<span class="k">end</span>
+
+<span class="n">cb5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DiscreteCallback</span><span class="p">(</span><span class="n">condition5</span><span class="p">,</span><span class="w"> </span><span class="n">affect5!</span><span class="p">)</span>
+
+<span class="n">sim_pars5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Dict</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;NS0&quot;</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">                           </span><span class="c">#moles of active sites in bed</span>
+<span class="w">    </span><span class="s">&quot;DSACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">    </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DHACT&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span><span class="w"> </span><span class="mi">130</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w">     </span><span class="c">#J/mol</span>
+<span class="w">    </span><span class="s">&quot;DS&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w">    </span><span class="c">#J/mol/K</span>
+<span class="w">    </span><span class="s">&quot;DH&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="c">#J/mol</span>
+<span class="w">    </span><span class="s">&quot;CB&quot;</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cb5</span>
+<span class="p">)</span>
+
+<span class="n">t5</span><span class="p">,</span><span class="w"> </span><span class="n">FA5</span><span class="p">,</span><span class="w"> </span><span class="n">FB5</span><span class="p">,</span><span class="w"> </span><span class="n">FC5</span><span class="p">,</span><span class="w"> </span><span class="n">FP5</span><span class="p">,</span><span class="w"> </span><span class="n">XA5</span><span class="p">,</span><span class="w"> </span><span class="n">θA5</span><span class="p">,</span><span class="w"> </span><span class="n">θB5</span><span class="p">,</span><span class="w"> </span><span class="n">θC5</span><span class="p">,</span><span class="w"> </span><span class="n">θP5</span><span class="p">,</span><span class="w"> </span><span class="n">θV5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tCSTRmain4</span><span class="p">(</span><span class="n">constants</span><span class="p">,</span><span class="w"> </span><span class="n">sim_pars5</span><span class="p">);</span>
+<span class="n">tLABEL5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;t (s)&quot;</span><span class="w"> </span><span class="s">&quot;FA (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;FB (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;FC (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;FP (mol/s)&quot;</span><span class="w"> </span><span class="s">&quot;XA&quot;</span><span class="w"> </span><span class="s">&quot;θA&quot;</span><span class="w"> </span><span class="s">&quot;θB&quot;</span><span class="w"> </span><span class="s">&quot;θC&quot;</span><span class="w"> </span><span class="s">&quot;θP&quot;</span><span class="w"> </span><span class="s">&quot;θV&quot;</span><span class="p">]</span>
+<span class="n">tDATA5</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">t5</span><span class="o">/</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FA5</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FB5</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FC5</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">FP5</span><span class="o">*</span><span class="mf">1e6</span><span class="w"> </span><span class="n">XA5</span><span class="w"> </span><span class="n">θA5</span><span class="w"> </span><span class="n">θB5</span><span class="w"> </span><span class="n">θC5</span><span class="w"> </span><span class="n">θP5</span><span class="w"> </span><span class="n">θV5</span><span class="p">]</span>
+<span class="n">FLOW_TRANSIENT_5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcat</span><span class="p">(</span><span class="n">tLABEL5</span><span class="p">,</span><span class="w"> </span><span class="n">tDATA5</span><span class="p">);</span>
+
+<span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">&quot;FLOW_TRANSIENT_5.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">writedlm</span><span class="p">(</span><span class="n">io</span><span class="p">,</span><span class="w"> </span><span class="n">FLOW_TRANSIENT_5</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">close</span><span class="p">(</span><span class="n">io</span><span class="p">)</span>
+
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady state flowrates of A, B, C, and P are </span><span class="si">%3.1E</span><span class="s">, </span><span class="si">%3.1E</span><span class="s">, </span><span class="si">%3.1E</span><span class="s">, </span><span class="si">%3.1E</span><span class="s"> mol/s/mol active site </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FA5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FB5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FC5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">FP5</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Fractional Conversion of A is </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">XA5</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;Steady State Coverages of A, B, C, P, and V are </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s">, </span><span class="si">%3.2E</span><span class="s"> </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">θA5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θB5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θC5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θP5</span><span class="p">[</span><span class="k">end</span><span class="p">],</span><span class="w"> </span><span class="n">θV5</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;The turnover frequency for this reaction is approximately </span><span class="si">%3.2E</span><span class="s"> mol/s/mol site.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">FC5</span><span class="p">[</span><span class="k">end</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady state flowrates of A, B, C, and P are 1.0E+00, 2.0E+00, 1.2E-57, 1.0E-06 mol/s/mol active site 
+Fractional Conversion of A is 0.00E+00 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Steady State Coverages of A, B, C, P, and V are 2.86E-49, 5.72E-49, 1.73E-55, 1.00E+00, 0.00E+00 
+The turnover frequency for this reaction is approximately 1.19E-57 mol/s/mol site.
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.11"
+        },
+        kernelOptions: {
+            name: "julia-1.11",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.11'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jesse Q. Bond, Syracuse University
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

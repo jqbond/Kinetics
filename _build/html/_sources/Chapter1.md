@@ -1,0 +1,3 @@
+# Batch Reactor Analysis
+
+This section includes two notebooks that cover the basics of differential and integral analysis of batch reactor data. The first highlights the way that dispersion effects will manifest in batch reactor data, and it discusses a better normalization for reaction rates (per unit active site) and for the extensive size of the system (total number of active sites). The second notebook highlights one example of hidden catalyst deactivation in a batch reactor and discusses how catalyst dynamics are difficult to resolve because batch data are inherently dynamic in nature.   
