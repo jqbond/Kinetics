@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -187,7 +187,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS02_Batch.html">Batch Reactors 02</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter2.html">Lectures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter2.html">Flow Reactor Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS04_Flow.html">Flow Reactors 02</a></li>
 </ul>
@@ -246,7 +246,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/jqbond/CEN587/main?urlpath=tree/BACKGROUND03_Modelling Transients.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/jqbond/NAM29_KineticsWorkshop/main?urlpath=tree/BACKGROUND03_Modelling Transients.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +277,7 @@
       
       
       
-      <li><a href="https://github.com/jqbond/CEN587" target="_blank"
+      <li><a href="https://github.com/jqbond/NAM29_KineticsWorkshop" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/jqbond/CEN587/issues/new?title=Issue%20on%20page%20%2FBACKGROUND03_Modelling Transients.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jqbond/NAM29_KineticsWorkshop/issues/new?title=Issue%20on%20page%20%2FBACKGROUND03_Modelling Transients.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -1128,14 +1128,14 @@ document.write(`
 <p>We will use these two equations as the starting point for the analysis of non-differential packed bed reactors operating with and without dynamic phenomena.</p>
 <p><strong>Packed Bed Reactors at Steady State (and without deactivation)</strong></p>
 <p>One can begin with the general forms developed above:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7af8e13d-0826-4f19-abb1-1b621967a2ab">
-<span class="eqno">()<a class="headerlink" href="#equation-7af8e13d-0826-4f19-abb1-1b621967a2ab" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2a4ca761-6da3-4628-b67a-ed19e43db6da">
+<span class="eqno">()<a class="headerlink" href="#equation-2a4ca761-6da3-4628-b67a-ed19e43db6da" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{\partial C_j}{\partial t} &amp;= -\frac{\rho_B}{\phi} \left(\frac{\partial F_j}{\partial W} - {R_j}^{\prime\prime\prime}\rho_S\right) \\
     \frac{dC_{j,*}}{dt} &amp;= {R_j}^{\prime\prime\prime}\rho_B \rho_S \\
 \end{align}\]</div>
 <p>At steady state, these balances simplify considerably:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22c4520f-4e64-4625-8459-92bfffd9d8bf">
-<span class="eqno">()<a class="headerlink" href="#equation-22c4520f-4e64-4625-8459-92bfffd9d8bf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-95178504-0961-4850-aee6-7a39857d2400">
+<span class="eqno">()<a class="headerlink" href="#equation-95178504-0961-4850-aee6-7a39857d2400" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{dF_j}{dW} &amp;= {R_j}^{\prime\prime\prime}\rho_S \\
     0 &amp;= {R_j}^{\prime\prime\prime} 
 \end{align}\]</div>
@@ -1159,23 +1159,23 @@ document.write(`
 \[\frac{d{F_j}^{\prime\prime\prime}}{d\Theta^{\prime\prime\prime}} = R_j^{\prime\prime\prime}\]</div>
 <p>Where the flowrate is expressed in site time yield units (inverse time), and the balance is always integrated from 0 to 1.</p>
 <p>With these simplifications, for a non-differential PBR without deactivation, the following balances are convenient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ceadfd9a-c0fc-47d4-9d91-41c279a5ba91">
-<span class="eqno">()<a class="headerlink" href="#equation-ceadfd9a-c0fc-47d4-9d91-41c279a5ba91" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a9ba80b2-863d-4d9a-a30b-90283780a94e">
+<span class="eqno">()<a class="headerlink" href="#equation-a9ba80b2-863d-4d9a-a30b-90283780a94e" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{d{F_j}^{\prime\prime\prime}}{d\Theta^{\prime\prime\prime}} &amp;= R_j^{\prime\prime\prime} \\
     0 &amp;= R_{j,*}^{\prime\prime\prime}
 \end{align}\]</div>
 <p><strong>Application to the Mechanism of Interest</strong></p>
 <p>Considering our base mechanism:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06508021-628f-467a-a105-e505ad6bb9e8">
-<span class="eqno">()<a class="headerlink" href="#equation-06508021-628f-467a-a105-e505ad6bb9e8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2d3170b6-d098-48d3-944c-2b952ce8bef7">
+<span class="eqno">()<a class="headerlink" href="#equation-2d3170b6-d098-48d3-944c-2b952ce8bef7" title="Permalink to this equation">#</a></span>\[\begin{align}
     A + * &amp;\rightleftharpoons A_* \\
     B + * &amp;\rightleftharpoons B_* \\
     C + * &amp;\rightleftharpoons C_* \\
     A_* + B_* &amp;\rightleftharpoons C_* + * \\
 \end{align}\]</div>
 <p>If this reaction occurs in a packed bed, we write a bulk species balance on A, B, and C, and we write surface balances on <span class="math notranslate nohighlight">\(A_*\)</span>, <span class="math notranslate nohighlight">\(B_*\)</span>, <span class="math notranslate nohighlight">\(C_*\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8baa7a2-417e-4f27-a9ad-a0492f29d3a7">
-<span class="eqno">()<a class="headerlink" href="#equation-d8baa7a2-417e-4f27-a9ad-a0492f29d3a7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-402d7ed8-82ed-454f-8812-58962b83b5fb">
+<span class="eqno">()<a class="headerlink" href="#equation-402d7ed8-82ed-454f-8812-58962b83b5fb" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{d{F_A}^{\prime \prime \prime}}{d\Theta} &amp;= {R_A}^{\prime \prime \prime} \\
     \frac{d{F_B}^{\prime \prime \prime}}{d\Theta} &amp;= {R_B}^{\prime \prime \prime} \\
     \frac{d{F_C}^{\prime \prime \prime}}{d\Theta} &amp;= {R_C}^{\prime \prime \prime} \\
@@ -1188,8 +1188,8 @@ document.write(`
 \[\theta_V = 1 - \theta_A - \theta_B - \theta_C\]</div>
 <p>And we note that, in this case, solution of the DAE system is unavoidable unless there is a tractable analytical solution for the 3 steady state balances on surface species.  In general, this will not be true, and it is necessary to numerically solve the DAE system written in terms of 6 state variables (which we do below).</p>
 <p>We express net production rates in terms of elementary reaction rates:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4b6375fc-f95a-42cc-9aac-0035cc646d93">
-<span class="eqno">()<a class="headerlink" href="#equation-4b6375fc-f95a-42cc-9aac-0035cc646d93" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6423b5e1-0731-49e7-b323-eb08cff580d9">
+<span class="eqno">()<a class="headerlink" href="#equation-6423b5e1-0731-49e7-b323-eb08cff580d9" title="Permalink to this equation">#</a></span>\[\begin{align}
     {R_A}^{\prime \prime \prime} &amp;= -{r_1}^{\prime \prime \prime} \\
     {R_B}^{\prime \prime \prime} &amp;= -{r_2}^{\prime \prime \prime} \\
     {R_C}^{\prime \prime \prime} &amp;= -{r_3}^{\prime \prime \prime} \\
@@ -1198,8 +1198,8 @@ document.write(`
     {R_{C_*}}^{\prime \prime \prime} &amp;= {r_3}^{\prime \prime \prime} + {r_4}^{\prime \prime \prime} \\
 \end{align}\]</div>
 <p>And we write elementary rate expressions in terms of activities and coverages:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6712ea91-8ab3-439d-88ec-9584375092c3">
-<span class="eqno">()<a class="headerlink" href="#equation-6712ea91-8ab3-439d-88ec-9584375092c3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b2a28692-dfa1-41c6-b856-7cbd3f8f9995">
+<span class="eqno">()<a class="headerlink" href="#equation-b2a28692-dfa1-41c6-b856-7cbd3f8f9995" title="Permalink to this equation">#</a></span>\[\begin{align}
     {r_1}^{\prime \prime \prime} &amp;= k_1a_A\theta_* - k_{-1}\theta_A \\
     {r_2}^{\prime \prime \prime} &amp;= k_2a_B\theta_* - k_{-2}\theta_B \\
     {r_3}^{\prime \prime \prime} &amp;= k_3a_C\theta_* - k_{-3}\theta_C \\
@@ -1335,15 +1335,15 @@ document.write(`
 \[{r}^{\prime \prime \prime} = \frac{k_4 K_1 K_2 a_A a_B - k_{-4}K_3a _C}{\left(1 + K_1a_A + K_2a_B + K_3a_C\right)^2}\]</div>
 <p>With that, the system is simplified considerably:</p>
 <p>We only write balances on A, B, and C, which gives an ODE system expressed in terms of 3 state variables (<span class="math notranslate nohighlight">\(F_A\)</span>, <span class="math notranslate nohighlight">\(F_B\)</span>, and <span class="math notranslate nohighlight">\(F_C\)</span>).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0535df83-6cff-4e82-b7bf-0e6a40359fee">
-<span class="eqno">()<a class="headerlink" href="#equation-0535df83-6cff-4e82-b7bf-0e6a40359fee" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-83f38e71-a5f9-42aa-96f2-d2ba22ab1790">
+<span class="eqno">()<a class="headerlink" href="#equation-83f38e71-a5f9-42aa-96f2-d2ba22ab1790" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{d{F_A}^{\prime \prime \prime}}{d\Theta} &amp;= {R_A}^{\prime \prime \prime} \\
     \frac{d{F_B}^{\prime \prime \prime}}{d\Theta} &amp;= {R_B}^{\prime \prime \prime} \\
     \frac{d{F_C}^{\prime \prime \prime}}{d\Theta} &amp;= {R_C}^{\prime \prime \prime} \\
 \end{align}\]</div>
 <p>We express net production rates for bulk species in terms of the overall reaction rate:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f25a828-fcd7-456c-a208-84b846aba695">
-<span class="eqno">()<a class="headerlink" href="#equation-2f25a828-fcd7-456c-a208-84b846aba695" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f8617d4a-2699-4c2c-a5b7-84753d637e03">
+<span class="eqno">()<a class="headerlink" href="#equation-f8617d4a-2699-4c2c-a5b7-84753d637e03" title="Permalink to this equation">#</a></span>\[\begin{align}
     {R_A}^{\prime \prime \prime} &amp;= -{r}^{\prime \prime \prime} \\
     {R_B}^{\prime \prime \prime} &amp;= -{r}^{\prime \prime \prime} \\
     {R_C}^{\prime \prime \prime} &amp;= {r}^{\prime \prime \prime} \\
@@ -1351,14 +1351,14 @@ document.write(`
 <p>The solution to this system is presented below.</p>
 <p><strong>Dynamic Phenomena in a non-differential Packed Bed (without deactivation)</strong></p>
 <p>One can begin with the general forms developed above:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-451f9afe-5fc4-4f6e-a9d9-0df49638b129">
-<span class="eqno">()<a class="headerlink" href="#equation-451f9afe-5fc4-4f6e-a9d9-0df49638b129" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ebba89ca-f240-491f-bcce-a4f88387948e">
+<span class="eqno">()<a class="headerlink" href="#equation-ebba89ca-f240-491f-bcce-a4f88387948e" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{\partial C_j}{\partial t} &amp;= -\frac{\rho_B}{\phi} \left(\frac{\partial F_j}{\partial W} - {R_j}^{\prime\prime\prime}\rho_S\right) \\
     \frac{dC_{j,*}}{dt} &amp;= {R_j}^{\prime\prime\prime}\rho_B \rho_S \\
 \end{align}\]</div>
 <p>If there is no deactivation, one can assume the density of active sites is constant and arrive at similar forms of the balance equation to those derived for various CSTR and steady state packed bed models.  Specifically, we will express the densities appearing the above balances:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-979fe9e1-9917-4f8d-a697-81a3333119a9">
-<span class="eqno">()<a class="headerlink" href="#equation-979fe9e1-9917-4f8d-a697-81a3333119a9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8147bf43-c21c-4751-9197-c00f42696d78">
+<span class="eqno">()<a class="headerlink" href="#equation-8147bf43-c21c-4751-9197-c00f42696d78" title="Permalink to this equation">#</a></span>\[\begin{align}
     \rho_b = \frac{M_C}{V_R} \\
     \rho_s = \frac{N_S}{M_C}
 \end{align}\]</div>
@@ -1381,8 +1381,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\frac{1}{Q_f}\frac{\partial \frac{F_j}{N_S}}{\partial t} = -\frac{1}{V_R\phi} \left(\frac{\partial F_j}{\partial S} - {R_j}^{\prime\prime\prime}\right)\]</div>
 <p>And expressing:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-30ee0d40-f84a-498e-b995-b744ce4c397c">
-<span class="eqno">()<a class="headerlink" href="#equation-30ee0d40-f84a-498e-b995-b744ce4c397c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0c167bf6-53c2-43ab-b2b6-4bd1e47db8e0">
+<span class="eqno">()<a class="headerlink" href="#equation-0c167bf6-53c2-43ab-b2b6-4bd1e47db8e0" title="Permalink to this equation">#</a></span>\[\begin{align}
     F_j = {F_j}^{\prime\prime\prime} N_S \\
     S   = \Theta N_S
 \end{align}\]</div>
@@ -1407,8 +1407,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\frac{\partial \theta_{j,*}}{dt} = {R_j}^{\prime\prime\prime}\]</div>
 <p>So, for a dynamic packed bed reactor in the absence of catalyst deactivation, we have the following balances:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-85e63e12-9c96-440a-a21f-31560e535689">
-<span class="eqno">()<a class="headerlink" href="#equation-85e63e12-9c96-440a-a21f-31560e535689" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-273d86ea-945f-480f-82a9-523c7f2d9fa1">
+<span class="eqno">()<a class="headerlink" href="#equation-273d86ea-945f-480f-82a9-523c7f2d9fa1" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{\partial {F_j}^{\prime\prime\prime}}{\partial t} &amp;= -\frac{1}{\tau_F} \left(\frac{\partial {F_j}^{\prime\prime\prime}}{\partial \Theta} - {R_j}^{\prime\prime\prime}\right) \\
     \frac{\partial \theta_{j,*}}{dt} &amp;= {R_j}^{\prime\prime\prime}
 \end{align}\]</div>
@@ -1442,8 +1442,8 @@ document.write(`
 </div>
 <p>Notes: The above discretizes the spatial domain of the reactor into 100 steps of equal size.  Solving this problem takes approximately 20 seconds.  The full system includes balances written on 3 species at each of these 100 steps, which gives 300 differential equations.  While a 20 second solution is not time prohibitive for a single simulation, it is considerably longer than the ODE solutions, which generally require only a few miliseconds.  This can begin to present problems when a parameter estimation routine depends on solution of a PDE (method of lines problem) in order to evaluate the objective function at a given parameter set.  We also note that there is about 1% error in this solution along the length of the reactor compared to the numerical solution of the steady state ODE. This arises to do the fact that finite differenes are a rough approximation of the derivative over the spatial step and it will generally require very small steps sizes (~ 1000 steps) to get close to the true steady-state solution.  This is necessarily going to be an accuracy vs. computation time tradeoff.</p>
 <p>The above solution took advantage of assuming a rate determining step to avoid solution of differential equations associated with surface coverages.  This is not always possible, and it is sometimes necessary to instead solve the full set of differential equations corresponding to both bulk and surface species.  This is covered below by writing the following material balances as relevant for all bulk and surface species:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e3d79394-8a44-4442-8114-fdfe41dd5226">
-<span class="eqno">()<a class="headerlink" href="#equation-e3d79394-8a44-4442-8114-fdfe41dd5226" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9184489d-99db-4f25-89e7-2a2bc454d7dc">
+<span class="eqno">()<a class="headerlink" href="#equation-9184489d-99db-4f25-89e7-2a2bc454d7dc" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{\partial {F_j}^{\prime\prime\prime}}{\partial t} &amp;= -\frac{1}{\tau_F} \left(\frac{\partial {F_j}^{\prime\prime\prime}}{\partial \Theta} - {R_j}^{\prime\prime\prime}\right) \\
     \frac{\partial \theta_{j,*}}{dt} &amp;= {R_j}^{\prime\prime\prime}
 \end{align}\]</div>

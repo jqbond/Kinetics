@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'ANALYSIS02_Batch';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lectures" href="Chapter2.html" />
+    <link rel="next" title="Flow Reactor Analysis" href="Chapter2.html" />
     <link rel="prev" title="Batch Reactors 01" href="ANALYSIS01_Batch.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,7 +187,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Batch Reactors 02</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter2.html">Lectures</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter2.html">Flow Reactor Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS04_Flow.html">Flow Reactors 02</a></li>
 </ul>
@@ -246,7 +246,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/jqbond/CEN587/main?urlpath=tree/ANALYSIS02_Batch.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/jqbond/NAM29_KineticsWorkshop/main?urlpath=tree/ANALYSIS02_Batch.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +277,7 @@
       
       
       
-      <li><a href="https://github.com/jqbond/CEN587" target="_blank"
+      <li><a href="https://github.com/jqbond/NAM29_KineticsWorkshop" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/jqbond/CEN587/issues/new?title=Issue%20on%20page%20%2FANALYSIS02_Batch.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jqbond/NAM29_KineticsWorkshop/issues/new?title=Issue%20on%20page%20%2FANALYSIS02_Batch.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -858,8 +858,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[A \longrightarrow B\]</div>
 <p>We perform two identical experiments for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> in a perfectly mixed batch reactor. We confirm that data are obtained under isothermal conditions and full kinetic control. We adjust quantities of catalyst so that each reactor has the same number of active sites, <span class="math notranslate nohighlight">\(N_{S0} = 1 \times 10^{-3}\)</span> moles of active sites. This is important to consider for catalytic reactions because changing the total number of active sites in the reactor is akin to changing the extensive size of the system. We should be mindful of this change when trying to interpret differences in, e.g., time profiles for conversion and yield.  This is common practice in the field, but it is difficult to assign much significance to variation in conversion or yield at a specific time point unless the extensive size of the system (i.e., the number of active sites) is identical; this is rarely ensured in published batch experiments.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b45589d-4745-4edd-b10d-2fa9931d7e1e">
-<span class="eqno">(3)<a class="headerlink" href="#equation-6b45589d-4745-4edd-b10d-2fa9931d7e1e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-24aace4c-f770-4c2d-9852-41d68c2c5a8b">
+<span class="eqno">(3)<a class="headerlink" href="#equation-24aace4c-f770-4c2d-9852-41d68c2c5a8b" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     P       &amp;= 1 \ \mathrm{bar} \\  
     N_{A0}  &amp;= 10 \ \mathrm{moles \ of \ A}\\
@@ -1136,9 +1136,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pt/SiO₂ has α = 1.04 and k =  2.4 1/s 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
+Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 </pre></div>
 </div>
 <img alt="_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" src="_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" /></div>
@@ -2064,9 +2062,7 @@ In experiment 10, we get α = 1.02 and k = 1.37E+00 1/s
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 1, we get k = 1.06E+02 1/s 
 In experiment 2, we get k = 5.29E+01 1/s 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 3, we get k = 3.04E+01 1/s 
+In experiment 3, we get k = 3.04E+01 1/s 
 In experiment 4, we get k = 2.08E+01 1/s 
 In experiment 5, we get k = 1.67E+01 1/s 
 In experiment 6, we get k = 1.50E+01 1/s 
@@ -2137,7 +2133,7 @@ True  α ≈ 1.0, EA ≈ 90 kJ/mol, A ≈ 2.5x10^11 s⁻¹, and k ≈ 13.7 s⁻�
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lectures</p>
+        <p class="prev-next-title">Flow Reactor Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

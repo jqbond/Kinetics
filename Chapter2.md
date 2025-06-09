@@ -1,11 +1,3 @@
-# Lectures
+# Flow Reactor Analysis
 
-This section compiles all lectures presented over the course of a typical semester in my undergraduate course in kinetics and reaction engineering. General topics include:
-
-1. Stoichoimetry
-2. Numerical Methods
-3. Chemical Equilibrium
-4. Material Balances
-5. Optimization
-6. Kinetics and Parameter Estimation
-7. Energy Balances
+This section includes two notebooks that work through analysis of data obtained in differential packed bed reactors. The first presents a typical textbook analysis of steady state reaction rates, and the second illustrate what startup of a packed bed will likely look like in the laboratory, where transient phenomena can make it difficult for us to determine what exactly is an appropriate definition for reaction rate and/or turnover frequency.
