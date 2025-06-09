@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Flow Reactors 01 &#8212; Kinetics and Reaction Engineering</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ANALYSIS03_Flow';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Flow Reactors 02" href="ANALYSIS04_Flow.html" />
+    <link rel="prev" title="Lectures" href="Chapter2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/JQB.png" class="logo__image only-light" alt="Kinetics and Reaction Engineering - Home"/>
+    <script>document.write(`<img src="_static/JQB.png" class="logo__image only-dark" alt="Kinetics and Reaction Engineering - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Kinetics workshop!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter1.html">Batch Reactor Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS01_Batch.html">Batch Reactors 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS02_Batch.html">Batch Reactors 02</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter2.html">Lectures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Flow Reactors 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ANALYSIS04_Flow.html">Flow Reactors 02</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/jqbond/CEN587/main?urlpath=tree/ANALYSIS03_Flow.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jqbond/CEN587" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jqbond/CEN587/issues/new?title=Issue%20on%20page%20%2FANALYSIS03_Flow.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ANALYSIS03_Flow.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Flow Reactors 01</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transient-phenomena-and-the-significance-of-steady-state-space-time-vs-clock-time">Transient phenomena and the significance of steady state (space time vs. clock time)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-textbook-example">A Textbook Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-and-parameter-estimation">Analysis and parameter estimation.</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="flow-reactors-01">
+<h1>Flow Reactors 01<a class="headerlink" href="#flow-reactors-01" title="Link to this heading">#</a></h1>
+<p>This notebook works through textbook data that would be typically presented for kinetic analysis using differential tubular or packed bed reactors. Reaction rates in these systems are inferred from the effluent flowrate of product, and they are compiled in tabular format at various reactant concentrations and reaction temperatures.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">DelimitedFiles</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Printf</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Polynomials</span>
+<span class="k">using</span><span class="w"> </span><span class="n">CairoMakie</span>
+<span class="k">using</span><span class="w"> </span><span class="n">LaTeXStrings</span>
+<span class="k">using</span><span class="w"> </span><span class="n">JLD2</span>
+<span class="k">using</span><span class="w"> </span><span class="n">DataFrames</span>
+<span class="k">using</span><span class="w"> </span><span class="n">NumericalIntegration</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Dierckx</span>
+<span class="k">using</span><span class="w"> </span><span class="n">PrettyTables</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="transient-phenomena-and-the-significance-of-steady-state-space-time-vs-clock-time">
+<h2>Transient phenomena and the significance of steady state (space time vs. clock time)<a class="headerlink" href="#transient-phenomena-and-the-significance-of-steady-state-space-time-vs-clock-time" title="Link to this heading">#</a></h2>
+<p>Measuring a reaction rate is not trivial.</p>
+<p>We should generally anticipate that, for catalytic reactors, the “size” of the reactor, which is best defined as the accessible catalytic surface area or number of accessible active sites, are changing in the time domain. Further, we might actually expect that the structure of the surface itself changes as a function of time under reaction conditions.  As an example, consider an alloy (bimetallic) catalyst where changes in reaction conditions causes surface enrichment of one species relative to the other.  In these cases, a “pristine catalyst” prepared by calcination in air or reduction in H2 might be easy to characterize, but it is not necessarily a good approximation for the catalyst surface under reaction conditions as these surfaces may evolve in time, and the time scales for this evolution might be very short or very long.</p>
+<p>As discussed in the analysis of Batch Reactors (Notebook 01), a batch reactor is an inherently dynamic environment where reaction rates should be expected to change in time over the course of the experiment because the composition of the system is changing over the course of the experiment. It is very difficult to deconvolute time-domain changes in reaction rate (almost inevitable in a batch reactor) from time domain changes in the nature or number of catalytic active sites.  The only way to meaningfully address this is to use systems that allow one to decouple reaction kinetics from reactor dynamics.  This is generally facilitated in flow reactors. Flow reactors will reach steady state at some point, which means that product flow rates and rates of reaction must become time invariant (in an ideal system). In a flow reactor at steady state, one infers kinetic information from changes that occur <em>spatially</em> across the reactor (i.e., as a function of reactor space time insteady of clock time). When one observes changes in clock time in a flow reactor, they provide insights about dynamic phenomena. Quantifying and understanding these dynamics makes it possible to deconvolute kinetic information from things like induction, deactivation, and restructuring.</p>
+<p>Before we do anything else in flow reactor experiments, it is important to establish expectations about how they behave and how we can obtain kinetic information from them.  In considering dynamic phenomena in flow reactors, it is important for us to understand that, just like in a batch reactor, there are inevitable dynamics during transient periods of reactor startup or anytime that we change operating conditions. During this time, we need to consider that the reactor volume is turned over, so the composition in the system is changing, with attendant implications for reaction rate <span class="math notranslate nohighlight">\(r = f(T, P, X)\)</span>; generally, if systems operate at modest GHSV/LHSV, the reactor free volume turns over many times per minute, so these dynamics tend to dissipate quickly.  We also have to expect that the coverage of surface species changes, generally, on time scales of adsorption and surface reaction.  So it may take time for surface coverages to reach steady state, and until surface coverages reach steady state, we will not see time-invariant reaction rates/production rates. How long will these changes take? It depends strongly on the nature of the reaction mechansim, the relative rates of adsorption and reaction, and the surface species involved in the rate determining step.  Are surface species in the RDS simply adsorbed reactants?  If so, their coverage will rapidly become time invariant and one might see steady state behavior within seconds or minutes.  If, on the other hand, species involved in the RDS are only formed through a sequence of relatively slow surface reactions, it may take minutes, hours, or maybe even days for a system to reach steady state.  It is important to understand that this accumulation of surface species is always a part of kinetics in a flow reactor.  If other dynamic phenomena occur, such as deactivation and restructuring, they overlay with these dynamics.  Contrary to batch reactor data, it is often possible to deconvolute the various temporal phenomena to arrive at a reasonable estimate for a reaction rate that can be attributed to a specific active site.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#################################################################</span>
+<span class="c">#  Set of 4 Figure Themes for Makie/CairoMakie                  #</span>
+<span class="c">#################################################################</span>
+
+<span class="c">#################################################################</span>
+<span class="c">#  Defaults for linear axes x,y plots                           #</span>
+<span class="c">#################################################################</span>
+
+<span class="n">theme_linear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Theme</span><span class="p">(</span><span class="w">    </span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Figure Attributes</span>
+<span class="w">    </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">font</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">figure_padding</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Cycling attributes</span>
+<span class="w">    </span><span class="n">Scatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cycle</span><span class="p">([[</span><span class="ss">:linecolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:markercolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:strokecolor</span><span class="p">]</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:marker</span><span class="p">],</span><span class="w"> </span><span class="n">covary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">),</span>
+<span class="w">    </span><span class="p">),</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Axis attributes</span>
+<span class="w">    </span><span class="n">Axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font types</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font sizes</span>
+<span class="w">        </span><span class="n">titlesize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x axis properties</span>
+<span class="w">        </span><span class="n">xscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">identity</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">xminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y axis properties</span>
+<span class="w">        </span><span class="n">yscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">identity</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">yminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x grid properties</span>
+<span class="w">        </span><span class="n">xgridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y grid properties</span>
+<span class="w">        </span><span class="n">ygridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span><span class="w">        </span>
+<span class="w">        </span><span class="n">yminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">    </span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#other axis properties</span>
+<span class="w">        </span><span class="n">spinewidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">aspect</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span>
+<span class="w">     </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Legend attributes</span>
+<span class="w">    </span><span class="n">Legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelfont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelsize</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span>
+<span class="w">        </span><span class="n">framecolor</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:white</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c">#################################################################</span>
+<span class="c">#  Defaults for log-log axes x,y plots                          #</span>
+<span class="c">#################################################################</span>
+
+<span class="n">theme_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Theme</span><span class="p">(</span><span class="w">    </span>
+
+<span class="w">    </span><span class="c">#Figure Attributes</span>
+<span class="w">    </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">font</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">figure_padding</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Cycling attributes</span>
+<span class="w">    </span><span class="n">Scatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cycle</span><span class="p">([[</span><span class="ss">:linecolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:markercolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:strokecolor</span><span class="p">]</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:marker</span><span class="p">],</span><span class="w"> </span><span class="n">covary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">),</span>
+<span class="w">    </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Axis attributes</span>
+<span class="w">    </span><span class="n">Axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font types</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font sizes</span>
+<span class="w">        </span><span class="n">titlesize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x axis properties</span>
+<span class="w">        </span><span class="n">xscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span>
+<span class="w">        </span><span class="n">xminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y axis properties</span>
+<span class="w">        </span><span class="n">yscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span>
+<span class="w">        </span><span class="n">yminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x grid properties</span>
+<span class="w">        </span><span class="n">xgridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y grid properties</span>
+<span class="w">        </span><span class="n">ygridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span><span class="w">        </span>
+<span class="w">        </span><span class="n">yminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">    </span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#other axis properties</span>
+<span class="w">        </span><span class="n">spinewidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">aspect</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Legend attributes</span>
+<span class="w">    </span><span class="n">Legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelfont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelsize</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span>
+<span class="w">        </span><span class="n">framecolor</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:white</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c">#################################################################</span>
+<span class="c">#  Defaults for log x/linear y plots                            #</span>
+<span class="c">#################################################################</span>
+
+<span class="n">theme_logx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Theme</span><span class="p">(</span><span class="w">    </span>
+<span class="w">    </span><span class="c">#Figure Attributes</span>
+<span class="w">    </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">font</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">figure_padding</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Cycling attributes</span>
+<span class="w">    </span><span class="n">Scatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cycle</span><span class="p">([[</span><span class="ss">:linecolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:markercolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:strokecolor</span><span class="p">]</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:marker</span><span class="p">],</span><span class="w"> </span><span class="n">covary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">),</span>
+<span class="w">    </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Axis attributes</span>
+<span class="w">    </span><span class="n">Axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font types</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font sizes</span>
+<span class="w">        </span><span class="n">titlesize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x axis properties</span>
+<span class="w">        </span><span class="n">xscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span>
+<span class="w">        </span><span class="n">xminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y axis properties</span>
+<span class="w">        </span><span class="n">yscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">identity</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">yminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x grid properties</span>
+<span class="w">        </span><span class="n">xgridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y grid properties</span>
+<span class="w">        </span><span class="n">ygridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span><span class="w">        </span>
+<span class="w">        </span><span class="n">yminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">    </span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#other axis properties</span>
+<span class="w">        </span><span class="n">spinewidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">aspect</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Legend attributes</span>
+<span class="w">    </span><span class="n">Legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelfont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelsize</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span>
+<span class="w">        </span><span class="n">framecolor</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:white</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c">#################################################################</span>
+<span class="c">#  Defaults for linear x/log y plots                            #</span>
+<span class="c">#################################################################</span>
+
+<span class="n">theme_logy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Theme</span><span class="p">(</span><span class="w">    </span>
+
+<span class="w">    </span><span class="c">#Figure Attributes</span>
+<span class="w">    </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">font</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">figure_padding</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c">#Cycling attributes</span>
+<span class="w">    </span><span class="n">Scatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cycle</span><span class="p">([[</span><span class="ss">:linecolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:markercolor</span><span class="p">,</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:strokecolor</span><span class="p">]</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">:color</span><span class="p">,</span><span class="w"> </span><span class="ss">:marker</span><span class="p">],</span><span class="w"> </span><span class="n">covary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">),</span>
+<span class="w">    </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Axis attributes</span>
+<span class="w">    </span><span class="n">Axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font types</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelfont</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelfont</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#Font sizes</span>
+<span class="w">        </span><span class="n">titlesize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xlabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ylabelsize</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticklabelsize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x axis properties</span>
+<span class="w">        </span><span class="n">xscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">identity</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<span class="w">        </span><span class="n">xminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xtickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y axis properties</span>
+<span class="w">        </span><span class="n">yscale</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksvisible</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickalign</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticks</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">IntervalsBetween</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span>
+<span class="w">        </span><span class="n">yminorticksvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickalign</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yticksize</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ytickwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorticksize</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminortickwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#x grid properties</span>
+<span class="w">        </span><span class="n">xgridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xgridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">xminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#y grid properties</span>
+<span class="w">        </span><span class="n">ygridvisible</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridvisible</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridstyle</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="ss">:solid</span><span class="p">,</span><span class="w">        </span>
+<span class="w">        </span><span class="n">yminorgridstyle</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridcolor</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray50&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridcolor</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray80&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ygridwidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="n">yminorgridwidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">    </span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c">#other axis properties</span>
+<span class="w">        </span><span class="n">spinewidth</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">aspect</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="p">),</span>
+
+<span class="w">    </span><span class="c">#Legend attributes</span>
+<span class="w">    </span><span class="n">Legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">titlefont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelfont</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Latin Modern Roman 17&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">labelsize</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span>
+<span class="w">        </span><span class="n">framecolor</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="n">backgroundcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:white</span>
+<span class="w">     </span><span class="p">)</span>
+<span class="p">)</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-textbook-example">
+<h2>A Textbook Example<a class="headerlink" href="#a-textbook-example" title="Link to this heading">#</a></h2>
+<p>We are considering a generic catalytic reaction:</p>
+<div class="math notranslate nohighlight">
+\[A + B \longrightarrow C\]</div>
+<p>We would like to learn more about the reaction orders with respect to species A and species B as well as apparent kinetic parameters that will allow us to capture the temperature dependence of reaction rate.  We decide to utilize a packed bed reactor operating under differential conditions to study this reaction.  For this example, we have ensured that the system is free of mass transfer limitations, heat transfer limitations, and there is no catalyst deactivation. We modulate feed compositions and reactor temperature, and we measure effluent compositions using gas chromatography. Our protocol is to allow our reactor to reach steady state such that the system becomes time invariant. We use that data point to estimate a production rate at those conditions. We then change conditions, allow the system to reach a new steady state, use the steady state data to estimate a production rate at the new condition, and repeat until we have explored the operational space of interest.</p>
+<p>The data we compile are placed in a spreadsheet and saved in a .csv format, which we can then easily load into this workbook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#######################################################################</span>
+<span class="c"># Load data obtained in differential packed bed at steady state       #</span>
+<span class="c">#######################################################################</span>
+
+<span class="n">KDATA</span><span class="p">,</span><span class="w"> </span><span class="n">HEADER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readdlm</span><span class="p">(</span><span class="s">&quot;SSKINETICS_Flow.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">,</span><span class="w"> </span><span class="kt">Any</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="n">KDATA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Float64</span><span class="o">.</span><span class="p">(</span><span class="n">KDATA</span><span class="p">)</span>
+<span class="n">CA</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">KDATA</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+<span class="n">rCA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KDATA</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span>
+<span class="n">CB</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">KDATA</span><span class="p">[</span><span class="mi">6</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span>
+<span class="n">rCB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KDATA</span><span class="p">[</span><span class="mi">6</span><span class="o">:</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span>
+<span class="n">T</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">KDATA</span><span class="p">[</span><span class="mi">11</span><span class="o">:</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
+<span class="n">rT</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">KDATA</span><span class="p">[</span><span class="mi">11</span><span class="o">:</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span>
+<span class="p">;</span>
+
+
+<span class="c">########################################################################</span>
+<span class="c"># Load same data in a data frame to pass into nicely formatted table   #</span>
+<span class="c">########################################################################</span>
+
+<span class="n">KDATAFRAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">load_object</span><span class="p">(</span><span class="s">&quot;SSKINETICS_Flow_df&quot;</span><span class="p">)</span>
+<span class="n">pretty_table</span><span class="p">(</span><span class="n">KDATAFRAME</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌────────────┬────────────┬─────────┬────────────┐
+│<span class=" -Color -Color-Bold"> CA (mol/L) </span>│<span class=" -Color -Color-Bold"> CB (mol/L) </span>│<span class=" -Color -Color-Bold">   T (K) </span>│<span class=" -Color -Color-Bold"> rate (1/s) </span>│
+│    Float64 │    Float64 │ Float64 │    Float64 │
+├────────────┼────────────┼─────────┼────────────┤
+│   0.000794 │      0.112 │   450.0 │    6.31e-6 │
+│    0.00944 │      0.112 │   450.0 │   0.000111 │
+│      0.112 │      0.112 │   450.0 │   0.000873 │
+│       1.33 │      0.112 │   450.0 │     0.0144 │
+│       15.8 │      0.112 │   450.0 │      0.159 │
+│      0.112 │   0.000794 │   450.0 │    3.97e-8 │
+│      0.112 │    0.00944 │   450.0 │    1.14e-5 │
+│      0.112 │      0.112 │   450.0 │     0.0011 │
+│      0.112 │       1.33 │   450.0 │      0.128 │
+│      0.112 │       15.8 │   450.0 │       22.7 │
+│      0.112 │      0.112 │   350.0 │    2.62e-6 │
+│      0.112 │      0.112 │   400.0 │   0.000107 │
+│      0.112 │      0.112 │   450.0 │      0.001 │
+│      0.112 │      0.112 │   500.0 │    0.00745 │
+│      0.112 │      0.112 │   550.0 │     0.0305 │
+└────────────┴────────────┴─────────┴────────────┘
+</pre></div>
+</div>
+</div>
+</div>
+<section id="analysis-and-parameter-estimation">
+<h3>Analysis and parameter estimation.<a class="headerlink" href="#analysis-and-parameter-estimation" title="Link to this heading">#</a></h3>
+<p>Above, we have a nicely planned set of experiments wherein <span class="math notranslate nohighlight">\(C_A\)</span>, <span class="math notranslate nohighlight">\(C_B\)</span>, and <span class="math notranslate nohighlight">\(T\)</span> are all independently varied while holding the other two parameters fixed.  This allows us to apply the following linearizations to estimate <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(E_A\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[r = k{C_A}^\alpha{C_B}^\beta\]</div>
+<div class="math notranslate nohighlight">
+\[\log_{10}{(r)} = \log_{10}(k^\prime) + \alpha \log_{10}{(C_A)}\]</div>
+<div class="math notranslate nohighlight">
+\[\log_{10}{(r)} = \log_{10}(k^{\prime \prime}) + \beta \log_{10}{(C_B)}\]</div>
+<div class="math notranslate nohighlight">
+\[\ln{(r)} = \ln(A^\prime) - \frac{E_A}{R}\frac{1}{T}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#######################################################</span>
+<span class="c"># Perform linear regressions                          #</span>
+<span class="c">#######################################################</span>
+
+<span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit</span><span class="p">(</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">CA</span><span class="p">),</span><span class="w"> </span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">rCA</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit</span><span class="p">(</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">CB</span><span class="p">),</span><span class="w"> </span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">rCB</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="n">f3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit</span><span class="p">(</span><span class="mi">1000</span><span class="w"> </span><span class="o">./</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">log</span><span class="o">.</span><span class="p">(</span><span class="n">rT</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#######################################################</span>
+<span class="c"># Generate log-log reaction order plot                #</span>
+<span class="c">#######################################################</span>
+
+<span class="n">set_theme!</span><span class="p">(</span><span class="n">theme_log</span><span class="p">)</span>
+<span class="n">fig1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Figure</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">))</span>
+<span class="n">ax1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig1</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig1</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">yaxisposition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:right</span><span class="p">,</span><span class="w"> </span><span class="n">xaxisposition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:top</span><span class="p">)</span>
+
+<span class="c">#Adjustable Figure properties</span>
+<span class="n">xlim_vals</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">1e-4</span><span class="p">,</span><span class="w"> </span><span class="mf">1e2</span><span class="p">)</span>
+<span class="c"># xtick_vals = [0.01, 0.1, 1, 10]</span>
+<span class="n">ylim_vals</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">1e-8</span><span class="p">,</span><span class="w"> </span><span class="mf">1e2</span><span class="p">)</span>
+<span class="c"># ytick_vals = [0.01, 0.1, 1, 10, 100]</span>
+<span class="n">xscale_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span>
+<span class="n">yscale_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">xlabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;\mathrm{C_j \, (mol \, L^{-1}})&quot;</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">ylabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;\mathrm{r \,(s^{-1})}&quot;</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">xticklabelsvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yticklabelsvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span>
+
+<span class="c">#Automatically updating Figure properties based on above</span>
+<span class="n">xlims!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">xlim_vals</span><span class="p">)</span>
+<span class="n">xlims!</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span><span class="w"> </span><span class="n">xlim_vals</span><span class="p">)</span>
+
+<span class="n">ylims!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">ylim_vals</span><span class="p">)</span>
+<span class="n">ylims!</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span><span class="w"> </span><span class="n">ylim_vals</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xscale_val</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xscale_val</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yscale_val</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yscale_val</span>
+
+<span class="n">scatter!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">CA</span><span class="p">,</span><span class="w"> </span><span class="n">rCA</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;C_A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">marker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:circle</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">strokewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span><span class="w"> </span><span class="n">strokecolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:blue</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:white</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">))</span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">CA</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">.^</span><span class="n">f1</span><span class="o">.</span><span class="p">(</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">CA</span><span class="p">)),</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;</span><span class="se">\a</span><span class="s">lpha = 1.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linestyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:dash</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">scatter!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">CB</span><span class="p">,</span><span class="w"> </span><span class="n">rCB</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;C_B&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">marker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:rect</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">strokewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.25</span><span class="p">,</span><span class="w"> </span><span class="n">strokecolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:red</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:white</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">))</span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">CB</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">.^</span><span class="n">f2</span><span class="o">.</span><span class="p">(</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">CB</span><span class="p">)),</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;</span><span class="se">\b</span><span class="s">eta = 2.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linestyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:dot</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">axislegend</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:lt</span><span class="p">,</span><span class="w"> </span><span class="n">framevisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="n">save</span><span class="p">(</span><span class="s">&quot;FlowOrders.svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fig1</span><span class="p">)</span>
+<span class="n">CairoMakie</span><span class="o">.</span><span class="n">activate!</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;svg&quot;</span><span class="p">)</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#######################################################</span>
+<span class="c"># Generate Arrhenius plot                             #</span>
+<span class="c">#######################################################</span>
+
+<span class="n">set_theme!</span><span class="p">(</span><span class="n">theme_linear</span><span class="p">)</span>
+<span class="n">fig2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Figure</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">))</span>
+<span class="n">ax1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig2</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig2</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">yaxisposition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:right</span><span class="p">,</span><span class="w"> </span><span class="n">xaxisposition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:top</span><span class="p">)</span>
+
+<span class="c">#Adjustable Figure properties</span>
+<span class="n">xlim_vals</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="n">xtick_vals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.75</span><span class="o">:</span><span class="mf">0.25</span><span class="o">:</span><span class="mf">3.0</span>
+<span class="n">ylim_vals</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ytick_vals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">14</span><span class="o">:</span><span class="mi">2</span><span class="o">:-</span><span class="mi">2</span>
+<span class="n">xscale_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">identity</span>
+<span class="n">yscale_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">identity</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">xlabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;1000/T \, (K^{-1})&quot;</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">ylabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">&quot;\ln{(\mathrm{r})}&quot;</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">xticklabelsvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yticklabelsvisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span>
+
+<span class="c">#Automatically updating Figure properties based on above</span>
+<span class="n">xlims!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">xlim_vals</span><span class="p">)</span>
+<span class="n">xlims!</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span><span class="w"> </span><span class="n">xlim_vals</span><span class="p">)</span>
+
+<span class="n">ylims!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">ylim_vals</span><span class="p">)</span>
+<span class="n">ylims!</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span><span class="w"> </span><span class="n">ylim_vals</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xscale_val</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xscale_val</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yscale_val</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yscale_val</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">xticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xtick_vals</span>
+<span class="c">#ax1.xtickformat = value -&gt; [LaTeXString(&quot;10^$value&quot;) for value in [&quot;0.01&quot;, &quot;0.1&quot;, &quot;1&quot;, &quot;10&quot;]]</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xtick_vals</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ytick_vals</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ytick_vals</span>
+
+<span class="n">scatter!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">./</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">log</span><span class="o">.</span><span class="p">(</span><span class="n">rT</span><span class="p">),</span><span class="w"> </span><span class="n">marker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:circle</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">strokewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">strokecolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:blue</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">:white</span><span class="p">,</span><span class="mf">0.0</span><span class="p">))</span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">./</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">f3</span><span class="o">.</span><span class="p">(</span><span class="mi">1000</span><span class="w"> </span><span class="o">./</span><span class="n">T</span><span class="p">),</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">string</span><span class="p">(</span><span class="s">&quot;EA = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="n">f3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*-</span><span class="mf">8.314</span><span class="p">,</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="s">&quot; kJ/mol&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linestyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:dash</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">axislegend</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:rt</span><span class="p">,</span><span class="w"> </span><span class="n">framevisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="n">save</span><span class="p">(</span><span class="s">&quot;FlowBarriers.svg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fig2</span><span class="p">)</span>
+<span class="n">CairoMakie</span><span class="o">.</span><span class="n">activate!</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;svg&quot;</span><span class="p">)</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#######################################################</span>
+<span class="c"># Display reaction orders and Arrhenius Plots         #</span>
+<span class="c">#######################################################</span>
+
+<span class="nd">@printf</span><span class="p">(</span><span class="s">&quot;α = </span><span class="si">%3.2f</span><span class="s">, β = </span><span class="si">%3.2f</span><span class="s">, and EA = </span><span class="si">%3.2f</span><span class="s"> kJ/mol - These are all statistically equal to true parameter values.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">f2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="o">-</span><span class="mf">8.314</span><span class="o">*</span><span class="n">f3</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = 1.02, β = 2.01, and EA = 74.53 kJ/mol - These are all statistically equal to true parameter values.
+</pre></div>
+</div>
+<img alt="_images/255a064f859c1e0f9a8b1e1cb95cdbf30c747e666f209c167b9e78d796bda911.svg" src="_images/255a064f859c1e0f9a8b1e1cb95cdbf30c747e666f209c167b9e78d796bda911.svg" /><img alt="_images/5d8038c2be04b772c081a7a14ea8c8ebca685e9ad2c60629044c09b148e78c1c.svg" src="_images/5d8038c2be04b772c081a7a14ea8c8ebca685e9ad2c60629044c09b148e78c1c.svg" /></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.11"
+        },
+        kernelOptions: {
+            name: "julia-1.11",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.11'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lectures</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ANALYSIS04_Flow.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Flow Reactors 02</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transient-phenomena-and-the-significance-of-steady-state-space-time-vs-clock-time">Transient phenomena and the significance of steady state (space time vs. clock time)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-textbook-example">A Textbook Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-and-parameter-estimation">Analysis and parameter estimation.</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jesse Q. Bond, Syracuse University
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
