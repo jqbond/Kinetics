@@ -144,7 +144,7 @@
     
   
 
-<a class="navbar-brand logo" href="intro.html">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -176,8 +176,8 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Welcome to the Kinetics workshop!
+                <a class="reference internal" href="index.html">
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -887,8 +887,8 @@ document.write(`
 </div>
 <p><strong>Modelling a CSTR (or differential PBR) with catalyst deactivation</strong></p>
 <p>Now that we have a transient model, we can build in catalyst deactivation. One can imagine a few ways to model catalyst deactivation; choices will depend on mathematical convenience as well as insights into the physical nature of deactivation. We consider two approaches beginning with the usual transient balances on the CSTR (assuming a constant bulk fluid density):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-47734b9d-7e2c-4d0d-8c3c-63f068058abe">
-<span class="eqno">()<a class="headerlink" href="#equation-47734b9d-7e2c-4d0d-8c3c-63f068058abe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-10c9419c-059a-4dcb-aa88-90734a406814">
+<span class="eqno">()<a class="headerlink" href="#equation-10c9419c-059a-4dcb-aa88-90734a406814" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{dF_j}{dt} &amp;= \frac{1}{\tau_F}\left(F_{j,f} - F_j + {R_j}^{\prime \prime \prime}N_S\right) \\
     \frac{dN_{j,*}}{dt} &amp;= {R_j}^{\prime \prime \prime}N_S
 \end{align}\]</div>
@@ -903,8 +903,8 @@ document.write(`
 <p>In order to account for the decay in the number of active sites, one would add the above deactivation model as a differential equation to the ODE system described above for the case of a CSTR without catalyst deactivation. Note that, here, since we have made the decision to treat the number of active sites (<span class="math notranslate nohighlight">\(N_S\)</span>) as time-variant, we have not normalized the ODEs by the number of active sites, so balances are written in extensive units.</p>
 <br> 
 <span style="font-size:1.3em;">
-<div class="amsmath math notranslate nohighlight" id="equation-2f04a077-deb5-48b3-a715-fddaeccfce8a">
-<span class="eqno">()<a class="headerlink" href="#equation-2f04a077-deb5-48b3-a715-fddaeccfce8a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b6058ad6-89ed-44f7-8cbf-3f177ed0c86a">
+<span class="eqno">()<a class="headerlink" href="#equation-b6058ad6-89ed-44f7-8cbf-3f177ed0c86a" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{dF_A}{dt} &amp;= \frac{1}{\tau_F}\left(F_{A,f} - F_A + {R_A}^{\prime \prime \prime}N_S\right) \\
     \frac{dF_B}{dt} &amp;= \frac{1}{\tau_F}\left(F_{B,f} - F_B + {R_B}^{\prime \prime \prime}N_S\right) \\
     \frac{dF_C}{dt} &amp;= \frac{1}{\tau_F}\left(F_{C,f} - F_C + {R_P}^{\prime \prime \prime}N_S\right) \\
@@ -925,8 +925,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\theta_V = 1 - \theta_A - \theta_B - \theta_C\]</div>
 <p>We express net production rates in terms of elementary reaction rates as usual:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-34c2b02d-3bb9-46bb-8878-a448ddedb924">
-<span class="eqno">()<a class="headerlink" href="#equation-34c2b02d-3bb9-46bb-8878-a448ddedb924" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-efbbba5e-20a9-4d44-a0db-24de99a98c9d">
+<span class="eqno">()<a class="headerlink" href="#equation-efbbba5e-20a9-4d44-a0db-24de99a98c9d" title="Permalink to this equation">#</a></span>\[\begin{align}
     {R_A}^{\prime \prime \prime} &amp;= -r_1 \\
     {R_B}^{\prime \prime \prime} &amp;= -r_2 \\
     {R_P}^{\prime \prime \prime} &amp;= -r_3 \\
@@ -935,8 +935,8 @@ document.write(`
     {R_{C_*}}^{\prime \prime \prime} &amp;= r_3 + r_4 \\
 \end{align}\]</div>
 <p>And elementary rate expressions are given as functions of activities and coverages.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c14454f2-ae3b-46f4-8ea1-a35ccedec480">
-<span class="eqno">()<a class="headerlink" href="#equation-c14454f2-ae3b-46f4-8ea1-a35ccedec480" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1ffaecf2-a4c9-42dc-8a18-2d0af3b397d6">
+<span class="eqno">()<a class="headerlink" href="#equation-1ffaecf2-a4c9-42dc-8a18-2d0af3b397d6" title="Permalink to this equation">#</a></span>\[\begin{align}
     {r_1}^{\prime \prime \prime} &amp;= k_1a_A\theta_* - k_{-1}\theta_A \\
     {r_2}^{\prime \prime \prime} &amp;= k_2a_B\theta_* - k_{-2}\theta_B \\
     {r_3}^{\prime \prime \prime} &amp;= k_3a_C\theta_* - k_{-3}\theta_C \\
@@ -1144,16 +1144,16 @@ document.write(`
 <p><strong>A different perspective</strong></p>
 <p>An alternative approach is to consider that the number of active sites in the reactor is actually constant, i.e., <span class="math notranslate nohighlight">\(N_S\)</span> is time independent, but that there is accumulation of an inhibitor on the surface that reduces the coverage of reacting species. This is perhaps the more realistic interpretation for cases of deactivation that do not involve restructuring (e.g., sintering), but instead involve the accumulation of inhibitors (e.g., poisons, coke, inert spectators, etc.) on the catalyst surface.  In these cases, the number of active sites does not change, but their accessibility does, and one would observe a decrease in turnover frequency, which would be attributed to a decrease in coverage of reaction intermediates.</p>
 <p>We begin as usual with the transient material balances:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6bd209f2-827d-4ff3-a15d-01aef7a63c85">
-<span class="eqno">()<a class="headerlink" href="#equation-6bd209f2-827d-4ff3-a15d-01aef7a63c85" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7aa7c6e8-7d8c-4534-b7f3-6d7c72529832">
+<span class="eqno">()<a class="headerlink" href="#equation-7aa7c6e8-7d8c-4534-b7f3-6d7c72529832" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{dF_j}{dt} &amp;= \frac{1}{\tau_F}\left(F_{j,f} - F_j + {R_j}^{\prime \prime \prime}N_S\right) \\
     \frac{dN_{j,*}}{dt} &amp;= {R_j}^{\prime \prime \prime}N_S
 \end{align}\]</div>
 <p>In this case, we say that the number of active sites, <span class="math notranslate nohighlight">\(N_S\)</span> remains constant as a function of time on stream, but their accessibility changes due to the accumulation of inhibitors, and this causes a decrease in the observed rate of reaction. With this approach, one needs a time-domain model that captures the increasing fractional coverage of inhibitors as a function of time on stream. Again, there is considerable flexibility in how one might do this, and it is relatively straightforward to incorporate even complex models into the ODE systems that describe transient behavior in a CSTR.</p>
 <p>Our approach is to introduce additional elementary steps that describe the accumulation of inhibitors on the surface.  This is a reasonable model for catalyst poisons or for carbon deposition.  Here we’ll consider the case where adsorbed species A converts to a non-reactive inhibitor, <em>I</em>. In this model, <em>I</em> has the sole function of competitively binding at active sites.</p>
 <p><strong>Mechanism with Inhibitor Accumulation</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-468d8780-d0a4-40d4-9346-db4e47c04597">
-<span class="eqno">()<a class="headerlink" href="#equation-468d8780-d0a4-40d4-9346-db4e47c04597" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4935a97b-3df6-42a9-a417-c665a9cf7c76">
+<span class="eqno">()<a class="headerlink" href="#equation-4935a97b-3df6-42a9-a417-c665a9cf7c76" title="Permalink to this equation">#</a></span>\[\begin{align}
     A + * &amp;\rightleftharpoons A_* \\
     B + * &amp;\rightleftharpoons B_* \\
     C + * &amp;\rightleftharpoons C_* \\
@@ -1170,8 +1170,8 @@ document.write(`
 <p>We then write material balances on all bulk and surface species–including the inhibitor. We add a site balance so that we can calculate the vacancy coverage. This gives a system of differential and algebraic equations, i.e., a DAE system, written in terms of 8 state variables–the molar flowrates of each bulk species, the coverage of all surface species (including the inhibitor), and the coverage of vacant sites:</p>
 <br> 
 <span style="font-size:1.25em;">
-<div class="amsmath math notranslate nohighlight" id="equation-df3f3004-093b-46f3-9fbc-018c400cef84">
-<span class="eqno">()<a class="headerlink" href="#equation-df3f3004-093b-46f3-9fbc-018c400cef84" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aa96fac1-3596-484e-bb3a-7bcdff712589">
+<span class="eqno">()<a class="headerlink" href="#equation-aa96fac1-3596-484e-bb3a-7bcdff712589" title="Permalink to this equation">#</a></span>\[\begin{align}
     \frac{d{F_A}^{\prime \prime \prime}}{dt} &amp;= \frac{1}{\tau_F}\left({F_{A,f}}^{\prime \prime \prime} - {F_A}^{\prime \prime \prime} + {R_A}^{\prime \prime \prime}\right) \\
     \frac{d{F_B}^{\prime \prime \prime}}{dt} &amp;= \frac{1}{\tau_F}\left({F_{B,f}}^{\prime \prime \prime} - {F_B}^{\prime \prime \prime} + {R_B}^{\prime \prime \prime}\right) \\
     \frac{d{F_C}^{\prime \prime \prime}}{dt} &amp;= \frac{1}{\tau_F}\left({F_{C,f}}^{\prime \prime \prime} - {F_C}^{\prime \prime \prime} + {R_C}^{\prime \prime \prime}\right) \\
@@ -1186,8 +1186,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\theta_V = 1 - \theta_A - \theta_B - \theta_C - \theta_I\]</div>
 <p>We express net production rates in terms of elementary reaction rates:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e96c8581-9662-4706-8e1f-79cedc4e5c67">
-<span class="eqno">()<a class="headerlink" href="#equation-e96c8581-9662-4706-8e1f-79cedc4e5c67" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e718f24b-121b-48de-a755-f61712f3f633">
+<span class="eqno">()<a class="headerlink" href="#equation-e718f24b-121b-48de-a755-f61712f3f633" title="Permalink to this equation">#</a></span>\[\begin{align}
     R_A &amp;= -r_1 \\
     R_B &amp;= -r_2 \\
     R_C &amp;= -r_3 \\
@@ -1197,8 +1197,8 @@ document.write(`
     R_{I_*} &amp;= r_5 \\
 \end{align}\]</div>
 <p>With elementary rate expressions given as functions of thermodynamic activities:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4dab2b35-fc2e-4ec5-87b0-73cce3fb7c39">
-<span class="eqno">()<a class="headerlink" href="#equation-4dab2b35-fc2e-4ec5-87b0-73cce3fb7c39" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2c000ced-abb1-4162-89e0-bbc135c58d9e">
+<span class="eqno">()<a class="headerlink" href="#equation-2c000ced-abb1-4162-89e0-bbc135c58d9e" title="Permalink to this equation">#</a></span>\[\begin{align}
     r_1 &amp;= k_1a_A\theta_* - k_{-1}\theta_A \\
     r_2 &amp;= k_2a_B\theta_* - k_{-2}\theta_B \\
     r_3 &amp;= k_3a_P\theta_* - k_{-3}\theta_C \\
