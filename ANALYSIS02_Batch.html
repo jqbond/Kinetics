@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -858,8 +858,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[A \longrightarrow B\]</div>
 <p>We perform two identical experiments for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> in a perfectly mixed batch reactor. We confirm that data are obtained under isothermal conditions and full kinetic control. We adjust quantities of catalyst so that each reactor has the same number of active sites, <span class="math notranslate nohighlight">\(N_{S0} = 1 \times 10^{-3}\)</span> moles of active sites. This is important to consider for catalytic reactions because changing the total number of active sites in the reactor is akin to changing the extensive size of the system. We should be mindful of this change when trying to interpret differences in, e.g., time profiles for conversion and yield.  This is common practice in the field, but it is difficult to assign much significance to variation in conversion or yield at a specific time point unless the extensive size of the system (i.e., the number of active sites) is identical; this is rarely ensured in published batch experiments.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9da4fb07-dd29-4e74-bd67-8869d30c65e4">
-<span class="eqno">(3)<a class="headerlink" href="#equation-9da4fb07-dd29-4e74-bd67-8869d30c65e4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bb7bff98-8cbd-4f5c-87a4-c87ffae43d41">
+<span class="eqno">(3)<a class="headerlink" href="#equation-bb7bff98-8cbd-4f5c-87a4-c87ffae43d41" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     P       &amp;= 1 \ \mathrm{bar} \\  
     N_{A0}  &amp;= 10 \ \mathrm{moles \ of \ A}\\
@@ -1136,9 +1136,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pt/SiO₂ has α = 1.04 and k =  2.4 1/s 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
+Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 </pre></div>
 </div>
 <img alt="_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" src="_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" /></div>
@@ -1253,7 +1251,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For first order kinetics, Pt/SiO₂ has k = 2.8 1/s 
-For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
 </pre></div>
 </div>
 <img alt="_images/1181be5d6752cf48100d6303c0d6ba212bab97512da2b11a17e649b70f57565a.svg" src="_images/1181be5d6752cf48100d6303c0d6ba212bab97512da2b11a17e649b70f57565a.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CairoMakie.Screen{IMAGE}
@@ -1354,10 +1354,12 @@ For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For second order kinetics, Pt/SiO₂ has k = 10.3 1/s 
-For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </pre></div>
 </div>
-<img alt="_images/a232ffc0176f17e048a0a8af9ae362d5066847f7ff41b8e1dc2f6d94d80e7293.svg" src="_images/a232ffc0176f17e048a0a8af9ae362d5066847f7ff41b8e1dc2f6d94d80e7293.svg" /></div>
+<img alt="_images/a232ffc0176f17e048a0a8af9ae362d5066847f7ff41b8e1dc2f6d94d80e7293.svg" src="_images/a232ffc0176f17e048a0a8af9ae362d5066847f7ff41b8e1dc2f6d94d80e7293.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1672,7 +1674,9 @@ Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 1, we get α = 1.04 and k = 2.70E+00 1/s 
-In experiment 2, we get α = 1.04 and k = 2.68E+00 1/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 2, we get α = 1.04 and k = 2.68E+00 1/s 
 In experiment 3, we get α = 0.99 and k = 2.48E+00 1/s 
 In experiment 4, we get α = 1.06 and k = 2.78E+00 1/s 
 </pre></div>
@@ -1765,9 +1769,7 @@ In experiment 4, we get α = 1.06 and k = 2.78E+00 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Regressing all data gives a first order rate constant of 2.82 1/s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The true rate constant at 450K constant is 2.8 1/s
+The true rate constant at 450K constant is 2.8 1/s
 </pre></div>
 </div>
 <img alt="_images/2644dc5b23d1af833cfb0b2c1e55ff819441a4a4fc7bc7dd8a1535c041d83421.svg" src="_images/2644dc5b23d1af833cfb0b2c1e55ff819441a4a4fc7bc7dd8a1535c041d83421.svg" /></div>
@@ -2065,7 +2067,9 @@ In experiment 10, we get α = 1.02 and k = 1.37E+00 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 1, we get k = 1.06E+02 1/s 
-In experiment 2, we get k = 5.29E+01 1/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 2, we get k = 5.29E+01 1/s 
 In experiment 3, we get k = 3.04E+01 1/s 
 In experiment 4, we get k = 2.08E+01 1/s 
 In experiment 5, we get k = 1.67E+01 1/s 
@@ -2204,7 +2208,7 @@ By Jesse Q. Bond, Syracuse University
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2025.
       <br/>
     
   </p>
