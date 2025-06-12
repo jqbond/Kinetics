@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -481,42 +481,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="n">opening</span> <span class="n">package</span> <span class="n">file</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">compiled</span>\<span class="n">v1</span><span class="mf">.11</span>\<span class="n">MathTeXEngine</span>\<span class="n">eCCtS_yWaUM_1</span><span class="o">.</span><span class="n">dll</span><span class="p">:</span> <span class="n">The</span> <span class="n">paging</span> <span class="n">file</span> <span class="ow">is</span> <span class="n">too</span> <span class="n">small</span> <span class="k">for</span> <span class="n">this</span> <span class="n">operation</span> <span class="n">to</span> <span class="n">complete</span><span class="o">.</span> 
-
-
-<span class="ne">Stacktrace</span>:
-  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">_include_from_serialized</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">path</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">ocachepath</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">depmods</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">Any</span><span class="p">},</span> <span class="n">ignore_native</span><span class="p">::</span><span class="n">Nothing</span><span class="p">;</span> <span class="n">register</span><span class="p">::</span><span class="n">Bool</span><span class="p">)</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1245</span>
-  <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">_include_from_serialized</span> <span class="p">(</span><span class="n">repeats</span> <span class="mi">2</span> <span class="n">times</span><span class="p">)</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1210</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
-  <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">_require_search_from_serialized</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">sourcepath</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">build_id</span><span class="p">::</span><span class="n">UInt128</span><span class="p">,</span> <span class="n">stalecheck</span><span class="p">::</span><span class="n">Bool</span><span class="p">;</span> <span class="n">reasons</span><span class="p">::</span><span class="n">Dict</span><span class="p">{</span><span class="n">String</span><span class="p">,</span> <span class="n">Int64</span><span class="p">},</span> <span class="n">DEPOT_PATH</span><span class="p">::</span><span class="n">Vector</span><span class="p">{</span><span class="n">String</span><span class="p">})</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2041</span>
-  <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">_require</span><span class="p">(</span><span class="n">pkg</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">env</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2527</span>
-  <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">__require_prelocked</span><span class="p">(</span><span class="n">uuidkey</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">env</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2388</span>
-  <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="c1">#invoke_in_world#3</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1089</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
-  <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">invoke_in_world</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1086</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
-  <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="n">_require_prelocked</span><span class="p">(</span><span class="n">uuidkey</span><span class="p">::</span><span class="n">Base</span><span class="o">.</span><span class="n">PkgId</span><span class="p">,</span> <span class="n">env</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2375</span>
-  <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2314</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="n">macro</span> <span class="n">expansion</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">lock</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">273</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="n">__require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2271</span>
- <span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="c1">#invoke_in_world#3</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1089</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="n">invoke_in_world</span>
-    <span class="o">@</span> <span class="o">.</span>\<span class="n">essentials</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1086</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="n">require</span><span class="p">(</span><span class="n">into</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">mod</span><span class="p">::</span><span class="n">Symbol</span><span class="p">)</span>
-    <span class="o">@</span> <span class="n">Base</span> <span class="o">.</span>\<span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">2260</span>
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="figure-formatting">
@@ -924,8 +888,8 @@ document.write(`
 </ol>
 <p>Samples are withdrawn periodically, and we analyze them with gas-chromatography. As is common practice, we use our GC data to determine the concentration of reactant and product as a function of reaction time. We collect the data, store it in a spreadsheet, and save it as a .csv file that can be loaded into this notebook for analysis.</p>
 <p><strong>Experimental Conditions</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-74e7e262-8f5f-4fce-b9df-ecc248b45eb6">
-<span class="eqno">(1)<a class="headerlink" href="#equation-74e7e262-8f5f-4fce-b9df-ecc248b45eb6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-55333f41-8c7c-46a8-86d2-5e7aa5f6ae8a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-55333f41-8c7c-46a8-86d2-5e7aa5f6ae8a" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -1381,8 +1345,8 @@ document.write(`
 <section id="example-02-applying-the-analysis-to-multiple-catalysts">
 <h2>Example 02: Applying the Analysis to Multiple Catalysts<a class="headerlink" href="#example-02-applying-the-analysis-to-multiple-catalysts" title="Link to this heading">#</a></h2>
 <p>We see good fits to the data, we conclude that the reaction is first order over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>, and we have estimated a rate constant for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>. This is the gold standard for kinetic analysis! We are naturally excited to benchmark the activity of our other catalysts using this same methodology. This reaction is not known to be structure-sensitive on Pt, but we hypothesize that we can tune the performance of our Pt catalyst by changing the support from <span class="math notranslate nohighlight">\(\mathrm{SiO_2}\)</span> to other materials like activated <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(\mathrm{\gamma}\)</span>-<span class="math notranslate nohighlight">\(\mathrm{Al_2O_3}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{ZrO_2}\)</span>, and <span class="math notranslate nohighlight">\(\mathrm{TiO_2}\)</span>. We accordingly prepare a series of 3 wt% Pt catalysts on these 5 different supports, and we test their activity in this reaction using the same batch reactor described above. <em><strong>We will repeat this experiment as is commonly reported in the literature – we will systematically change only the identity of the catalyst and keep all of our operating parameters constant.</strong></em>  So, in all cases, we have the same conditions as in the original experiment:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fadde711-762f-49c3-a383-3e55eb1f7a43">
-<span class="eqno">(2)<a class="headerlink" href="#equation-fadde711-762f-49c3-a383-3e55eb1f7a43" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e7e88a42-ff06-4ccf-8a0b-39975107db88">
+<span class="eqno">(2)<a class="headerlink" href="#equation-e7e88a42-ff06-4ccf-8a0b-39975107db88" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -1923,7 +1887,9 @@ For Pt/Al₂O₃, k = 1.69E-03 s⁻¹
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/ZrO₂, A = 2.41E+06 s⁻¹ and EA = 90.74 kJ/mol 
-For  Pt/TiO₂, A = 5.50E+06 s⁻¹ and EA = 91.22 kJ/mol 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/TiO₂, A = 5.50E+06 s⁻¹ and EA = 91.22 kJ/mol 
 For  Pt/SiO₂, A = 1.53E+07 s⁻¹ and EA = 92.38 kJ/mol 
 For     Pt/C, A = 5.45E+07 s⁻¹ and EA = 92.93 kJ/mol 
 For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol 
