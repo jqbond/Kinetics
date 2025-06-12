@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -859,8 +859,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[A \longrightarrow B\]</div>
 <p>We perform two identical experiments for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> in a perfectly mixed batch reactor. We confirm that data are obtained under isothermal conditions and full kinetic control. We adjust quantities of catalyst so that each reactor has the same number of active sites, <span class="math notranslate nohighlight">\(N_{S0} = 1 \times 10^{-3}\)</span> moles of active sites. This is important to consider for catalytic reactions because changing the total number of active sites in the reactor is akin to changing the extensive size of the system. We should be mindful of this change when trying to interpret differences in, e.g., time profiles for conversion and yield.  This is common practice in the field, but it is difficult to assign much significance to variation in conversion or yield at a specific time point unless the extensive size of the system (i.e., the number of active sites) is identical; this is rarely ensured in published batch experiments.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-427601df-9de7-4019-bbfa-6e7eb3830486">
-<span class="eqno">(3)<a class="headerlink" href="#equation-427601df-9de7-4019-bbfa-6e7eb3830486" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b2ebfadf-ae05-44cb-b2b2-7dbbba26b750">
+<span class="eqno">(3)<a class="headerlink" href="#equation-b2ebfadf-ae05-44cb-b2b2-7dbbba26b750" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     P       &amp;= 1 \ \mathrm{bar} \\  
     N_{A0}  &amp;= 10 \ \mathrm{moles \ of \ A}\\
@@ -932,17 +932,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: Cannot open &#39;BR02A.csv&#39;: not a file
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">readdlm_auto</span><span class="p">(</span><span class="nb">input</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">dlm</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">T</span><span class="p">::</span><span class="n">Type</span><span class="p">,</span> <span class="n">eol</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">auto</span><span class="p">::</span><span class="n">Bool</span><span class="p">;</span> <span class="n">opts</span><span class="p">::</span><span class="nd">@Kwargs</span><span class="p">{</span><span class="n">header</span><span class="p">::</span><span class="n">Bool</span><span class="p">})</span>
-   <span class="o">@</span> <span class="n">DelimitedFiles</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">234</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">readdlm_auto</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">233</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#readdlm#6</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">226</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="mi">5</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌────────────┬─────────┬───────────┬────────────┬─────────┬───────────┐
+│<span class=" -Color -Color-Bold"> Pt/SiO2 -&gt; </span>│<span class=" -Color -Color-Bold"> t1 (ks) </span>│<span class=" -Color -Color-Bold"> N_A (mol) </span>│<span class=" -Color -Color-Bold"> Ru/SiO2 -&gt; </span>│<span class=" -Color -Color-Bold"> t2 (ks) </span>│<span class=" -Color -Color-Bold"> N_A (mol) </span>│
+├────────────┼─────────┼───────────┼────────────┼─────────┼───────────┤
+│            │     0.0 │      10.0 │            │     0.0 │      10.0 │
+│            │   150.0 │    9.1819 │            │    50.0 │   9.39569 │
+│            │   300.0 │   8.86181 │            │   100.0 │   8.65409 │
+│            │   600.0 │   8.60128 │            │   200.0 │   7.79267 │
+│            │   900.0 │   7.73977 │            │   300.0 │   6.91249 │
+│            │  1200.0 │   7.00153 │            │   400.0 │   6.55302 │
+│            │  1500.0 │   6.80988 │            │   500.0 │   5.49091 │
+│            │  1800.0 │   5.99175 │            │   700.0 │   4.93391 │
+│            │  2100.0 │   5.13643 │            │   900.0 │   4.11962 │
+│            │  2500.0 │   5.04922 │            │  1200.0 │   3.45721 │
+└────────────┴─────────┴───────────┴────────────┴─────────┴───────────┘
 </pre></div>
 </div>
 </div>
@@ -1013,7 +1016,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/18d89bdc73335b0e4e570e4f85a6fb8fdbcb865f0f9e21025b06203255bffe49.svg" src="../_images/18d89bdc73335b0e4e570e4f85a6fb8fdbcb865f0f9e21025b06203255bffe49.svg" /></div>
+<img alt="../_images/87aaff861f780de279b777895bdaa583bc269fdab1b871887e4c00b9e0cf226e.svg" src="../_images/87aaff861f780de279b777895bdaa583bc269fdab1b871887e4c00b9e0cf226e.svg" /></div>
 </div>
 <section id="applying-a-differential-data-analysis-using-appropriate-scaling">
 <h3>Applying a differential data analysis using appropriate scaling<a class="headerlink" href="#applying-a-differential-data-analysis-using-appropriate-scaling" title="Link to this heading">#</a></h3>
@@ -1137,7 +1140,7 @@ document.write(`
 Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 </pre></div>
 </div>
-<img alt="../_images/ddb8b76c50e7f7db7d885e2c4a873d3f6afea5688e04f9b43facfdb0b631de25.svg" src="../_images/ddb8b76c50e7f7db7d885e2c4a873d3f6afea5688e04f9b43facfdb0b631de25.svg" /></div>
+<img alt="../_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" src="../_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" /></div>
 </div>
 </section>
 <section id="results-of-differential-analysis">
@@ -1252,7 +1255,7 @@ Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
 </pre></div>
 </div>
-<img alt="../_images/0068c322256d40ca7c34bc2b1866cf0cccd0683c3057b59ab4eb8bfefc1713b2.svg" src="../_images/0068c322256d40ca7c34bc2b1866cf0cccd0683c3057b59ab4eb8bfefc1713b2.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CairoMakie.Screen{IMAGE}
+<img alt="../_images/1181be5d6752cf48100d6303c0d6ba212bab97512da2b11a17e649b70f57565a.svg" src="../_images/1181be5d6752cf48100d6303c0d6ba212bab97512da2b11a17e649b70f57565a.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CairoMakie.Screen{IMAGE}
 </pre></div>
 </div>
 </div>
@@ -1353,7 +1356,7 @@ For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
 For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </pre></div>
 </div>
-<img alt="../_images/4761a7521291813659e7b2f1b3eea063d7648faaee105dfa842da1fde853555a.svg" src="../_images/4761a7521291813659e7b2f1b3eea063d7648faaee105dfa842da1fde853555a.svg" /></div>
+<img alt="../_images/a232ffc0176f17e048a0a8af9ae362d5066847f7ff41b8e1dc2f6d94d80e7293.svg" src="../_images/a232ffc0176f17e048a0a8af9ae362d5066847f7ff41b8e1dc2f6d94d80e7293.svg" /></div>
 </div>
 </section>
 </section>
@@ -1471,7 +1474,7 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
 </pre></div>
 </div>
-<img alt="../_images/1640eb9fe7cf830e43316455575d875a331613bc03a0b4fa4ea96b5977e7a54e.svg" src="../_images/1640eb9fe7cf830e43316455575d875a331613bc03a0b4fa4ea96b5977e7a54e.svg" /></div>
+<img alt="../_images/db4588a56ef59b51b0af89f8b4455841a8755f5bdc6222a843d204bb17bab1c9.svg" src="../_images/db4588a56ef59b51b0af89f8b4455841a8755f5bdc6222a843d204bb17bab1c9.svg" /></div>
 </div>
 </section>
 </section>
@@ -1565,7 +1568,7 @@ Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/537518b770351dc4064f3fe0e835d86d7ac925b1727fd60bbe5f6bd6572de142.svg" src="../_images/537518b770351dc4064f3fe0e835d86d7ac925b1727fd60bbe5f6bd6572de142.svg" /></div>
+<img alt="../_images/f539ad2cfe113e595ceed19e255914457ec0e5ff4edc1b135ecea5b7b231f619.svg" src="../_images/f539ad2cfe113e595ceed19e255914457ec0e5ff4edc1b135ecea5b7b231f619.svg" /></div>
 </div>
 <section id="interpreting-replicates-for-mathrm-pt-sio-2">
 <h3>Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span><a class="headerlink" href="#interpreting-replicates-for-mathrm-pt-sio-2" title="Link to this heading">#</a></h3>
@@ -1673,7 +1676,7 @@ In experiment 3, we get α = 0.99 and k = 2.48E+00 1/s
 In experiment 4, we get α = 1.06 and k = 2.78E+00 1/s 
 </pre></div>
 </div>
-<img alt="../_images/2d12c9a704ffcb68ea09561691371b07d2d81be4e5b8db7d06b8f72d48d40d1f.svg" src="../_images/2d12c9a704ffcb68ea09561691371b07d2d81be4e5b8db7d06b8f72d48d40d1f.svg" /></div>
+<img alt="../_images/94d63e37b066e93f439528747127bd53481c88c181e8cbc07b5c75733062ff56.svg" src="../_images/94d63e37b066e93f439528747127bd53481c88c181e8cbc07b5c75733062ff56.svg" /></div>
 </div>
 <p>Because each run shows similar behavior, we can treat this as one large data set and regress a single mean rate constant that does a pretty good job of describing kinetics.</p>
 <div class="cell docutils container">
@@ -1764,7 +1767,7 @@ In experiment 4, we get α = 1.06 and k = 2.78E+00 1/s
 The true rate constant at 450K constant is 2.8 1/s
 </pre></div>
 </div>
-<img alt="../_images/ca505cb5e1cbfb48122a74d6a76dee727e91faef37a0e6876fc1bb15120e3ec5.svg" src="../_images/ca505cb5e1cbfb48122a74d6a76dee727e91faef37a0e6876fc1bb15120e3ec5.svg" /></div>
+<img alt="../_images/2644dc5b23d1af833cfb0b2c1e55ff819441a4a4fc7bc7dd8a1535c041d83421.svg" src="../_images/2644dc5b23d1af833cfb0b2c1e55ff819441a4a4fc7bc7dd8a1535c041d83421.svg" /></div>
 </div>
 </section>
 </section>
@@ -1857,7 +1860,7 @@ The true rate constant at 450K constant is 2.8 1/s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5c93b3e719bf49e2f6f6c2b80d3ca43c7bae3e1676a0ba4162d0ea6f2e906629.svg" src="../_images/5c93b3e719bf49e2f6f6c2b80d3ca43c7bae3e1676a0ba4162d0ea6f2e906629.svg" /></div>
+<img alt="../_images/a2511c1dd45e7d02d7d39953f918cd005e31983a871f0014665c3e7aec863a15.svg" src="../_images/a2511c1dd45e7d02d7d39953f918cd005e31983a871f0014665c3e7aec863a15.svg" /></div>
 </div>
 <section id="some-observations">
 <h3>Some observations<a class="headerlink" href="#some-observations" title="Link to this heading">#</a></h3>
@@ -1983,7 +1986,7 @@ In experiment 9, we get α = 1.04 and k = 1.38E+00 1/s
 In experiment 10, we get α = 1.02 and k = 1.37E+00 1/s 
 </pre></div>
 </div>
-<img alt="../_images/bdc9710838309bce1b8a44748b9e394300842bbeb4a5e0daed1f3e34a1bad73b.svg" src="../_images/bdc9710838309bce1b8a44748b9e394300842bbeb4a5e0daed1f3e34a1bad73b.svg" /></div>
+<img alt="../_images/c47ff571f0345bd623249b87171eb9971bebc0aa1133e0ae3e8af81590e98025.svg" src="../_images/c47ff571f0345bd623249b87171eb9971bebc0aa1133e0ae3e8af81590e98025.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2072,7 +2075,7 @@ First α ≈ 2.0, EA ≈ 70 kJ/mol, A ≈ 1x10^9  s⁻¹, and k ≈ 13.3 s⁻¹
 True  α ≈ 1.0, EA ≈ 90 kJ/mol, A ≈ 2.5x10^11 s⁻¹, and k ≈ 13.7 s⁻¹ 
 </pre></div>
 </div>
-<img alt="../_images/b21bc6779dfebbb6a92d17891e7a10f801cce8532074c08c52fd0c2713655701.svg" src="../_images/b21bc6779dfebbb6a92d17891e7a10f801cce8532074c08c52fd0c2713655701.svg" /></div>
+<img alt="../_images/d644d5d7cdc49ed99f958f052cbb1d7cd166945b060ed4f6d65e85630f0c7a3a.svg" src="../_images/d644d5d7cdc49ed99f958f052cbb1d7cd166945b060ed4f6d65e85630f0c7a3a.svg" /></div>
 </div>
 </section>
 </section>

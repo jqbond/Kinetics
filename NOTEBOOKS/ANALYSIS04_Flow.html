@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -887,21 +887,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: Cannot open &#39;FLOW_TRANSIENT_1.csv&#39;: not a file
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">readdlm_auto</span><span class="p">(</span><span class="nb">input</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">dlm</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">T</span><span class="p">::</span><span class="n">Type</span><span class="p">,</span> <span class="n">eol</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">auto</span><span class="p">::</span><span class="n">Bool</span><span class="p">;</span> <span class="n">opts</span><span class="p">::</span><span class="nd">@Kwargs</span><span class="p">{</span><span class="n">header</span><span class="p">::</span><span class="n">Bool</span><span class="p">})</span>
-   <span class="o">@</span> <span class="n">DelimitedFiles</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">234</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">readdlm_auto</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">233</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#readdlm#6</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">226</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">6</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1036,7 +1021,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p><img alt="NOTEBOOKS/figA.svg" src="NOTEBOOKS/figA.svg" /></p>
+<p><img alt="../_images/figA.svg" src="../_images/figA.svg" /></p>
 <section id="dynamics-in-flow-reactors">
 <h3>Dynamics in Flow Reactors<a class="headerlink" href="#dynamics-in-flow-reactors" title="Link to this heading">#</a></h3>
 <p>With these visualizations in mind, we now would like to determine which is the most active catalyst and why. Let’s start the analysis by considering the observed dynamics of the <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> catalyst.  We’ll then work through similar analyses for the remaining two catalysts.</p>
@@ -1112,10 +1097,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bdfeda74e2a2a21513b1af080d5648e4f6b19994d9c3c89dd860ed901634ac59.svg" src="../_images/bdfeda74e2a2a21513b1af080d5648e4f6b19994d9c3c89dd860ed901634ac59.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At Steady State, over Pt/SiO₂, we observe: 
-FA = 1.00E+05 s⁻¹ 
+<img alt="../_images/7fa3a6ae612c1196363dcb99e73dd8305798e08a85b87fc99430af79e3a3a834.svg" src="../_images/7fa3a6ae612c1196363dcb99e73dd8305798e08a85b87fc99430af79e3a3a834.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At Steady State, over Pt/SiO₂, we observe: 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FA = 1.00E+05 s⁻¹ 
 FB = 2.00E+05 s⁻¹ 
-FC = 0.106 s⁻¹ 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FC = 0.106 s⁻¹ 
 XA = 1.06E-06 
 r  ≈ 0.106 s⁻¹
 </pre></div>
@@ -1211,7 +1200,7 @@ r  ≈ 0.106 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/31404fa049e92f3912001bdd6d8a13ed527d8aac487c908f09df211e15037448.svg" src="../_images/31404fa049e92f3912001bdd6d8a13ed527d8aac487c908f09df211e15037448.svg" /></div>
+<img alt="../_images/938be4df4b3ab5b30e66510f4cded78a2d2b3f26ac70eb0e15e100b69d9c7c80.svg" src="../_images/938be4df4b3ab5b30e66510f4cded78a2d2b3f26ac70eb0e15e100b69d9c7c80.svg" /></div>
 </div>
 <section id="observations">
 <h3>Observations<a class="headerlink" href="#observations" title="Link to this heading">#</a></h3>
@@ -1283,7 +1272,7 @@ r  ≈ 0.106 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/69b2303684fe7593d97aa1103a2e5de61165fcff7d22ff54b3aaffb4311e519b.svg" src="../_images/69b2303684fe7593d97aa1103a2e5de61165fcff7d22ff54b3aaffb4311e519b.svg" /></div>
+<img alt="../_images/fa82005ba0d80da2a411706ead6a1b7241c84e5788071ac112656e70b1a26dd6.svg" src="../_images/fa82005ba0d80da2a411706ead6a1b7241c84e5788071ac112656e70b1a26dd6.svg" /></div>
 </div>
 </section>
 <section id="id1">
@@ -1355,7 +1344,7 @@ r  ≈ 0.106 s⁻¹
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For Catalyst 1, our best estimate of a TOF is r ≈ 0.106 s⁻¹ 
 </pre></div>
 </div>
-<img alt="../_images/b150e873339e7d1160c27bfb52bfc99d307c4246ddc7b4fcdb0a53969b742972.svg" src="../_images/b150e873339e7d1160c27bfb52bfc99d307c4246ddc7b4fcdb0a53969b742972.svg" /></div>
+<img alt="../_images/729b178c0c611ba02c1884211e0e8e4392c6569328373ae275f9eb144aad34ca.svg" src="../_images/729b178c0c611ba02c1884211e0e8e4392c6569328373ae275f9eb144aad34ca.svg" /></div>
 </div>
 <p>One might also note here that the true turnover frequency for this reaction given by simulation data is 0.106 inverse seconds.  Inverting that turnover frequency gives a time scale of roughly 10 seconds, which is the time scale over which this particular system is observed to reach steady state.  They are not exactly equivalent, as steady state is really determined by when the coverages of species participating in the RDS become time invariant, but the two should roughly agree. Generally, one might see a system reach steady state faster than the time scale indicated by inverse turnover frequency, but it should not take longer than this time scale to reach steady state.</p>
 </section>
@@ -1433,7 +1422,7 @@ r  ≈ 0.106 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8b51864c88d0539183a3557a58a1b31f7507cd40bceb258d1e18341155100f9b.svg" src="../_images/8b51864c88d0539183a3557a58a1b31f7507cd40bceb258d1e18341155100f9b.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At Steady State, over Ru/SiO₂, we observe: 
+<img alt="../_images/22ae5fecde265e0cceb92ff103ef10759b6e5879a064ba7b42c78abb3eb3944b.svg" src="../_images/22ae5fecde265e0cceb92ff103ef10759b6e5879a064ba7b42c78abb3eb3944b.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At Steady State, over Ru/SiO₂, we observe: 
 FA = 1.00E+05 s⁻¹ 
 FB = 2.00E+05 s⁻¹ 
 FC = 0.339 s⁻¹ 
@@ -1527,7 +1516,7 @@ r  ≈ 0.339 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6407bc5d427d0e1b931fe6614b7bc69f7e7e88bf0f9e17b7ca61dab04d5b0f62.svg" src="../_images/6407bc5d427d0e1b931fe6614b7bc69f7e7e88bf0f9e17b7ca61dab04d5b0f62.svg" /></div>
+<img alt="../_images/d6e36bc9f969b6642f767e89ca98ab22c1ee9e7e43e5fed95cd3e65a6a2f4255.svg" src="../_images/d6e36bc9f969b6642f767e89ca98ab22c1ee9e7e43e5fed95cd3e65a6a2f4255.svg" /></div>
 </div>
 </section>
 <section id="interpreting-the-ton-behavior">
@@ -1598,7 +1587,7 @@ r  ≈ 0.339 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8c9e12bf22a4f351272f8e209d6dd11ed1bc4f2158eb676237cfc6391713ef86.svg" src="../_images/8c9e12bf22a4f351272f8e209d6dd11ed1bc4f2158eb676237cfc6391713ef86.svg" /></div>
+<img alt="../_images/bc3cb4591a8978158fc2763191bf68e6c6ab83e338727de929c5366503c37aac.svg" src="../_images/bc3cb4591a8978158fc2763191bf68e6c6ab83e338727de929c5366503c37aac.svg" /></div>
 </div>
 </section>
 <section id="possible-analysis-methods">
@@ -1682,7 +1671,7 @@ r  ≈ 0.339 s⁻¹
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For Ru/SiO₂, we estimate a turnover frequency of 2.54 s⁻¹
 </pre></div>
 </div>
-<img alt="../_images/1a72bf14b4e687ecf61f7bd27d6cef52f4050c97de20074a324ec07bed578ef2.svg" src="../_images/1a72bf14b4e687ecf61f7bd27d6cef52f4050c97de20074a324ec07bed578ef2.svg" /></div>
+<img alt="../_images/c9b747482c18fbbe340294b4e3f96b70c96b46f68abc1cfb98e5febd1d91ffec.svg" src="../_images/c9b747482c18fbbe340294b4e3f96b70c96b46f68abc1cfb98e5febd1d91ffec.svg" /></div>
 </div>
 </section>
 </section>
@@ -1768,7 +1757,7 @@ r  ≈ 0.339 s⁻¹
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>If we turn off deactivation, Ru/SiO₂ achieves a TOF of 2.68 s⁻¹
 </pre></div>
 </div>
-<img alt="../_images/2aeef474a11e2fda8ab14a1fe8042e580899811fa2346e7f13b6d5d25b4c6304.svg" src="../_images/2aeef474a11e2fda8ab14a1fe8042e580899811fa2346e7f13b6d5d25b4c6304.svg" /></div>
+<img alt="../_images/fea9294e364f716e0ab2b625edf77c4b1d2e9242c6f43ab506428672c42dc80a.svg" src="../_images/fea9294e364f716e0ab2b625edf77c4b1d2e9242c6f43ab506428672c42dc80a.svg" /></div>
 </div>
 <section id="id3">
 <h3>Observations<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
@@ -1848,8 +1837,10 @@ r  ≈ 0.339 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9d5cbe6d8d27335f5704a7f90ff111fc281d99ec7926ff974b334aeffa203ac7.svg" src="../_images/9d5cbe6d8d27335f5704a7f90ff111fc281d99ec7926ff974b334aeffa203ac7.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At Steady State, over PtSn/SiO₂, we observe: 
-FA = 1.00E+05 s⁻¹ 
+<img alt="../_images/af8abb67b0365b36985f4e1a319fa71e7bebedf4c369db1b15eafe1693a73255.svg" src="../_images/af8abb67b0365b36985f4e1a319fa71e7bebedf4c369db1b15eafe1693a73255.svg" /><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At Steady State, over PtSn/SiO₂, we observe: 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FA = 1.00E+05 s⁻¹ 
 FB = 2.00E+05 s⁻¹ 
 FC = 7.137 s⁻¹ 
 XA = 7.14E-05 
@@ -1941,7 +1932,7 @@ r  ≈ 7.137 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4d3c5ae9ed3d7c0d7c54e7a80291921437b69f023830341f2406e8ed58ad98d3.svg" src="../_images/4d3c5ae9ed3d7c0d7c54e7a80291921437b69f023830341f2406e8ed58ad98d3.svg" /></div>
+<img alt="../_images/c033d53724f1664ea3e0580ea3d9aef5759d9e9e32f5af7cd1fbbc4bc195cbe1.svg" src="../_images/c033d53724f1664ea3e0580ea3d9aef5759d9e9e32f5af7cd1fbbc4bc195cbe1.svg" /></div>
 </div>
 <section id="id5">
 <h3>Interpretation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
@@ -2018,7 +2009,7 @@ r  ≈ 7.137 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/172b6520276c40090104a3c464785a3a8b861a35c72a21ea52455378d301599d.svg" src="../_images/172b6520276c40090104a3c464785a3a8b861a35c72a21ea52455378d301599d.svg" /></div>
+<img alt="../_images/fd68bd5f7305efe0cc35d057eb2fefce1b48537d2fa24d7e6ffdf64d6a7fcb8c.svg" src="../_images/fd68bd5f7305efe0cc35d057eb2fefce1b48537d2fa24d7e6ffdf64d6a7fcb8c.svg" /></div>
 </div>
 </section>
 <section id="post-mortem-chemisorption">
@@ -2112,7 +2103,7 @@ At Steady State, PtSn/SiO₂ has a TOF of ≈ 0.190 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/484ff470a21f072c187958e1df27d94a11b0309cd631bb4ba814d84081135a14.svg" src="../_images/484ff470a21f072c187958e1df27d94a11b0309cd631bb4ba814d84081135a14.svg" /></div>
+<img alt="../_images/548af13a7afe9954d998165a838f32d9aed8b4c9bd08d489f7e9d5e7a5a1376b.svg" src="../_images/548af13a7afe9954d998165a838f32d9aed8b4c9bd08d489f7e9d5e7a5a1376b.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2174,7 +2165,7 @@ At Steady State, PtSn/SiO₂ has a TOF of ≈ 0.190 s⁻¹
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c4a6353d504f8b116bf7873cd60ae4a688653dd50be39f9ef8a39dfa93fafdaf.svg" src="../_images/c4a6353d504f8b116bf7873cd60ae4a688653dd50be39f9ef8a39dfa93fafdaf.svg" /></div>
+<img alt="../_images/087e215d275139560bddd90064563651d64a020618883ff98c18dfde794a3d9e.svg" src="../_images/087e215d275139560bddd90064563651d64a020618883ff98c18dfde794a3d9e.svg" /></div>
 </div>
 </section>
 <section id="id6">
@@ -2265,7 +2256,7 @@ The molar flowrate of product out of the reactor is 71.4 mol/s.
 We can therefore estimate a TOF of r ≈ 0.192 s⁻¹.
 </pre></div>
 </div>
-<img alt="../_images/7cd965ef4d245c2e618aef5ff57830ba29e0c32d046382d0c8dbee0493f8b0ad.svg" src="../_images/7cd965ef4d245c2e618aef5ff57830ba29e0c32d046382d0c8dbee0493f8b0ad.svg" /></div>
+<img alt="../_images/2b4cc90783407fc0a45bd2ef185cb201197692b6f0555610e0ca18e8729baa1e.svg" src="../_images/2b4cc90783407fc0a45bd2ef185cb201197692b6f0555610e0ca18e8729baa1e.svg" /></div>
 </div>
 </section>
 </section>

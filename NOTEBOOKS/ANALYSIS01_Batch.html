@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -873,8 +873,8 @@ document.write(`
 </ol>
 <p>Samples are withdrawn periodically, and we analyze them with gas-chromatography. As is common practice, we use our GC data to determine the concentration of reactant and product as a function of reaction time. We collect the data, store it in a spreadsheet, and save it as a .csv file that can be loaded into this notebook for analysis.</p>
 <p><strong>Experimental Conditions</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-21239b4a-09b5-4086-8ee4-4fba380caee9">
-<span class="eqno">(1)<a class="headerlink" href="#equation-21239b4a-09b5-4086-8ee4-4fba380caee9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-20c436d1-f478-448e-8c79-a0048efa501a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-20c436d1-f478-448e-8c79-a0048efa501a" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -925,17 +925,30 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: Cannot open &#39;BATCH1.csv&#39;: not a file
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">readdlm_auto</span><span class="p">(</span><span class="nb">input</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">dlm</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">T</span><span class="p">::</span><span class="n">Type</span><span class="p">,</span> <span class="n">eol</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">auto</span><span class="p">::</span><span class="n">Bool</span><span class="p">;</span> <span class="n">opts</span><span class="p">::</span><span class="nd">@Kwargs</span><span class="p">{</span><span class="n">header</span><span class="p">::</span><span class="n">Bool</span><span class="p">})</span>
-   <span class="o">@</span> <span class="n">DelimitedFiles</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">234</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">readdlm_auto</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">233</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#readdlm#6</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">226</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="mi">5</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌────────┬─────────────┬─────────────┬──────┐
+│<span class=" -Color -Color-Bold"> t (ks) </span>│<span class=" -Color -Color-Bold"> CA (mmol/L) </span>│<span class=" -Color -Color-Bold"> CB (mmol/L) </span>│<span class=" -Color -Color-Bold">   XA </span>│
+├────────┼─────────────┼─────────────┼──────┤
+│    0.0 │        26.7 │         0.0 │  0.0 │
+│   0.15 │        24.5 │         1.1 │ 0.08 │
+│    0.3 │        23.7 │         2.2 │ 0.11 │
+│    0.6 │        23.0 │         4.2 │ 0.14 │
+│    0.9 │        20.7 │         5.7 │ 0.23 │
+│    1.2 │        18.7 │         7.5 │  0.3 │
+│    1.5 │        18.2 │         9.1 │ 0.32 │
+│    1.8 │        16.0 │        10.0 │  0.4 │
+│    2.1 │        13.7 │        11.8 │ 0.49 │
+│    2.5 │        13.5 │        13.0 │  0.5 │
+│    3.0 │        11.4 │        15.4 │ 0.57 │
+│    3.5 │         9.8 │        16.5 │ 0.63 │
+│    4.0 │         8.8 │        18.3 │ 0.67 │
+│    4.5 │         7.2 │        19.3 │ 0.73 │
+│    5.3 │         5.9 │        20.5 │ 0.78 │
+│    6.0 │         4.8 │        21.8 │ 0.82 │
+│    7.0 │         3.6 │        23.1 │ 0.87 │
+│    8.0 │         2.9 │        23.3 │ 0.89 │
+│    9.0 │         2.1 │        24.9 │ 0.92 │
+│   10.0 │         1.7 │        25.9 │ 0.94 │
+└────────┴─────────────┴─────────────┴──────┘
 </pre></div>
 </div>
 </div>
@@ -1044,7 +1057,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b67c4a6d136e766cba6c5873b60353a11b71282968c74c05b6ca5988c7abc08e.svg" src="../_images/b67c4a6d136e766cba6c5873b60353a11b71282968c74c05b6ca5988c7abc08e.svg" /></div>
+<img alt="../_images/7cdf82969d45506bc564291d753dbea6953aeda63a7f77363d85bd38b2fd0138.svg" src="../_images/7cdf82969d45506bc564291d753dbea6953aeda63a7f77363d85bd38b2fd0138.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1053,7 +1066,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eef32808ae4ff3210fa6754ec5ea4c4b66605d8d41980aa5df541c97ad152d36.svg" src="../_images/eef32808ae4ff3210fa6754ec5ea4c4b66605d8d41980aa5df541c97ad152d36.svg" /></div>
+<img alt="../_images/d8127c76b1e57487962fab456c42faf27764ffe97f2255b5494bfb8ae4a64bd9.svg" src="../_images/d8127c76b1e57487962fab456c42faf27764ffe97f2255b5494bfb8ae4a64bd9.svg" /></div>
 </div>
 </section>
 <section id="analysis-of-data-obtained-in-a-batch-reactor">
@@ -1205,7 +1218,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = 1.04, and k = 2.80E-04 s⁻¹
 </pre></div>
 </div>
-<img alt="../_images/9747a127d58bd820ed82aea3e4f5ea7d438cf0a65dc6b57c99607b05739db8a7.svg" src="../_images/9747a127d58bd820ed82aea3e4f5ea7d438cf0a65dc6b57c99607b05739db8a7.svg" /></div>
+<img alt="../_images/cdef230f64ec9cf53fa05da593f3048d127c08eaffb3fd19285f3b39111f1971.svg" src="../_images/cdef230f64ec9cf53fa05da593f3048d127c08eaffb3fd19285f3b39111f1971.svg" /></div>
 </div>
 </section>
 </section>
@@ -1307,14 +1320,14 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The rate constant for this reaction is 2.81E-04 s⁻¹
 </pre></div>
 </div>
-<img alt="../_images/7c103abb78887feb6ca51477b994504f0081fb956fa04823c87d78829e91c8e4.svg" src="../_images/7c103abb78887feb6ca51477b994504f0081fb956fa04823c87d78829e91c8e4.svg" /></div>
+<img alt="../_images/309abcc68a9cc742ede997d6e12e3383c7ccb81c93f6e56934b5730956137d1d.svg" src="../_images/309abcc68a9cc742ede997d6e12e3383c7ccb81c93f6e56934b5730956137d1d.svg" /></div>
 </div>
 </section>
 <section id="applying-the-analysis-to-multiple-catalysts">
 <h2>Applying the Analysis to Multiple Catalysts<a class="headerlink" href="#applying-the-analysis-to-multiple-catalysts" title="Link to this heading">#</a></h2>
 <p>We see good fits to the data, we conclude that the reaction is first order over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>, and we have estimated a rate constant for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>. This is the gold standard for kinetic analysis! We are naturally excited to benchmark the activity of our other catalysts using this same methodology. This reaction is not known to be structure-sensitive on Pt, but we hypothesize that we can tune the performance of our Pt catalyst by changing the support from <span class="math notranslate nohighlight">\(\mathrm{SiO_2}\)</span> to other materials like activated <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(\mathrm{\gamma}\)</span>-<span class="math notranslate nohighlight">\(\mathrm{Al_2O_3}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{ZrO_2}\)</span>, and <span class="math notranslate nohighlight">\(\mathrm{TiO_2}\)</span>. We accordingly prepare a series of 3 wt% Pt catalysts on these 5 different supports, and we test their activity in this reaction using the same batch reactor described above. <em><strong>We will repeat this experiment as is commonly reported in the literature – we will systematically change only the identity of the catalyst and keep all of our operating parameters constant.</strong></em>  So, in all cases, we have the same conditions as in the original experiment:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-401c545c-ff83-4e76-9e80-1c7bba13ef4e">
-<span class="eqno">(2)<a class="headerlink" href="#equation-401c545c-ff83-4e76-9e80-1c7bba13ef4e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5569cf60-9729-4133-9a08-5ea44065fa09">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5569cf60-9729-4133-9a08-5ea44065fa09" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -1439,7 +1452,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d8897cbc8a45cc81b37d132a01f11c8f4a31533b74ddd98bd155c95d6cbea849.svg" src="../_images/d8897cbc8a45cc81b37d132a01f11c8f4a31533b74ddd98bd155c95d6cbea849.svg" /></div>
+<img alt="../_images/7426e74b155fc35ba5cac35cbb90a023a2139c1d9c2f298cc5efda2d9e66630d.svg" src="../_images/7426e74b155fc35ba5cac35cbb90a023a2139c1d9c2f298cc5efda2d9e66630d.svg" /></div>
 </div>
 <section id="a-typical-catalyst-comparison">
 <h3>A Typical Catalyst Comparison<a class="headerlink" href="#a-typical-catalyst-comparison" title="Link to this heading">#</a></h3>
@@ -1514,7 +1527,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a6aa6c8c1d00c8e1d097dd58844e4a24bbfbd8562eeed8f232ca173954402d4f.svg" src="../_images/a6aa6c8c1d00c8e1d097dd58844e4a24bbfbd8562eeed8f232ca173954402d4f.svg" /></div>
+<img alt="../_images/cad875b9cb2880fc8c763088f5307eb6478c27fcc6b9115249c2e954d2f9165d.svg" src="../_images/cad875b9cb2880fc8c763088f5307eb6478c27fcc6b9115249c2e954d2f9165d.svg" /></div>
 </div>
 </section>
 <section id="applying-the-differential-and-integral-analysis-to-each-catalyst">
@@ -1615,13 +1628,15 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/ZrO₂, α = 1.04 and k = 7.94E-05 s⁻¹ 
-For  Pt/TiO₂, α = 1.03 and k = 1.52E-04 s⁻¹ 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/TiO₂, α = 1.03 and k = 1.52E-04 s⁻¹ 
 For  Pt/SiO₂, α = 1.04 and k = 3.11E-04 s⁻¹ 
 For     Pt/C, α = 1.03 and k = 7.57E-04 s⁻¹ 
 For Pt/Al₂O₃, α = 1.04 and k = 1.66E-03 s⁻¹ 
 </pre></div>
 </div>
-<img alt="../_images/81988fd872c1e80695fd1f49a2aa26e7cfe0bee5801a713ceb67645b208c66dd.svg" src="../_images/81988fd872c1e80695fd1f49a2aa26e7cfe0bee5801a713ceb67645b208c66dd.svg" /></div>
+<img alt="../_images/331ff2adc4c38f0757524c7c6eae48f07473d9661ad055241b47f1dd1b9f8b3d.svg" src="../_images/331ff2adc4c38f0757524c7c6eae48f07473d9661ad055241b47f1dd1b9f8b3d.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1717,7 +1732,7 @@ For     Pt/C, k = 8.40E-04 s⁻¹
 For Pt/Al₂O₃, k = 1.69E-03 s⁻¹ 
 </pre></div>
 </div>
-<img alt="../_images/0cbc48e9fedbe9e69cac55d18938ba5073871b55afbb712210099b947eceef6c.svg" src="../_images/0cbc48e9fedbe9e69cac55d18938ba5073871b55afbb712210099b947eceef6c.svg" /></div>
+<img alt="../_images/cf9764573ec25dacae474775c640895bbf89cfaea67b5d83d39c62b733792de9.svg" src="../_images/cf9764573ec25dacae474775c640895bbf89cfaea67b5d83d39c62b733792de9.svg" /></div>
 </div>
 </section>
 <section id="let-s-get-at-those-barriers">
@@ -1862,7 +1877,7 @@ For     Pt/C, A = 5.45E+07 s⁻¹ and EA = 92.93 kJ/mol
 For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol 
 </pre></div>
 </div>
-<img alt="../_images/e0b0855ffbd92a64b97cbc3ccaefbf4b91e3d531827de3a2d4d4b8e95d74d31f.svg" src="../_images/e0b0855ffbd92a64b97cbc3ccaefbf4b91e3d531827de3a2d4d4b8e95d74d31f.svg" /></div>
+<img alt="../_images/30c6c159c5f050f37f53c199f2526eecd44c250562b8b894e56c5aeaa27dcbe0.svg" src="../_images/30c6c159c5f050f37f53c199f2526eecd44c250562b8b894e56c5aeaa27dcbe0.svg" /></div>
 </div>
 </section>
 </section>
@@ -1984,7 +1999,7 @@ For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/99a8e89eedfad6b3ca9f4a7743bde4c3ab17448804cdd29c5ccbc1f9f37eb137.svg" src="../_images/99a8e89eedfad6b3ca9f4a7743bde4c3ab17448804cdd29c5ccbc1f9f37eb137.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CairoMakie.Screen{IMAGE}
+<img alt="../_images/c37b34e381d841c415125647357e02fbda48608fa40bb029500212ff142c48ea.svg" src="../_images/c37b34e381d841c415125647357e02fbda48608fa40bb029500212ff142c48ea.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CairoMakie.Screen{IMAGE}
 </pre></div>
 </div>
 </div>
@@ -2102,7 +2117,7 @@ For     Pt/C, A = 1.82E+11 s⁻¹ and EA = 92.93 kJ/mol
 For Pt/Al₂O₃, A = 2.30E+11 s⁻¹ and EA = 93.79 kJ/mol 
 </pre></div>
 </div>
-<img alt="../_images/581cc1295f3b25d569c5d187560c1ea12465ffb7feea03d40729b7fcac41a87f.svg" src="../_images/581cc1295f3b25d569c5d187560c1ea12465ffb7feea03d40729b7fcac41a87f.svg" /></div>
+<img alt="../_images/14365a692e1b67a21d78d45ba900c69fa96b8c0f39369c7542a81cab03cea8b2.svg" src="../_images/14365a692e1b67a21d78d45ba900c69fa96b8c0f39369c7542a81cab03cea8b2.svg" /></div>
 </div>
 </section>
 </section>

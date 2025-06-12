@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -872,17 +872,26 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ArgumentError</span>: Cannot open &#39;SSKINETICS_Flow.csv&#39;: not a file
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">readdlm_auto</span><span class="p">(</span><span class="nb">input</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">dlm</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">T</span><span class="p">::</span><span class="n">Type</span><span class="p">,</span> <span class="n">eol</span><span class="p">::</span><span class="n">Char</span><span class="p">,</span> <span class="n">auto</span><span class="p">::</span><span class="n">Bool</span><span class="p">;</span> <span class="n">opts</span><span class="p">::</span><span class="nd">@Kwargs</span><span class="p">{</span><span class="n">header</span><span class="p">::</span><span class="n">Bool</span><span class="p">})</span>
-   <span class="o">@</span> <span class="n">DelimitedFiles</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">234</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">readdlm_auto</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">233</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#readdlm#6</span>
-   <span class="o">@</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">jqbon</span>\<span class="o">.</span><span class="n">julia</span>\<span class="n">packages</span>\<span class="n">DelimitedFiles</span>\<span class="n">aGcsu</span>\<span class="n">src</span>\<span class="n">DelimitedFiles</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">226</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span><span class="mi">5</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>┌────────────┬────────────┬─────────┬────────────┐
+│<span class=" -Color -Color-Bold"> CA (mol/L) </span>│<span class=" -Color -Color-Bold"> CB (mol/L) </span>│<span class=" -Color -Color-Bold">   T (K) </span>│<span class=" -Color -Color-Bold"> rate (1/s) </span>│
+│    Float64 │    Float64 │ Float64 │    Float64 │
+├────────────┼────────────┼─────────┼────────────┤
+│   0.000794 │      0.112 │   450.0 │    6.31e-6 │
+│    0.00944 │      0.112 │   450.0 │   0.000111 │
+│      0.112 │      0.112 │   450.0 │   0.000873 │
+│       1.33 │      0.112 │   450.0 │     0.0144 │
+│       15.8 │      0.112 │   450.0 │      0.159 │
+│      0.112 │   0.000794 │   450.0 │    3.97e-8 │
+│      0.112 │    0.00944 │   450.0 │    1.14e-5 │
+│      0.112 │      0.112 │   450.0 │     0.0011 │
+│      0.112 │       1.33 │   450.0 │      0.128 │
+│      0.112 │       15.8 │   450.0 │       22.7 │
+│      0.112 │      0.112 │   350.0 │    2.62e-6 │
+│      0.112 │      0.112 │   400.0 │   0.000107 │
+│      0.112 │      0.112 │   450.0 │      0.001 │
+│      0.112 │      0.112 │   500.0 │    0.00745 │
+│      0.112 │      0.112 │   550.0 │     0.0305 │
+└────────────┴────────────┴─────────┴────────────┘
 </pre></div>
 </div>
 </div>
@@ -1032,7 +1041,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>α = 1.02, β = 2.01, and EA = 74.53 kJ/mol - These are all statistically equal to true parameter values.
 </pre></div>
 </div>
-<img alt="../_images/6a091ed73dbcb1d91eb4bab21712cd5ce56ba59acb2ac108cb513a1d5b8ad65a.svg" src="../_images/6a091ed73dbcb1d91eb4bab21712cd5ce56ba59acb2ac108cb513a1d5b8ad65a.svg" /><img alt="../_images/3c8f5167aa15017d9d2394a59473b13d02af0bf05e9381b2ce79ab1b4c5e356d.svg" src="../_images/3c8f5167aa15017d9d2394a59473b13d02af0bf05e9381b2ce79ab1b4c5e356d.svg" /></div>
+<img alt="../_images/255a064f859c1e0f9a8b1e1cb95cdbf30c747e666f209c167b9e78d796bda911.svg" src="../_images/255a064f859c1e0f9a8b1e1cb95cdbf30c747e666f209c167b9e78d796bda911.svg" /><img alt="../_images/5d8038c2be04b772c081a7a14ea8c8ebca685e9ad2c60629044c09b148e78c1c.svg" src="../_images/5d8038c2be04b772c081a7a14ea8c8ebca685e9ad2c60629044c09b148e78c1c.svg" /></div>
 </div>
 </section>
 </section>
