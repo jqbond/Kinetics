@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Batch Reactors 02" href="ANALYSIS02_Batch.html" />
-    <link rel="prev" title="Reactor Analysis" href="../Chapter1.html" />
+    <link rel="prev" title="NAM 29 Workshop" href="../Chapter1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,7 +183,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">Reactor Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">NAM 29 Workshop</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Batch Reactors 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS02_Batch.html">Batch Reactors 02</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
@@ -885,8 +885,8 @@ document.write(`
 </ol>
 <p>Samples are withdrawn periodically, and we analyze them with gas-chromatography. As is common practice, we use our GC data to determine the concentration of reactant and product as a function of reaction time. We collect the data, store it in a spreadsheet, and save it as a .csv file that can be loaded into this notebook for analysis.</p>
 <p><strong>Experimental Conditions</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-a61d6d04-c58a-42fe-8411-2863bb6843a3">
-<span class="eqno">(1)<a class="headerlink" href="#equation-a61d6d04-c58a-42fe-8411-2863bb6843a3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-08bb3457-76cd-445a-9212-f8f2e5e24bd7">
+<span class="eqno">(1)<a class="headerlink" href="#equation-08bb3457-76cd-445a-9212-f8f2e5e24bd7" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -1342,8 +1342,8 @@ document.write(`
 <section id="example-02-applying-the-analysis-to-multiple-catalysts">
 <h2>Example 02: Applying the Analysis to Multiple Catalysts<a class="headerlink" href="#example-02-applying-the-analysis-to-multiple-catalysts" title="Link to this heading">#</a></h2>
 <p>We see good fits to the data, we conclude that the reaction is first order over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>, and we have estimated a rate constant for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>. This is the gold standard for kinetic analysis! We are naturally excited to benchmark the activity of our other catalysts using this same methodology. This reaction is not known to be structure-sensitive on Pt, but we hypothesize that we can tune the performance of our Pt catalyst by changing the support from <span class="math notranslate nohighlight">\(\mathrm{SiO_2}\)</span> to other materials like activated <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(\mathrm{\gamma}\)</span>-<span class="math notranslate nohighlight">\(\mathrm{Al_2O_3}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{ZrO_2}\)</span>, and <span class="math notranslate nohighlight">\(\mathrm{TiO_2}\)</span>. We accordingly prepare a series of 3 wt% Pt catalysts on these 5 different supports, and we test their activity in this reaction using the same batch reactor described above. <em><strong>We will repeat this experiment as is commonly reported in the literature – we will systematically change only the identity of the catalyst and keep all of our operating parameters constant.</strong></em>  So, in all cases, we have the same conditions as in the original experiment:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6cca1eb3-b401-4eca-b044-2091af3620ff">
-<span class="eqno">(2)<a class="headerlink" href="#equation-6cca1eb3-b401-4eca-b044-2091af3620ff" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f6f16415-55d8-4449-ad3c-31c2d7f65162">
+<span class="eqno">(2)<a class="headerlink" href="#equation-f6f16415-55d8-4449-ad3c-31c2d7f65162" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -1644,7 +1644,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/ZrO₂, α = 1.04 and k = 7.94E-05 s⁻¹ 
-For  Pt/TiO₂, α = 1.03 and k = 1.52E-04 s⁻¹ 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/TiO₂, α = 1.03 and k = 1.52E-04 s⁻¹ 
 For  Pt/SiO₂, α = 1.04 and k = 3.11E-04 s⁻¹ 
 For     Pt/C, α = 1.03 and k = 7.57E-04 s⁻¹ 
 For Pt/Al₂O₃, α = 1.04 and k = 1.66E-03 s⁻¹ 
@@ -1884,7 +1886,9 @@ For Pt/Al₂O₃, k = 1.69E-03 s⁻¹
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/ZrO₂, A = 2.41E+06 s⁻¹ and EA = 90.74 kJ/mol 
-For  Pt/TiO₂, A = 5.50E+06 s⁻¹ and EA = 91.22 kJ/mol 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/TiO₂, A = 5.50E+06 s⁻¹ and EA = 91.22 kJ/mol 
 For  Pt/SiO₂, A = 1.53E+07 s⁻¹ and EA = 92.38 kJ/mol 
 For     Pt/C, A = 5.45E+07 s⁻¹ and EA = 92.93 kJ/mol 
 For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol 
@@ -2173,7 +2177,7 @@ For Pt/Al₂O₃, A = 2.30E+11 s⁻¹ and EA = 93.79 kJ/mol
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Reactor Analysis</p>
+        <p class="prev-next-title">NAM 29 Workshop</p>
       </div>
     </a>
     <a class="right-next"

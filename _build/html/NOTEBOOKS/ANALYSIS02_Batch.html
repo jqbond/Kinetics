@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -183,7 +183,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">Reactor Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">NAM 29 Workshop</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS01_Batch.html">Batch Reactors 01</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Batch Reactors 02</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
@@ -872,8 +872,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[A \longrightarrow B\]</div>
 <p>We perform two identical experiments for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> in a perfectly mixed batch reactor. We confirm that data are obtained under isothermal conditions and full kinetic control. We adjust quantities of catalyst so that each reactor has the same number of active sites, <span class="math notranslate nohighlight">\(N_{S0} = 1 \times 10^{-3}\)</span> moles of active sites. This is important to consider for catalytic reactions because changing the total number of active sites in the reactor is akin to changing the extensive size of the system. We should be mindful of this change when trying to interpret differences in, e.g., time profiles for conversion and yield.  This is common practice in the field, but it is difficult to assign much significance to variation in conversion or yield at a specific time point unless the extensive size of the system (i.e., the number of active sites) is identical; this is rarely ensured in published batch experiments.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a423646-2424-401c-983b-229ca33119c5">
-<span class="eqno">(3)<a class="headerlink" href="#equation-1a423646-2424-401c-983b-229ca33119c5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-17702a61-3d00-4af9-b40e-ff2d2ffe1da2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-17702a61-3d00-4af9-b40e-ff2d2ffe1da2" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     P       &amp;= 1 \ \mathrm{bar} \\  
     N_{A0}  &amp;= 10 \ \mathrm{moles \ of \ A}\\
@@ -1154,7 +1154,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pt/SiO₂ has α = 1.04 and k =  2.4 1/s 
-Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 </pre></div>
 </div>
 <img alt="../_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" src="../_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" /></div>
@@ -1269,7 +1271,9 @@ Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For first order kinetics, Pt/SiO₂ has k = 2.8 1/s 
-For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For first order kinetics, Ru/SiO₂ has k = 3.6 1/s
 </pre></div>
 </div>
 <img alt="../_images/1181be5d6752cf48100d6303c0d6ba212bab97512da2b11a17e649b70f57565a.svg" src="../_images/1181be5d6752cf48100d6303c0d6ba212bab97512da2b11a17e649b70f57565a.svg" /><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CairoMakie.Screen{IMAGE}
@@ -1488,7 +1492,9 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pt/SiO₂ has a pre-exponential of 8.8E+10 1/s and a barrier of 90.4 kJ/mol 
-Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
 </pre></div>
 </div>
 <img alt="../_images/db4588a56ef59b51b0af89f8b4455841a8755f5bdc6222a843d204bb17bab1c9.svg" src="../_images/db4588a56ef59b51b0af89f8b4455841a8755f5bdc6222a843d204bb17bab1c9.svg" /></div>
