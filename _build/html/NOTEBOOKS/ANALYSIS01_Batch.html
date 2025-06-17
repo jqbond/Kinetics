@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Batch Reactors 02" href="ANALYSIS02_Batch.html" />
-    <link rel="prev" title="Batch Reactor Analysis" href="../Chapter1.html" />
+    <link rel="prev" title="Reactor Analysis" href="../Chapter1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,17 +178,14 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    <no title>
+                    NAM 29 - Obtaining Good Kinetic Data
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">Batch Reactor Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">Reactor Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Batch Reactors 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS02_Batch.html">Batch Reactors 02</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2.html">Flow Reactor Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS04_Flow.html">Flow Reactors 02</a></li>
 </ul>
@@ -422,28 +419,28 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-julia-packages">Loading Julia Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-formatting">Figure formatting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-01">Example 01</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-visualizing-data-example-01">Importing and visualizing data (Example 01)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-methods-for-batch-reactor-analysis-example-01">An Overview of Methods for Batch Reactor Analysis (Example 01)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-differential-analysis-of-batch-reactor-data-example-01">A differential analysis of batch reactor data (Example 01)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-visualizing-data">Importing and visualizing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-methods-for-batch-reactor-analysis">An Overview of Methods for Batch Reactor Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-differential-analysis-of-batch-reactor-data">A differential analysis of batch reactor data</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-and-parameter-estimation">Linearization and parameter estimation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-analysis-of-batch-reactor-data-for-a-first-order-reaction-example-01">Integral Analysis of Batch Reactor Data for a First Order Reaction (Example 01)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-analysis-of-batch-reactor-data-for-a-first-order-reaction">Integral Analysis of Batch Reactor Data for a First Order Reaction</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-02-applying-the-analysis-to-multiple-catalysts">Example 02: Applying the Analysis to Multiple Catalysts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-typical-catalyst-comparison-example-02">A Typical Catalyst Comparison (Example 02)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-differential-and-integral-analysis-to-each-catalyst-example-02">Applying the differential and integral analysis to each catalyst (Example 02)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-apparent-activation-barriers-for-each-catalyst-example-02">Estimating Apparent Activation Barriers for Each Catalyst (Example 02)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-typical-catalyst-comparison">A Typical Catalyst Comparison</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-differential-and-integral-analysis-to-each-catalyst">Applying the differential and integral analysis to each catalyst</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-apparent-activation-barriers-for-each-catalyst">Estimating Apparent Activation Barriers for Each Catalyst</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-k-vs-t">Linearization of k vs. T</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-estimated-barriers-and-pre-exponential-factors-example-02">Interpreting Estimated Barriers and Pre-exponential Factors (Example 02)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-estimated-barriers-and-pre-exponential-factors">Interpreting Estimated Barriers and Pre-exponential Factors</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-better-analysis-for-heterogeneously-catalyzed-reactions-example-03">A better analysis for heterogeneously catalyzed reactions (Example 03)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balance-for-a-heterogenously-catalyzed-reaction">Balance for a heterogenously catalyzed reaction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-estimation-example-03">Parameter estimation (Example 03)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-estimation">Parameter estimation</a></li>
 </ul>
 </li>
 </ul>
@@ -888,15 +885,15 @@ document.write(`
 </ol>
 <p>Samples are withdrawn periodically, and we analyze them with gas-chromatography. As is common practice, we use our GC data to determine the concentration of reactant and product as a function of reaction time. We collect the data, store it in a spreadsheet, and save it as a .csv file that can be loaded into this notebook for analysis.</p>
 <p><strong>Experimental Conditions</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-55333f41-8c7c-46a8-86d2-5e7aa5f6ae8a">
-<span class="eqno">(1)<a class="headerlink" href="#equation-55333f41-8c7c-46a8-86d2-5e7aa5f6ae8a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a61d6d04-c58a-42fe-8411-2863bb6843a3">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a61d6d04-c58a-42fe-8411-2863bb6843a3" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
     m_{c}   &amp;= 1.0 \, \mathrm{g} \\
 \end{align}\]</div>
-<section id="importing-and-visualizing-data-example-01">
-<h3>Importing and visualizing data (Example 01)<a class="headerlink" href="#importing-and-visualizing-data-example-01" title="Link to this heading">#</a></h3>
+<section id="importing-and-visualizing-data">
+<h3>Importing and visualizing data<a class="headerlink" href="#importing-and-visualizing-data" title="Link to this heading">#</a></h3>
 <p>The cell blocks below load relevant experimental conditions into the workspace for subsequent analysis. Experimental data have been generated using a separate set of simulations (see <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/GENERATION01_Batch.ipynb">GENERATION01_BATCH.ipynb</a>) and saved in a .csv file (see <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/BATCH1.csv">BATCH1.csv</a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1087,8 +1084,8 @@ document.write(`
 <img alt="../_images/d8127c76b1e57487962fab456c42faf27764ffe97f2255b5494bfb8ae4a64bd9.svg" src="../_images/d8127c76b1e57487962fab456c42faf27764ffe97f2255b5494bfb8ae4a64bd9.svg" /></div>
 </div>
 </section>
-<section id="an-overview-of-methods-for-batch-reactor-analysis-example-01">
-<h3>An Overview of Methods for Batch Reactor Analysis (Example 01)<a class="headerlink" href="#an-overview-of-methods-for-batch-reactor-analysis-example-01" title="Link to this heading">#</a></h3>
+<section id="an-overview-of-methods-for-batch-reactor-analysis">
+<h3>An Overview of Methods for Batch Reactor Analysis<a class="headerlink" href="#an-overview-of-methods-for-batch-reactor-analysis" title="Link to this heading">#</a></h3>
 <p>Here, we will start the analysis as is typically presented in most undergraduate textbooks. Quite often, one sees similar analyses in peer-reviewed literature as well. It is very likely that our training would generally prompt us to approach the analysis in either or both of two ways: relatively macroscopic <em><strong>differential analysis</strong></em> or <em><strong>integral analysis</strong></em>. It is less likely that we would attempt a more sophisticated <em><strong>microkinetic</strong></em> analysis at this point as we know very little about the reaction mechanims.</p>
 <p>Despite the different names, these methods both essentially refer to the material balance on a batch reactor. The difference between them is how we analyze the material balance. To use them, we should really first write an appropriate material balance for our batch reactor. For the moment, we will choose the one that usually sticks in most people’s memories from courses in physical chemistry and reaction engineering, which is that of a constant volume, perfectly-mixed batch reactor.  Presently, I see no reason why I couldn’t apply this balance since the experiment was performed in an autoclave reactor of fixed volume, and we have stated that data are obtained under conditions of kinetic control and perfect mixing. We will use the notation from Scott Fogler’s <em>Elements of Chemical Reaction Engineering</em> as this is one that most of us are going to be familiar with.</p>
 <div class="math notranslate nohighlight">
@@ -1101,8 +1098,8 @@ document.write(`
 \[\frac{dC_A}{dt} = -k{C_A}^\alpha\]</div>
 <p>Now we should decide whether we want to proceed with a differential or integral analysis of the data. Both have merits and disadvantages. If we do not know a reaction order, then differential analysis is convenient as it permits us to easily estimate the reaction order. The downside is that differentiation of discrete, noisy data will amplify experimental imprecision. If we do know a reaction order, then the integral analysis generally permits a more precise estimation of kinetic parameters (e.g., a rate constant).</p>
 </section>
-<section id="a-differential-analysis-of-batch-reactor-data-example-01">
-<h3>A differential analysis of batch reactor data (Example 01)<a class="headerlink" href="#a-differential-analysis-of-batch-reactor-data-example-01" title="Link to this heading">#</a></h3>
+<section id="a-differential-analysis-of-batch-reactor-data">
+<h3>A differential analysis of batch reactor data<a class="headerlink" href="#a-differential-analysis-of-batch-reactor-data" title="Link to this heading">#</a></h3>
 <p>Since we don’t have any information about the rate law, let’s try a differential analysis. To move forward, we approximate the derivative in the material balance using finite differences:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dC_A}{dt} \approx \frac{\Delta C_A}{\Delta t}\]</div>
@@ -1240,8 +1237,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="integral-analysis-of-batch-reactor-data-for-a-first-order-reaction-example-01">
-<h3>Integral Analysis of Batch Reactor Data for a First Order Reaction (Example 01)<a class="headerlink" href="#integral-analysis-of-batch-reactor-data-for-a-first-order-reaction-example-01" title="Link to this heading">#</a></h3>
+<section id="integral-analysis-of-batch-reactor-data-for-a-first-order-reaction">
+<h3>Integral Analysis of Batch Reactor Data for a First Order Reaction<a class="headerlink" href="#integral-analysis-of-batch-reactor-data-for-a-first-order-reaction" title="Link to this heading">#</a></h3>
 <p>Based on that differential analysis result, we are confident that the system has a first order rate of reaction (in species A). To increase precision in our estimation of the rate constant, it is common to fix the reaction order at 1 and solve the differential equation that describes a well-mixed, constant volume batch reactor:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dC_A}{dt} = -kC_A\]</div>
@@ -1345,8 +1342,8 @@ document.write(`
 <section id="example-02-applying-the-analysis-to-multiple-catalysts">
 <h2>Example 02: Applying the Analysis to Multiple Catalysts<a class="headerlink" href="#example-02-applying-the-analysis-to-multiple-catalysts" title="Link to this heading">#</a></h2>
 <p>We see good fits to the data, we conclude that the reaction is first order over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>, and we have estimated a rate constant for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span>. This is the gold standard for kinetic analysis! We are naturally excited to benchmark the activity of our other catalysts using this same methodology. This reaction is not known to be structure-sensitive on Pt, but we hypothesize that we can tune the performance of our Pt catalyst by changing the support from <span class="math notranslate nohighlight">\(\mathrm{SiO_2}\)</span> to other materials like activated <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(\mathrm{\gamma}\)</span>-<span class="math notranslate nohighlight">\(\mathrm{Al_2O_3}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{ZrO_2}\)</span>, and <span class="math notranslate nohighlight">\(\mathrm{TiO_2}\)</span>. We accordingly prepare a series of 3 wt% Pt catalysts on these 5 different supports, and we test their activity in this reaction using the same batch reactor described above. <em><strong>We will repeat this experiment as is commonly reported in the literature – we will systematically change only the identity of the catalyst and keep all of our operating parameters constant.</strong></em>  So, in all cases, we have the same conditions as in the original experiment:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7e88a42-ff06-4ccf-8a0b-39975107db88">
-<span class="eqno">(2)<a class="headerlink" href="#equation-e7e88a42-ff06-4ccf-8a0b-39975107db88" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6cca1eb3-b401-4eca-b044-2091af3620ff">
+<span class="eqno">(2)<a class="headerlink" href="#equation-6cca1eb3-b401-4eca-b044-2091af3620ff" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     C_{A0}  &amp;= 0.0267 \ \mathrm{moles \ L^{-1}}\\
     C_{B0}  &amp;= 0 \ \mathrm{moles \ L^{-1}} \\
@@ -1473,8 +1470,8 @@ document.write(`
 <div class="cell_output docutils container">
 <img alt="../_images/7426e74b155fc35ba5cac35cbb90a023a2139c1d9c2f298cc5efda2d9e66630d.svg" src="../_images/7426e74b155fc35ba5cac35cbb90a023a2139c1d9c2f298cc5efda2d9e66630d.svg" /></div>
 </div>
-<section id="a-typical-catalyst-comparison-example-02">
-<h3>A Typical Catalyst Comparison (Example 02)<a class="headerlink" href="#a-typical-catalyst-comparison-example-02" title="Link to this heading">#</a></h3>
+<section id="a-typical-catalyst-comparison">
+<h3>A Typical Catalyst Comparison<a class="headerlink" href="#a-typical-catalyst-comparison" title="Link to this heading">#</a></h3>
 <p>In the catalysis literature, we often focus on comparisons between catalysts, and we emphasize things like which material was the “most active.” One might often see a set of materials in this type of experiment ranked based on how long they take to achieve a certain benchmark conversion, e.g., 50% conversion of the reactant.  We can illustrate this type of comparison in the figure below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1549,8 +1546,8 @@ document.write(`
 <img alt="../_images/cad875b9cb2880fc8c763088f5307eb6478c27fcc6b9115249c2e954d2f9165d.svg" src="../_images/cad875b9cb2880fc8c763088f5307eb6478c27fcc6b9115249c2e954d2f9165d.svg" /></div>
 </div>
 </section>
-<section id="applying-the-differential-and-integral-analysis-to-each-catalyst-example-02">
-<h3>Applying the differential and integral analysis to each catalyst (Example 02)<a class="headerlink" href="#applying-the-differential-and-integral-analysis-to-each-catalyst-example-02" title="Link to this heading">#</a></h3>
+<section id="applying-the-differential-and-integral-analysis-to-each-catalyst">
+<h3>Applying the differential and integral analysis to each catalyst<a class="headerlink" href="#applying-the-differential-and-integral-analysis-to-each-catalyst" title="Link to this heading">#</a></h3>
 <p>Because we have <span class="math notranslate nohighlight">\(C_A\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> data for each catalyst, we can go through the typical differential and integral methods for analysis of batch reactor data. This permits one to estimate reaction orders and rate constants.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1752,8 +1749,8 @@ For Pt/Al₂O₃, k = 1.69E-03 s⁻¹
 <img alt="../_images/cf9764573ec25dacae474775c640895bbf89cfaea67b5d83d39c62b733792de9.svg" src="../_images/cf9764573ec25dacae474775c640895bbf89cfaea67b5d83d39c62b733792de9.svg" /></div>
 </div>
 </section>
-<section id="estimating-apparent-activation-barriers-for-each-catalyst-example-02">
-<h3>Estimating Apparent Activation Barriers for Each Catalyst (Example 02)<a class="headerlink" href="#estimating-apparent-activation-barriers-for-each-catalyst-example-02" title="Link to this heading">#</a></h3>
+<section id="estimating-apparent-activation-barriers-for-each-catalyst">
+<h3>Estimating Apparent Activation Barriers for Each Catalyst<a class="headerlink" href="#estimating-apparent-activation-barriers-for-each-catalyst" title="Link to this heading">#</a></h3>
 <p>So far, everything suggests that all of these catalysts show first order kinetics and that activity, as indicated by the rate constant, increases considerably from Catalyst 1 to Catalyst 5.  That’s two orders of magnitude, which we generally take as pretty significant, and so we might next set about trying to figure out why Catalyst 5 is so much more active than Catalyst 1.</p>
 <p>In our coursework, we hammer on Arrhenius plots pretty heavily.  We now have a good way to determine rate constants from an integral analysis, and we know all of the systems here show fist order kinetcs, so we repeat our experiments at multiple temperatures and use that analysis at each one to estimate rate constants.  With this information, we can generate an Arrhenius plot that will allow us to estimate barriers and pre-exponential factors.</p>
 <p>Specifically, we repeat the experiment using the identical system described above, but we perform the experiments at six temperatures:</p>
@@ -1887,9 +1884,7 @@ For Pt/Al₂O₃, k = 1.69E-03 s⁻¹
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/ZrO₂, A = 2.41E+06 s⁻¹ and EA = 90.74 kJ/mol 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For  Pt/TiO₂, A = 5.50E+06 s⁻¹ and EA = 91.22 kJ/mol 
+For  Pt/TiO₂, A = 5.50E+06 s⁻¹ and EA = 91.22 kJ/mol 
 For  Pt/SiO₂, A = 1.53E+07 s⁻¹ and EA = 92.38 kJ/mol 
 For     Pt/C, A = 5.45E+07 s⁻¹ and EA = 92.93 kJ/mol 
 For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol 
@@ -1899,8 +1894,8 @@ For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol
 </div>
 </section>
 </section>
-<section id="interpreting-estimated-barriers-and-pre-exponential-factors-example-02">
-<h3>Interpreting Estimated Barriers and Pre-exponential Factors (Example 02)<a class="headerlink" href="#interpreting-estimated-barriers-and-pre-exponential-factors-example-02" title="Link to this heading">#</a></h3>
+<section id="interpreting-estimated-barriers-and-pre-exponential-factors">
+<h3>Interpreting Estimated Barriers and Pre-exponential Factors<a class="headerlink" href="#interpreting-estimated-barriers-and-pre-exponential-factors" title="Link to this heading">#</a></h3>
 <p>We find that the barriers for each catalyst are identical, and that the entire variation in performance seems to come from different pre-exponential factors. At this point in the analysis, we would probably recall from our courses in kinetics and physical chemistry that the pre-exponential factor is generally a function of the entropy of activation for a reaction. We might then seek explanations for why the Pt/Al2O3 catalysts has a more favorable entropy of activation than the other materials. We might also be curious about why the entropy of activation is such a strong function of catalyst support. This is a logical course of analysis, but it unfortunately has all been based on a faulty assumption that the differential equation below:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dC_A}{dt} = R_A\]</div>
@@ -2024,8 +2019,8 @@ For Pt/Al₂O₃, A = 1.38E+08 s⁻¹ and EA = 93.79 kJ/mol
 </div>
 </div>
 </section>
-<section id="parameter-estimation-example-03">
-<h3>Parameter estimation (Example 03)<a class="headerlink" href="#parameter-estimation-example-03" title="Link to this heading">#</a></h3>
+<section id="parameter-estimation">
+<h3>Parameter estimation<a class="headerlink" href="#parameter-estimation" title="Link to this heading">#</a></h3>
 <p>We can see pretty clearly that with a better description of the system, where kinetics are quantified per unit active site, we estimate similar rate constants for all catalysts. We then repeat the analysis for various temperatures, permitting us to estimate barriers and pre-exponential factors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2178,7 +2173,7 @@ For Pt/Al₂O₃, A = 2.30E+11 s⁻¹ and EA = 93.79 kJ/mol
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Batch Reactor Analysis</p>
+        <p class="prev-next-title">Reactor Analysis</p>
       </div>
     </a>
     <a class="right-next"
@@ -2209,28 +2204,28 @@ For Pt/Al₂O₃, A = 2.30E+11 s⁻¹ and EA = 93.79 kJ/mol
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-julia-packages">Loading Julia Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-formatting">Figure formatting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-01">Example 01</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-visualizing-data-example-01">Importing and visualizing data (Example 01)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-methods-for-batch-reactor-analysis-example-01">An Overview of Methods for Batch Reactor Analysis (Example 01)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-differential-analysis-of-batch-reactor-data-example-01">A differential analysis of batch reactor data (Example 01)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-visualizing-data">Importing and visualizing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview-of-methods-for-batch-reactor-analysis">An Overview of Methods for Batch Reactor Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-differential-analysis-of-batch-reactor-data">A differential analysis of batch reactor data</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-and-parameter-estimation">Linearization and parameter estimation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-analysis-of-batch-reactor-data-for-a-first-order-reaction-example-01">Integral Analysis of Batch Reactor Data for a First Order Reaction (Example 01)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-analysis-of-batch-reactor-data-for-a-first-order-reaction">Integral Analysis of Batch Reactor Data for a First Order Reaction</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-02-applying-the-analysis-to-multiple-catalysts">Example 02: Applying the Analysis to Multiple Catalysts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-typical-catalyst-comparison-example-02">A Typical Catalyst Comparison (Example 02)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-differential-and-integral-analysis-to-each-catalyst-example-02">Applying the differential and integral analysis to each catalyst (Example 02)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-apparent-activation-barriers-for-each-catalyst-example-02">Estimating Apparent Activation Barriers for Each Catalyst (Example 02)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-typical-catalyst-comparison">A Typical Catalyst Comparison</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-differential-and-integral-analysis-to-each-catalyst">Applying the differential and integral analysis to each catalyst</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-apparent-activation-barriers-for-each-catalyst">Estimating Apparent Activation Barriers for Each Catalyst</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-k-vs-t">Linearization of k vs. T</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-estimated-barriers-and-pre-exponential-factors-example-02">Interpreting Estimated Barriers and Pre-exponential Factors (Example 02)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-estimated-barriers-and-pre-exponential-factors">Interpreting Estimated Barriers and Pre-exponential Factors</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-better-analysis-for-heterogeneously-catalyzed-reactions-example-03">A better analysis for heterogeneously catalyzed reactions (Example 03)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balance-for-a-heterogenously-catalyzed-reaction">Balance for a heterogenously catalyzed reaction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-estimation-example-03">Parameter estimation (Example 03)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parameter-estimation">Parameter estimation</a></li>
 </ul>
 </li>
 </ul>

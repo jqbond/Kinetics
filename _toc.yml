@@ -8,7 +8,5 @@ chapters:
   sections:
   - file: NOTEBOOKS/ANALYSIS01_Batch
   - file: NOTEBOOKS/ANALYSIS02_Batch
-- file: Chapter2
-  sections:
   - file: NOTEBOOKS/ANALYSIS03_Flow
   - file: NOTEBOOKS/ANALYSIS04_Flow

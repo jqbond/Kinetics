@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -63,7 +63,7 @@
     <link rel="canonical" href="/NAM29_KineticsWorkshop/NOTEBOOKS/ANALYSIS02_Batch.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flow Reactor Analysis" href="../Chapter2.html" />
+    <link rel="next" title="Flow Reactors 01" href="ANALYSIS03_Flow.html" />
     <link rel="prev" title="Batch Reactors 01" href="ANALYSIS01_Batch.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -178,17 +178,14 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    <no title>
+                    NAM 29 - Obtaining Good Kinetic Data
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">Batch Reactor Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter1.html">Reactor Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS01_Batch.html">Batch Reactors 01</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Batch Reactors 02</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter2.html">Flow Reactor Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS03_Flow.html">Flow Reactors 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ANALYSIS04_Flow.html">Flow Reactors 02</a></li>
 </ul>
@@ -419,29 +416,37 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-try-a-totally-different-type-of-active-site">Let’s try a totally different type of active site…</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-a-differential-data-analysis-using-appropriate-scaling">Applying a differential data analysis using appropriate scaling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-of-differential-analysis">Results of Differential Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-julia-packages">Importing Julia Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-formatting">Figure formatting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-04-let-s-try-a-totally-different-type-of-active-site">Example 04: Let’s try a totally different type of active site…</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-visualizing-data">Importing and visualizing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-a-differential-data-analysis-using-appropriate-scaling">Applying a differential data analysis using appropriate scaling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#results-of-differential-analysis">Results of Differential Analysis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2">Applying an Integral Analaysis to <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized first order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized second order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2">Applying an Integral Analaysis to <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized first order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized second order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-temperature-effects">Consider temperature effects</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-barriers-and-pre-exponentials">Estimating barriers and pre-exponentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-temperature-effects">Consider Temperature Effects</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-barriers-and-pre-exponentials">Estimating barriers and pre-exponentials</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility">Reproducibility</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-replicates-for-mathrm-pt-sio-2">Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicates-over-mathrm-ru-sio-2">Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-observations">Some observations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility-of-data">Reproducibility of Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-replicate-experiments-over-mathrm-pt-sio-2">Visualizing Replicate Experiments over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-replicates-for-mathrm-pt-sio-2">Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations">Recommendations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-replicates-over-mathrm-ru-sio-2">Visualizing Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-replicates-over-mathrm-ru-sio-2">Interpreting Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-recommendations-for-batch-reactors">Some Recommendations for Batch Reactors!</a></li>
 </ul>
             </nav>
         </div>
@@ -456,6 +461,9 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="batch-reactors-02">
 <h1>Batch Reactors 02<a class="headerlink" href="#batch-reactors-02" title="Link to this heading">#</a></h1>
 <p>This Notebook extends batch data analysis to compare the performanc of two different metal catalysts. We again use an approach that is common in peer-reviewed literature, and we highlight the impact of artifacts that may go unnoticed in the course of an experiment. Here, we consider a hypotehtical reaction occuring on both Pt nanoparticles and Ru nanoparticles that are dispersed on a single, high surface area support.</p>
+<section id="importing-julia-packages">
+<h2>Importing Julia Packages<a class="headerlink" href="#importing-julia-packages" title="Link to this heading">#</a></h2>
+<p>This Notebook uses a handful of Julia Packages for analysis and presentation of data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#########################################################################</span>
@@ -473,6 +481,10 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="figure-formatting">
+<h2>Figure formatting<a class="headerlink" href="#figure-formatting" title="Link to this heading">#</a></h2>
+<p>Figures in this Notebook are generated using CairoMakie; the code block below adds some default formatting templates for figures.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#################################################################</span>
@@ -850,23 +862,27 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="let-s-try-a-totally-different-type-of-active-site">
-<h2>Let’s try a totally different type of active site…<a class="headerlink" href="#let-s-try-a-totally-different-type-of-active-site" title="Link to this heading">#</a></h2>
-<p>In our first case study, we started with the hypothesis that support effects might give us a more active Pt catalyst. We were tempted to conclude this, but once we corrected for dispersion effects, it became clear that all of our Pt catalysts seem to have identical turnover frequencies, and that our more active materials (Pt/C and Pt/<span class="math notranslate nohighlight">\(\gamma\)</span>-Al<sub>2</sub>O<sub>3</sub>) are only more active because they have larger quantities of accessible Pt per unit mass or volume of catalyst. This is, of course, useful to us in industrial practice as we want to minimize the physical size of our reactors, but as we start thinking about fundamental kinetics, it is important for us to focus on the activity of a single site.  From that perspective, all of the materials are identical, and we conclude that changing the support has no impact on the activity of a Pt atom on the surface of a Pt nanoparticle.</p>
-<p>Next, we’ll change the nature of the active site entirely–since we are looking at a metal catalyzed reaction, let’s say we are going to compare our original <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> material with a <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> analog. For both of these metals, we have reasonable ways to count active sites, and so we go into this analysis knowing exactly how to control and correct for variations in the active surface area within the reactor. As examples, <span class="math notranslate nohighlight">\(CO\)</span> or <span class="math notranslate nohighlight">\(H_2\)</span> chemisorption can be used to titrate surface sites on metals. If instead we were considering acid catalysts, we might consider using something like temperature programmed desorption of propylamine to titrate Bronsted sites. This can be coupled with Pyridine FTIR to quantify the ratio of Bronsted and Lewis sites and so provide a reasonable estimate of both Bronsted and Lewis site densities.</p>
+</section>
+<section id="example-04-let-s-try-a-totally-different-type-of-active-site">
+<h2>Example 04: Let’s try a totally different type of active site…<a class="headerlink" href="#example-04-let-s-try-a-totally-different-type-of-active-site" title="Link to this heading">#</a></h2>
+<p>In our <a class="reference external" href="https://jqbond.github.io/NAM29_KineticsWorkshop/NOTEBOOKS/ANALYSIS01_Batch.html">first case study</a>, we considered 3 separate examples. We started with the hypothesis that support effects might give us a more active Pt catalyst. We were tempted to conclude this, but once we corrected for dispersion effects, it became clear that all of our Pt catalysts seem to have identical turnover frequencies, and that our more active materials (Pt/C and Pt/<span class="math notranslate nohighlight">\(\gamma\)</span>-Al<sub>2</sub>O<sub>3</sub>) are only more active because they have larger quantities of accessible Pt per unit mass or volume of catalyst. This is, of course, useful to us in industrial practice as we want to minimize the physical size of our reactors, but as we start thinking about fundamental kinetics, it is important for us to focus on the activity of a single site.  From that perspective, all of the materials are identical, and we conclude that changing the support has no impact on the activity of a Pt atom on the surface of a Pt nanoparticle.</p>
+<p>In this example, we’ll change the nature of the active site entirely–since we are looking at a metal catalyzed reaction, let’s say we are going to compare our original <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> material with a <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> analog. For both of these metals, we have reasonable ways to count active sites, and so we go into this analysis knowing exactly how to control and correct for variations in the active surface area within the reactor. As examples, <span class="math notranslate nohighlight">\(CO\)</span> or <span class="math notranslate nohighlight">\(H_2\)</span> chemisorption can be used to titrate surface sites on metals. If instead we were considering acid catalysts, we might consider using something like temperature programmed desorption of propylamine to titrate Bronsted sites. This can be coupled with Pyridine FTIR to quantify the ratio of Bronsted and Lewis sites and so provide a reasonable estimate of both Bronsted and Lewis site densities.</p>
 <p>Empowered with these techniques, we can devise our batch reactor experiments so that we load a constant number of active sites instead of a constant mass of catalyst. In addition, this information permits us to scale results by the number of active sites so that we can determine turnover frequencies and rate constants that are more directly comparable to elementary barriers and pre-exponentials. With this information, we can better understand the behavior of two catalysts.</p>
 <p>We will stay with the sample example of an irreversible reaction involving only two molecules, A and B.</p>
 <div class="math notranslate nohighlight">
 \[A \longrightarrow B\]</div>
 <p>We perform two identical experiments for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span> in a perfectly mixed batch reactor. We confirm that data are obtained under isothermal conditions and full kinetic control. We adjust quantities of catalyst so that each reactor has the same number of active sites, <span class="math notranslate nohighlight">\(N_{S0} = 1 \times 10^{-3}\)</span> moles of active sites. This is important to consider for catalytic reactions because changing the total number of active sites in the reactor is akin to changing the extensive size of the system. We should be mindful of this change when trying to interpret differences in, e.g., time profiles for conversion and yield.  This is common practice in the field, but it is difficult to assign much significance to variation in conversion or yield at a specific time point unless the extensive size of the system (i.e., the number of active sites) is identical; this is rarely ensured in published batch experiments.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6c19cef-650f-4364-8781-889038bf8a33">
-<span class="eqno">(3)<a class="headerlink" href="#equation-f6c19cef-650f-4364-8781-889038bf8a33" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1a423646-2424-401c-983b-229ca33119c5">
+<span class="eqno">(3)<a class="headerlink" href="#equation-1a423646-2424-401c-983b-229ca33119c5" title="Permalink to this equation">#</a></span>\[\begin{align}
     T       &amp;= 450.0 \ \mathrm{K} \\
     P       &amp;= 1 \ \mathrm{bar} \\  
     N_{A0}  &amp;= 10 \ \mathrm{moles \ of \ A}\\
     N_{B0}  &amp;= 0 \ \mathrm{moles \ of \ B} \\
     N_{S0}  &amp;= 1.0 \times 10^{-3} \ \mathrm{moles \ of \ Active \ sites} \\
 \end{align}\]</div>
+<section id="importing-and-visualizing-data">
+<h3>Importing and visualizing data<a class="headerlink" href="#importing-and-visualizing-data" title="Link to this heading">#</a></h3>
+<p>The data presented for analysis here were generated in a separate simulation (see <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/GENERATION01_Batch.ipynb">GENERATION01_Batch.ipynb</a>). Data are stored for 3 separate scenarios in .csv files, <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/BR02A.csv">BR02A.csv</a>, <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/BR02B.csv">BR02B.csv</a>, and <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/BR02C.csv">BR02C.csv</a>. In addition, data are drawn from two JLD2 objects <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/BR02D">BR02D</a> and <a class="reference external" href="https://github.com/jqbond/NAM29_KineticsWorkshop/blob/main/NOTEBOOKS/BR02E">BR02E</a>, which are useful when storing data in a native Julia format</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">###########################################################</span>
@@ -1018,6 +1034,7 @@ document.write(`
 <div class="cell_output docutils container">
 <img alt="../_images/87aaff861f780de279b777895bdaa583bc269fdab1b871887e4c00b9e0cf226e.svg" src="../_images/87aaff861f780de279b777895bdaa583bc269fdab1b871887e4c00b9e0cf226e.svg" /></div>
 </div>
+</section>
 <section id="applying-a-differential-data-analysis-using-appropriate-scaling">
 <h3>Applying a differential data analysis using appropriate scaling<a class="headerlink" href="#applying-a-differential-data-analysis-using-appropriate-scaling" title="Link to this heading">#</a></h3>
 <p>We have suggested that a better analysis for heterogeneously catalyzed reactions would be one that carefully accounts for the system’s extensive “size” in terms of the number of accessible active sites:</p>
@@ -1142,21 +1159,21 @@ Ru/SiO₂ has α = 2.03 and k = 13.3 1/s
 </div>
 <img alt="../_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" src="../_images/5f9514df13811acedf7473306ab8524c38f461286ffbf047973450c6fb2f9be6.svg" /></div>
 </div>
-</section>
 <section id="results-of-differential-analysis">
-<h3>Results of Differential Analysis<a class="headerlink" href="#results-of-differential-analysis" title="Link to this heading">#</a></h3>
+<h4>Results of Differential Analysis<a class="headerlink" href="#results-of-differential-analysis" title="Link to this heading">#</a></h4>
 <p>Our data suggest that this reaction is first order over Pt/SiO2 and second order over Ru/SiO2, which is interesting. This result might point to fundamentally different mechanisms over the two metals; different rate determining steps within similar mechanisms; or different coverage regimes even with the same rate determining step. To move further, we apply integral analyses for first order kinetics and second order kinetics to both systems. This allows us to check goodness of fit and improve precision in rate constant estimation.</p>
 </section>
 </section>
 <section id="applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2">
-<h2>Applying an Integral Analaysis to <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span><a class="headerlink" href="#applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2" title="Link to this heading">#</a></h2>
+<h3>Applying an Integral Analaysis to <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span><a class="headerlink" href="#applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2" title="Link to this heading">#</a></h3>
+<p>Starting with material balances on a well-mixed Batch Reactor (with rates specified in turnover frequency units), one can derive the following analytical solutions for molar quantites of species A as a function of time in cases of first order kinetics and second order kinetics. They are linearized here in a form that has a zero y-intercept to permit convenient estimation of rate constants by linear regression.</p>
 <section id="linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">
-<h3>Linearized first order result with b = 0 (activity-based rate law, gas-phase reaction):<a class="headerlink" href="#linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction" title="Link to this heading">#</a></h3>
+<h4>Linearized first order result with b = 0 (activity-based rate law, gas-phase reaction):<a class="headerlink" href="#linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[\ln{\left(\frac{N_A}{N_{A0}}\right)} = -\frac{P}{P^\circ}\frac{N_{S0}}{N_{T0}}t\]</div>
 </section>
 <section id="linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">
-<h3>Linearized second order result with b = 0 (activity-based rate law, gas-phase reaction):<a class="headerlink" href="#linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction" title="Link to this heading">#</a></h3>
+<h4>Linearized second order result with b = 0 (activity-based rate law, gas-phase reaction):<a class="headerlink" href="#linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[\frac{1}{N_A} - \frac{1}{N_{A0}} = -k\frac{N_{S0}}{{N_{T0}}^2}\left(\frac{P}{P^\circ}\right)^2t\]</div>
 <div class="cell docutils container">
@@ -1361,7 +1378,7 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </section>
 </section>
 <section id="consider-temperature-effects">
-<h2>Consider temperature effects<a class="headerlink" href="#consider-temperature-effects" title="Link to this heading">#</a></h2>
+<h3>Consider Temperature Effects<a class="headerlink" href="#consider-temperature-effects" title="Link to this heading">#</a></h3>
 <p>We now are relatively confident that we are seeing first order kinetics for Pt and second order kinetics for Ru. Further, it seems that Ru is considerably more active than Pt for this reaction. A logical next step might now be to repeat these reactions at multiple temperatures. Generally speaking, this will allow us to extract barriers, which can often provide insight into elementary phenomena and help us to understand why we see differences between these two catalysts.</p>
 <p>We performed the first and second order linearizations at each temperature, and we now have a set of rate constants for Pt and Ru at various reaction temperatures. These are stored in a .csv file and loaded in the cell below.</p>
 <div class="cell docutils container">
@@ -1382,7 +1399,7 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </div>
 </div>
 <section id="estimating-barriers-and-pre-exponentials">
-<h3>Estimating barriers and pre-exponentials<a class="headerlink" href="#estimating-barriers-and-pre-exponentials" title="Link to this heading">#</a></h3>
+<h4>Estimating barriers and pre-exponentials<a class="headerlink" href="#estimating-barriers-and-pre-exponentials" title="Link to this heading">#</a></h4>
 <p>With rate constants estimated at various temperatures, one can perform the usual Arrhenius-type analysis to estimate barriers, pre-exponentials, entropies of activation, etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1471,19 +1488,20 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pt/SiO₂ has a pre-exponential of 8.8E+10 1/s and a barrier of 90.4 kJ/mol 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
+Ru/SiO₂ has a pre-exponential of 1.2E+09 1/s and a barrier of 68.8 kJ/mol
 </pre></div>
 </div>
 <img alt="../_images/db4588a56ef59b51b0af89f8b4455841a8755f5bdc6222a843d204bb17bab1c9.svg" src="../_images/db4588a56ef59b51b0af89f8b4455841a8755f5bdc6222a843d204bb17bab1c9.svg" /></div>
 </div>
 </section>
 </section>
-<section id="reproducibility">
-<h2>Reproducibility<a class="headerlink" href="#reproducibility" title="Link to this heading">#</a></h2>
+</section>
+<section id="reproducibility-of-data">
+<h2>Reproducibility of Data<a class="headerlink" href="#reproducibility-of-data" title="Link to this heading">#</a></h2>
 <p>It is <em><strong>always</strong></em> a good idea to run replicates in catalytic reactors.  One can imagine two types of replicates.  In the first, one might clean the reactor, load it with a fresh charge of catalyst and reacting species, and perform the experiment a second time.  This would give us some idea of the level of reproducibility and precision we have each time we attempt to perform an indentical experiment, which is surprisingly difficult. Small variations in catalyst mass (it is hard to precisely measure out mg quantities of catalyst), temperature, and startup procedure can produce large variations in the data that we observe. We will not consider this type of replicate here.</p>
 <p>A second, useful type of replicate involves attempting to repeating the experiment with the spent catalyst. This allows us to test for any type of evolution in the catalyst over the course of the reaction. For example, a catalyst may well deactivate under reaction conditions, which would influence our observations and perhaps confound our interpretation of reaction kinetics.</p>
+<section id="visualizing-replicate-experiments-over-mathrm-pt-sio-2">
+<h3>Visualizing Replicate Experiments over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span><a class="headerlink" href="#visualizing-replicate-experiments-over-mathrm-pt-sio-2" title="Link to this heading">#</a></h3>
 <p>Below, we illustrate four replicates over our <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> catalyst.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1573,7 +1591,7 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 <img alt="../_images/f539ad2cfe113e595ceed19e255914457ec0e5ff4edc1b135ecea5b7b231f619.svg" src="../_images/f539ad2cfe113e595ceed19e255914457ec0e5ff4edc1b135ecea5b7b231f619.svg" /></div>
 </div>
 <section id="interpreting-replicates-for-mathrm-pt-sio-2">
-<h3>Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span><a class="headerlink" href="#interpreting-replicates-for-mathrm-pt-sio-2" title="Link to this heading">#</a></h3>
+<h4>Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span><a class="headerlink" href="#interpreting-replicates-for-mathrm-pt-sio-2" title="Link to this heading">#</a></h4>
 <p>We observe nearly identical <span class="math notranslate nohighlight">\(C_A\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> profiles, suggesting that the catalyst structure and its active sites are not significantly altered (at least, not in a kinetically relevant way) over the course of the batch run. We can repeat the differential and/or integral analyses to estimate rate constants and barriers as usual, and we find little variation for this catalyst. This suggests that it is stable and that our initial active site count, <span class="math notranslate nohighlight">\(N_{S0}\)</span>, likely remains a good estimate for the active site density throughout the course of any one reaction and throughout all of our replicates.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1673,7 +1691,9 @@ For second order kinetics, Ru/SiO₂ has k = 15.1 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 1, we get α = 1.04 and k = 2.70E+00 1/s 
-In experiment 2, we get α = 1.04 and k = 2.68E+00 1/s 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 2, we get α = 1.04 and k = 2.68E+00 1/s 
 In experiment 3, we get α = 0.99 and k = 2.48E+00 1/s 
 In experiment 4, we get α = 1.06 and k = 2.78E+00 1/s 
 </pre></div>
@@ -1773,8 +1793,8 @@ The true rate constant at 450K constant is 2.8 1/s
 </div>
 </section>
 </section>
-<section id="replicates-over-mathrm-ru-sio-2">
-<h2>Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span><a class="headerlink" href="#replicates-over-mathrm-ru-sio-2" title="Link to this heading">#</a></h2>
+<section id="visualizing-replicates-over-mathrm-ru-sio-2">
+<h3>Visualizing Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span><a class="headerlink" href="#visualizing-replicates-over-mathrm-ru-sio-2" title="Link to this heading">#</a></h3>
 <p>Next we load replicates performed over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span>, where we observe significant differences between each run. This suggests that the catalyst deactivates over the course of each run, which means that our initial estimate of the active site count, <span class="math notranslate nohighlight">\(N_{S0}\)</span>, is only really relevant at <span class="math notranslate nohighlight">\(t = 0\)</span>, and it becomes a less relevant descriptor as time and batch cycles progress. This likely means that our conclusions about the 2nd order reaction and the barriers based on that analysis are incorrect as they are influenced by catalyst deactivation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1864,8 +1884,8 @@ The true rate constant at 450K constant is 2.8 1/s
 <div class="cell_output docutils container">
 <img alt="../_images/a2511c1dd45e7d02d7d39953f918cd005e31983a871f0014665c3e7aec863a15.svg" src="../_images/a2511c1dd45e7d02d7d39953f918cd005e31983a871f0014665c3e7aec863a15.svg" /></div>
 </div>
-<section id="some-observations">
-<h3>Some observations<a class="headerlink" href="#some-observations" title="Link to this heading">#</a></h3>
+<section id="interpreting-replicates-over-mathrm-ru-sio-2">
+<h4>Interpreting Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span><a class="headerlink" href="#interpreting-replicates-over-mathrm-ru-sio-2" title="Link to this heading">#</a></h4>
 <p>We can see that the catalyst does not begin to behave reproducibly until the 7th or 8th replicate. Until that point, the catalyst appears to become less active with each run. This suggests that Ru/SiO2 undergoes some type of deactivation (sintering, coke deposition, poisoning, oxidation, etc.) upon exposure to reaction conditions. The tricky part is that this deactivation causes a time-dependent change in the “extensive activity” of the Ru catalyst (the number of sites participating in the reaction is probably decreasing, or each site is somehow becoming less active with time). It is impossible for us to resolve this deactivation from the regular time domain change in CA from a single experiment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2064,9 +2084,7 @@ In experiment 10, we get α = 1.02 and k = 1.37E+00 1/s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 1, we get k = 1.06E+02 1/s 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In experiment 2, we get k = 5.29E+01 1/s 
+In experiment 2, we get k = 5.29E+01 1/s 
 In experiment 3, we get k = 3.04E+01 1/s 
 In experiment 4, we get k = 2.08E+01 1/s 
 In experiment 5, we get k = 1.67E+01 1/s 
@@ -2083,8 +2101,9 @@ True  α ≈ 1.0, EA ≈ 90 kJ/mol, A ≈ 2.5x10^11 s⁻¹, and k ≈ 13.7 s⁻�
 </div>
 </section>
 </section>
-<section id="recommendations">
-<h2>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading">#</a></h2>
+</section>
+<section id="some-recommendations-for-batch-reactors">
+<h2>Some Recommendations for Batch Reactors!<a class="headerlink" href="#some-recommendations-for-batch-reactors" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Always be mindful of hidden dynamics in batch reactors (non-isothermal, deactivation, induction, etc.)</p></li>
 <li><p>Try to focus on data at short times – deactivation is sometimes slow relative to reaction, so it can be insignificant early.</p></li>
@@ -2134,11 +2153,11 @@ True  α ≈ 1.0, EA ≈ 90 kJ/mol, A ≈ 2.5x10^11 s⁻¹, and k ≈ 13.7 s⁻�
       </div>
     </a>
     <a class="right-next"
-       href="../Chapter2.html"
+       href="ANALYSIS03_Flow.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Flow Reactor Analysis</p>
+        <p class="prev-next-title">Flow Reactors 01</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2158,29 +2177,37 @@ True  α ≈ 1.0, EA ≈ 90 kJ/mol, A ≈ 2.5x10^11 s⁻¹, and k ≈ 13.7 s⁻�
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-try-a-totally-different-type-of-active-site">Let’s try a totally different type of active site…</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-a-differential-data-analysis-using-appropriate-scaling">Applying a differential data analysis using appropriate scaling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-of-differential-analysis">Results of Differential Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-julia-packages">Importing Julia Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-formatting">Figure formatting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-04-let-s-try-a-totally-different-type-of-active-site">Example 04: Let’s try a totally different type of active site…</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-and-visualizing-data">Importing and visualizing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-a-differential-data-analysis-using-appropriate-scaling">Applying a differential data analysis using appropriate scaling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#results-of-differential-analysis">Results of Differential Analysis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2">Applying an Integral Analaysis to <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized first order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized second order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-an-integral-analaysis-to-mathrm-pt-sio-2-and-mathrm-ru-sio-2">Applying an Integral Analaysis to <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-first-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized first order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearized-second-order-result-with-b-0-activity-based-rate-law-gas-phase-reaction">Linearized second order result with b = 0 (activity-based rate law, gas-phase reaction):</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-temperature-effects">Consider temperature effects</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-barriers-and-pre-exponentials">Estimating barriers and pre-exponentials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-temperature-effects">Consider Temperature Effects</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-barriers-and-pre-exponentials">Estimating barriers and pre-exponentials</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility">Reproducibility</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-replicates-for-mathrm-pt-sio-2">Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicates-over-mathrm-ru-sio-2">Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-observations">Some observations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility-of-data">Reproducibility of Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-replicate-experiments-over-mathrm-pt-sio-2">Visualizing Replicate Experiments over <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-replicates-for-mathrm-pt-sio-2">Interpreting replicates for <span class="math notranslate nohighlight">\(\mathrm{Pt/SiO_2}\)</span></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations">Recommendations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-replicates-over-mathrm-ru-sio-2">Visualizing Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-replicates-over-mathrm-ru-sio-2">Interpreting Replicates over <span class="math notranslate nohighlight">\(\mathrm{Ru/SiO_2}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-recommendations-for-batch-reactors">Some Recommendations for Batch Reactors!</a></li>
 </ul>
   </nav></div>
 
