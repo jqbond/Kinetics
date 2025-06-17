@@ -6,7 +6,7 @@ root: index
 chapters: 
 - file: Chapter1
   sections:
-  - file: NOTEBOOKS/ANALYSIS01_Batch
-  - file: NOTEBOOKS/ANALYSIS02_Batch
-  - file: NOTEBOOKS/ANALYSIS03_Flow
-  - file: NOTEBOOKS/ANALYSIS04_Flow
+  - file: NOTEBOOKS/NAM29/ANALYSIS01_Batch
+  - file: NOTEBOOKS/NAM29/ANALYSIS02_Batch
+  - file: NOTEBOOKS/NAM29/ANALYSIS03_Flow
+  - file: NOTEBOOKS/NAM29/ANALYSIS04_Flow
