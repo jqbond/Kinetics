@@ -1,4 +1,4 @@
-# Reactor Analysis
+# NAM 29 Workshop
 
 This section includes the four Jupyter Notebooks discussed during the NAM29 workshop. There are two Notebooks that discuss the interpretation of Batch Reactor data, and there are two Notebooks that discuss the interpretation of flow reactor data. 
 
